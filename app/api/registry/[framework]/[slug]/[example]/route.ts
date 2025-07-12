@@ -2,16 +2,16 @@ import { NextRequest, NextResponse } from "next/server";
 import { getComponentSource } from "@/lib/registry";
 
 interface RouteParams {
-  params: {
+  params: Promise<{
     framework: string;
     slug: string;
     example: string;
-  };
+  }>;
 }
 
 export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
-    const { framework, slug, example } = params;
+    const { framework, slug, example } = await params;
 
     // Remove .json extension if present
     const exampleName = example.replace(/\.json$/, "");

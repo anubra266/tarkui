@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { Header } from "@/components/header";
 import { getComponentRegistry } from "@/lib/registry";
-import { ComponentExamples } from "./components/component-examples";
+import { ComponentExamples } from "./component-examples";
 import { components } from "@/lib/components";
 
 interface ComponentDetailPageProps {
