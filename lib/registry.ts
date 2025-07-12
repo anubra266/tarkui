@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import { components } from "./components";
+import { REGISTRY_DATA } from "./registry-data";
 
 export interface ComponentExampleMeta {
   name: string;
@@ -26,46 +27,33 @@ export interface ComponentRegistry {
   examples: ComponentExample[];
 }
 
-// Get file extension for framework
-function getFrameworkExtension(framework: string): string {
-  switch (framework) {
-    case "vue":
-      return "vue";
-    case "svelte":
-      return "svelte";
-    case "solid":
-    case "react":
-    default:
-      return "tsx";
-  }
-}
-
-// Function to get source code for a specific framework (server-side file reading)
+// Function to get source code for a specific framework (uses static data)
 export async function getComponentSource(
   slug: string,
   exampleName: string,
   framework: string
 ): Promise<string | null> {
   try {
-    const fileExtension = getFrameworkExtension(framework);
-    const filePath = `components/registry/${framework}/${slug}/${exampleName}.${fileExtension}`;
-
-    // Read the actual file content (server-side only)
-    if (typeof window !== "undefined") {
-      throw new Error("getComponentSource should only be called on the server");
-    }
-
-    const fs = await import("fs");
-    const path = await import("path");
-
-    const fullPath = path.join(process.cwd(), filePath);
-
-    if (!fs.existsSync(fullPath)) {
-      console.warn(`File not found: ${fullPath}`);
+    const componentData = REGISTRY_DATA[slug];
+    if (!componentData) {
+      console.warn(`No registry data found for component: ${slug}`);
       return null;
     }
 
-    const sourceCode = fs.readFileSync(fullPath, "utf-8");
+    const frameworkData = componentData[framework];
+    if (!frameworkData) {
+      console.warn(`No ${framework} data found for component: ${slug}`);
+      return null;
+    }
+
+    const sourceCode = frameworkData[exampleName];
+    if (!sourceCode) {
+      console.warn(
+        `No source code found for ${framework}/${slug}/${exampleName}`
+      );
+      return null;
+    }
+
     return sourceCode;
   } catch (error) {
     console.error(
