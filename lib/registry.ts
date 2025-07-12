@@ -60,12 +60,38 @@ export async function getComponentSource(
 
     const fullPath = path.join(process.cwd(), filePath);
 
+    // Enhanced logging for debugging
+    console.log(`Looking for component source:`, {
+      slug,
+      exampleName,
+      framework,
+      filePath,
+      fullPath,
+      cwd: process.cwd(),
+    });
+
     if (!fs.existsSync(fullPath)) {
       console.warn(`File not found: ${fullPath}`);
+
+      // List directory contents for debugging
+      const dirPath = path.join(
+        process.cwd(),
+        `components/registry/${framework}/${slug}`
+      );
+      if (fs.existsSync(dirPath)) {
+        const files = fs.readdirSync(dirPath);
+        console.log(`Available files in ${dirPath}:`, files);
+      } else {
+        console.log(`Directory does not exist: ${dirPath}`);
+      }
+
       return null;
     }
 
     const sourceCode = fs.readFileSync(fullPath, "utf-8");
+    console.log(
+      `Successfully read source code for ${framework}/${slug}/${exampleName}`
+    );
     return sourceCode;
   } catch (error) {
     console.error(
