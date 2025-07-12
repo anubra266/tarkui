@@ -50,26 +50,14 @@ export function Header() {
               Tark UI
             </span>
           </Link>
-          <nav className="hidden md:flex items-center space-x-8">
-            <a
-              href="#"
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors flex items-center space-x-2"
-            >
-              <span>Layouts</span>
-              <Badge
-                variant="secondary"
-                className="text-xs bg-blue-500/20 text-blue-300 border-blue-500/30"
-              >
-                NEW
-              </Badge>
-            </a>
+          {/* <nav className="hidden md:flex items-center space-x-8">
             <a
               href="#"
               className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
-              Easing Classes
+              Link
             </a>
-          </nav>
+          </nav> */}
         </div>
         <div className="flex items-center space-x-3">
           {/* Framework Selector */}

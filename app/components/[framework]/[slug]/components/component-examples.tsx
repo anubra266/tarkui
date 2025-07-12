@@ -3,6 +3,7 @@
 import { useState, ReactNode } from "react";
 import { Copy, ExternalLink, Sparkles, Zap } from "lucide-react";
 import { useParams } from "next/navigation";
+import { getRegistryUrl } from "@/lib/utils";
 
 interface ComponentExamplesProps {
   id: string;
@@ -52,11 +53,15 @@ export function ComponentExamples({
     }
   };
 
-  const openInV0 = (code: string) => {
-    // In a real implementation, this would open the code in v0
-    console.log("Opening in v0:", code);
-    // For now, we'll just show an alert
-    alert("This would open the component in v0 for editing!");
+  const getV0Url = (exampleId: string) => {
+    const params = useParams();
+    const slug = Array.isArray(params.slug)
+      ? params.slug[0]
+      : params.slug || "";
+    const registryUrl = getRegistryUrl(framework, slug, exampleId);
+    return `https://v0.dev/chat/api/open?url=${encodeURIComponent(
+      registryUrl
+    )}`;
   };
 
   return (
@@ -82,15 +87,17 @@ export function ComponentExamples({
 
           {/* Enhanced Action Buttons */}
           <div className="flex items-center space-x-3 ml-6">
-            <button
-              onClick={() => openInV0(`Component ${id}`)}
-              className="group/btn relative overflow-hidden bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/40 hover:to-purple-500/40 border border-blue-500/30 hover:border-blue-400/50 rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:rotate-3"
+            <a
+              href={getV0Url(id)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/btn relative overflow-hidden bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/40 hover:to-purple-500/40 border border-blue-500/30 hover:border-blue-400/50 rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:rotate-3 inline-flex items-center justify-center"
               title="Open in v0"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover/btn:opacity-20 transition-opacity duration-300"></div>
               <ExternalLink className="w-4 h-4 text-blue-400 group-hover/btn:text-blue-300 relative z-10 group-hover/btn:scale-110 transition-all duration-200" />
               <Zap className="w-3 h-3 text-yellow-400 absolute -top-1 -right-1 opacity-0 group-hover/btn:opacity-100 transition-all duration-300 animate-pulse" />
-            </button>
+            </a>
 
             <button
               onClick={() => copyToClipboard(id)}
