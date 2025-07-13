@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { Github, Twitter, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -107,11 +106,8 @@ export function Header() {
             className="hover:bg-gray-200/50 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-white"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
-            {theme === "light" ? (
-              <Moon className="w-4 h-4" />
-            ) : (
-              <Sun className="w-4 h-4" />
-            )}
+            <Moon className="w-4 h-4 dark:hidden" />
+            <Sun className="w-4 h-4 hidden dark:block" />
           </Button>
         </div>
       </div>
