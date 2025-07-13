@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, ReactNode } from "react";
-import { Copy, Sparkles, Zap } from "lucide-react";
+import { Code, Sparkles, Zap } from "lucide-react";
 import { useParams } from "next/navigation";
 import { getRegistryUrl } from "@/lib/utils";
+import { CodeModal } from "./components/code-modal";
 
 interface ComponentExamplesProps {
   id: string;
@@ -22,35 +23,16 @@ export function ComponentExamples({
   children,
   sourceCode,
 }: ComponentExamplesProps) {
-  const [copiedId, setCopiedId] = useState<string | null>(null);
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const params = useParams();
 
   const framework = Array.isArray(params.framework)
     ? params.framework[0]
     : params.framework || "react";
 
-  const copyToClipboard = async (exampleId: string) => {
-    try {
-      // Get the source code for the selected framework
-      const code = sourceCode[framework];
-      if (code) {
-        await navigator.clipboard.writeText(code);
-        setCopiedId(exampleId);
-        setTimeout(() => setCopiedId(null), 2000);
-      } else {
-        throw new Error("Source code not available for this framework");
-      }
-    } catch (err) {
-      console.error("Failed to copy code:", err);
-      // Fallback to a generic message
-      const fallbackCode = `// ${
-        framework.charAt(0).toUpperCase() + framework.slice(1)
-      } code for ${title}\n// Source code not available for this framework`;
-      await navigator.clipboard.writeText(fallbackCode);
-      setCopiedId(exampleId);
-      setTimeout(() => setCopiedId(null), 2000);
-    }
+  const openCodeModal = () => {
+    setIsModalOpen(true);
   };
 
   const getV0Url = (exampleId: string) => {
@@ -91,7 +73,7 @@ export function ComponentExamples({
               href={getV0Url(id)}
               target="_blank"
               rel="noopener noreferrer"
-              className="group/btn relative overflow-hidden bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/40 hover:to-purple-500/40 border border-blue-500/30 hover:border-blue-400/50 rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:rotate-3 inline-flex items-center justify-center"
+              className="group/btn relative overflow-hidden bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/40 hover:to-purple-500/40 border border-blue-500/30 hover:border-blue-400/50 rounded-xl p-2 transition-all duration-300 hover:scale-110 hover:rotate-3 inline-flex items-center justify-center"
               title="Open in v0"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover/btn:opacity-20 transition-opacity duration-300"></div>
@@ -101,7 +83,7 @@ export function ComponentExamples({
                 stroke-linejoin="round"
                 viewBox="0 0 16 16"
                 width="16"
-                className="w-4 h-4 text-blue-400 group-hover/btn:text-blue-300 relative z-10 group-hover/btn:scale-110 transition-all duration-200"
+                className="w-4 h-4 text-blue-400 group-hover/btn:text-blue-100 relative z-10 group-hover/btn:scale-110 transition-all duration-200"
               >
                 <path
                   clip-rule="evenodd"
@@ -114,21 +96,12 @@ export function ComponentExamples({
             </a>
 
             <button
-              onClick={() => copyToClipboard(id)}
-              className="group/btn relative overflow-hidden bg-gradient-to-r from-emerald-500/20 to-teal-500/20 hover:from-emerald-500/40 hover:to-teal-500/40 border border-emerald-500/30 hover:border-emerald-400/50 rounded-xl p-3 transition-all duration-300 hover:scale-110 hover:-rotate-3"
-              title="Copy code"
+              onClick={openCodeModal}
+              className="group/btn relative overflow-hidden bg-gradient-to-r from-emerald-500/20 to-teal-500/20 hover:from-emerald-500/40 hover:to-teal-500/40 border border-emerald-500/30 hover:border-emerald-400/50 rounded-xl p-2 transition-all duration-300 hover:scale-110 hover:-rotate-3"
+              title="View code"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 opacity-0 group-hover/btn:opacity-20 transition-opacity duration-300"></div>
-              {copiedId === id ? (
-                <div className="relative z-10 flex items-center justify-center">
-                  <div className="w-4 h-4 border-2 border-emerald-400 rounded-full flex items-center justify-center animate-bounce">
-                    <div className="w-2 h-1 border-b-2 border-l-2 border-emerald-400 transform rotate-[-45deg]"></div>
-                  </div>
-                  <div className="absolute inset-0 bg-emerald-400/20 rounded-full animate-ping"></div>
-                </div>
-              ) : (
-                <Copy className="w-4 h-4 text-emerald-400 group-hover/btn:text-emerald-300 relative z-10 group-hover/btn:scale-110 transition-all duration-200" />
-              )}
+              <Code className="w-4 h-4 text-emerald-400 group-hover/btn:text-emerald-100 relative z-10 group-hover/btn:scale-110 transition-all duration-200" />
               <Sparkles className="w-3 h-3 text-yellow-400 absolute -top-1 -right-1 opacity-0 group-hover/btn:opacity-100 transition-all duration-300 animate-pulse delay-100" />
             </button>
           </div>
@@ -162,6 +135,20 @@ export function ComponentExamples({
           }
         }
       `}</style>
+
+      {/* Code Modal */}
+      <CodeModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={title}
+        framework={framework}
+        slug={Array.isArray(params.slug) ? params.slug[0] : params.slug || ""}
+        exampleId={id}
+        sourceCode={
+          sourceCode[framework] ||
+          "// Source code not available for this framework"
+        }
+      />
     </div>
   );
 }
