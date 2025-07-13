@@ -42,13 +42,13 @@ export default function WithIconAndPlusMinusAccordion() {
           </Accordion.ItemTrigger>
           <Accordion.ItemContent className="px-4 pb-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
             <div className="pt-3 pl-7">
-{item.name === "Discover hidden creative talents" ?
-                "Unlock your inner artist by exploring new mediums, experimenting with bold techniques, and embracing the creative process without fear of judgment." :
-               item.name === "Customize your workspace perfectly" ?
-                "Transform your environment into a productivity powerhouse with smart organization, ergonomic setups, and personalized touches that inspire daily success." :
-               item.name === "Master efficient time management" ?
-                "Develop powerful habits that maximize your daily potential through strategic planning, priority setting, and mindful focus techniques." :
-                "Build meaningful connections through active listening, empathy, and clear expression that resonates with others on a deeper level."}
+              {item.name === "Discover hidden creative talents"
+                ? "Unlock your inner artist by exploring new mediums, experimenting with bold techniques, and embracing the creative process without fear of judgment."
+                : item.name === "Customize your workspace perfectly"
+                ? "Transform your environment into a productivity powerhouse with smart organization, ergonomic setups, and personalized touches that inspire daily success."
+                : item.name === "Master efficient time management"
+                ? "Develop powerful habits that maximize your daily potential through strategic planning, priority setting, and mindful focus techniques."
+                : "Build meaningful connections through active listening, empathy, and clear expression that resonates with others on a deeper level."}
             </div>
           </Accordion.ItemContent>
         </Accordion.Item>

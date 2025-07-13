@@ -27,21 +27,29 @@ export default function TableWithPlusMinusAccordion() {
             </Accordion.ItemIndicator>
           </Accordion.ItemTrigger>
           <Accordion.ItemContent className="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 leading-relaxed bg-gradient-to-r from-transparent via-gray-50/30 dark:via-gray-800/30 to-transparent border-b border-gray-200/50 dark:border-gray-700/50 last:border-b-0">
-{item === "Explore modern music production" ? (
+            {item === "Explore modern music production" ? (
               <div>
-                Create professional-quality tracks using digital audio workstations, synthesizers, and mixing techniques that bring your musical ideas to life.
+                Create professional-quality tracks using digital audio
+                workstations, synthesizers, and mixing techniques that bring
+                your musical ideas to life.
               </div>
             ) : item === "Design stunning visual graphics" ? (
               <div>
-                Master color theory, typography, and composition principles to create compelling visuals that communicate effectively and inspire audiences.
+                Master color theory, typography, and composition principles to
+                create compelling visuals that communicate effectively and
+                inspire audiences.
               </div>
             ) : item === "Master financial planning basics" ? (
               <div>
-                Build a secure financial future through budgeting, investing, and strategic planning that grows your wealth and protects your assets.
+                Build a secure financial future through budgeting, investing,
+                and strategic planning that grows your wealth and protects your
+                assets.
               </div>
             ) : (
               <div>
-                Achieve conversational fluency through immersive practice, cultural understanding, and proven language learning techniques that stick.
+                Achieve conversational fluency through immersive practice,
+                cultural understanding, and proven language learning techniques
+                that stick.
               </div>
             )}
           </Accordion.ItemContent>
