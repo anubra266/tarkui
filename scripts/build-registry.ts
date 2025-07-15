@@ -1,15 +1,14 @@
-const fs = require("fs");
-const path = require("path");
-
-// Component list (for now just accordion, expand as needed)
-const components = [
-  { slug: "accordion", name: "Accordion", category: "Disclosure" },
-];
+import * as fs from "fs";
+import * as path from "path";
+import { components } from "../lib/components";
 
 const frameworks = ["react", "vue", "solid", "svelte"];
 
 function generateRegistryData() {
-  const registryData = {};
+  const registryData: Record<
+    string,
+    Record<string, Record<string, string>>
+  > = {};
   const registryDir = path.join(process.cwd(), "components/registry");
 
   console.log("Building registry data...");
@@ -99,7 +98,7 @@ function generateStaticRegistryFiles() {
 
       for (const [exampleName, sourceCode] of Object.entries(frameworkData)) {
         // Get file extension for the framework
-        const getFileExtension = (fw) => {
+        const getFileExtension = (fw: string) => {
           switch (fw) {
             case "vue":
               return "vue";
@@ -113,9 +112,9 @@ function generateStaticRegistryFiles() {
         };
 
         // Get dependencies for the framework
-        const getDependencies = (fw) => {
+        const getDependencies = (fw: string) => {
           const arkUi = `@ark-ui/${fw}`;
-          const lucideMap = {
+          const lucideMap: Record<string, string> = {
             react: "lucide-react",
             vue: "lucide-vue-next",
             solid: "lucide-solid",
@@ -171,7 +170,7 @@ function watchRegistryFiles() {
   // Initial build
   generateStaticRegistryFiles();
 
-  let timeoutId = null;
+  let timeoutId: NodeJS.Timeout | null = null;
 
   // Watch for changes
   fs.watch(registryDir, { recursive: true }, (eventType, filename) => {
@@ -183,7 +182,9 @@ function watchRegistryFiles() {
         filename.endsWith(".ts"))
     ) {
       // Debounce multiple rapid changes
-      clearTimeout(timeoutId);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
       timeoutId = setTimeout(() => {
         console.log(`\n📝 File changed: ${filename}`);
         console.log("🔄 Rebuilding registry...\n");
@@ -212,7 +213,7 @@ if (require.main === module) {
   }
 }
 
-module.exports = {
+export {
   generateRegistryData,
   generateStaticRegistryFiles,
   watchRegistryFiles,

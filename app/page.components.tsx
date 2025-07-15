@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Search, Command } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { components } from "@/lib/components";
 import { componentPreviews } from "@/components/component-preview";
@@ -105,14 +104,6 @@ export function Components({ counts }: ComponentsProps) {
             >
               {/* Card Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-              {component.isNew && (
-                <div className="absolute top-4 left-4 z-10">
-                  <Badge className="text-xs bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0 shadow-lg">
-                    New
-                  </Badge>
-                </div>
-              )}
 
               <div className="aspect-video p-6 flex items-center justify-center relative">
                 {PreviewComponent ? <PreviewComponent /> : null}

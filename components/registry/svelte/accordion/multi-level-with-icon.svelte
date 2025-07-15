@@ -1,30 +1,7 @@
 <script>
-  const items = [
-    {
-      id: "responsive-web-apps",
-      title: "Build responsive web applications",
-      content: "Create fluid layouts that adapt seamlessly across devices using CSS Grid, Flexbox, and media queries for optimal user experience."
-    },
-    {
-      id: "user-interfaces",
-      title: "Create engaging user interfaces",
-      content: "Design intuitive interfaces with smooth animations, thoughtful color schemes, and interactive elements that delight users."
-    },
-    {
-      id: "authentication",
-      title: "Implement modern authentication",
-      content: "Secure your applications with OAuth, JWT tokens, and multi-factor authentication for robust user protection."
-    },
-    {
-      id: "performance",
-      title: "Optimize for performance",
-      content: "Enhance loading speeds through code splitting, lazy loading, and efficient bundling strategies that improve user satisfaction."
-    }
-  ];
-
   import { Accordion } from "@ark-ui/svelte/accordion";
   import {
-    ChevronDown,
+    ChevronDownIcon,
     Sparkles,
     Settings,
     Zap,
@@ -34,84 +11,157 @@
   } from "lucide-svelte";
 
   const items = [
-    { text: "Advanced data visualization techniques", icon: Sparkles },
-    { text: "Machine learning for beginners", icon: Settings },
-    { text: "Sustainable urban planning methods", icon: Zap },
-    { text: "Psychology of human behavior", icon: HelpCircle },
+    {
+      id: "data-visualization",
+      title: "Advanced data visualization techniques",
+      icon: Sparkles,
+      items: [
+        {
+          id: "dashboard-design",
+          title: "Interactive dashboard design",
+          content:
+            "Create intuitive interfaces that allow users to explore data dynamically with filters, drill-downs, and real-time updates.",
+          icon: BarChart3,
+        },
+        {
+          id: "chart-selection",
+          title: "Statistical chart selection",
+          content:
+            "Choose the right visualization type for your data story, from scatter plots for correlations to heat maps for patterns.",
+          icon: Code,
+        },
+      ],
+    },
+    {
+      id: "machine-learning",
+      title: "Machine learning for beginners",
+      icon: Settings,
+      items: [
+        {
+          id: "supervised-learning",
+          title: "Supervised learning basics",
+          content:
+            "Learn classification and regression techniques using labeled training data to make predictions on new, unseen examples.",
+          icon: BarChart3,
+        },
+        {
+          id: "data-preprocessing",
+          title: "Data preprocessing steps",
+          content:
+            "Clean, transform, and prepare raw data through normalization, feature engineering, and handling missing values.",
+          icon: Code,
+        },
+      ],
+    },
+    {
+      id: "urban-planning",
+      title: "Sustainable urban planning methods",
+      icon: Zap,
+      items: [
+        {
+          id: "green-building",
+          title: "Green building certification programs",
+          content:
+            "LEED and BREEAM standards guide sustainable construction with energy efficiency and environmental responsibility.",
+          icon: BarChart3,
+        },
+        {
+          id: "community-engagement",
+          title: "Community engagement strategies",
+          content:
+            "Build consensus through town halls, surveys, and collaborative design workshops that empower residents.",
+          icon: Code,
+        },
+      ],
+    },
+    {
+      id: "human-behavior",
+      title: "Psychology of human behavior",
+      icon: HelpCircle,
+      items: [
+        {
+          id: "cognitive-bias",
+          title: "Cognitive bias patterns",
+          content:
+            "Recognize common mental shortcuts like confirmation bias, anchoring, and availability heuristic that influence judgments.",
+          icon: BarChart3,
+        },
+        {
+          id: "social-influence",
+          title: "Social influence mechanisms",
+          content:
+            "Explore how social proof, authority, and reciprocity shape behavior through psychological principles of persuasion.",
+          icon: Code,
+        },
+      ],
+    },
   ];
-
-  const nestedItemsByTopic = {
-    "Advanced data visualization techniques": [
-      { text: "Interactive dashboard design", icon: BarChart3 },
-      { text: "Statistical chart selection", icon: Code },
-    ],
-    "Machine learning for beginners": [
-      { text: "Supervised learning basics", icon: BarChart3 },
-      { text: "Data preprocessing steps", icon: Code },
-    ],
-    "Sustainable urban planning methods": [
-      { text: "Green building certification programs", icon: BarChart3 },
-      { text: "Community engagement strategies", icon: Code },
-    ],
-    "Psychology of human behavior": [
-      { text: "Cognitive bias patterns", icon: BarChart3 },
-      { text: "Social influence mechanisms", icon: Code },
-    ],
-  };
 </script>
 
 <Accordion.Root
-  defaultValue={["user-interfaces"]}
+  defaultValue={["human-behavior"]}
   collapsible
   class="w-full max-w-md mx-auto bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm"
 >
-  {#each items as item}
+  {#each items as item (item.id)}
     <Accordion.Item
       value={item.id}
       class="group border-b border-gray-200/50 dark:border-gray-700/50 last:border-b-0"
     >
-      <Accordion.ItemTrigger class="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200">
+      <Accordion.ItemTrigger
+        class="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200"
+      >
         <div class="flex items-center">
-          <svelte:component this={item.icon} class="w-4 h-4 text-blue-600 dark:text-blue-400 mr-3" />
-          <span class="font-medium text-gray-900 dark:text-white text-sm">
-            {item.text}
+          <svelte:component
+            this={item.icon}
+            class="w-5 h-5 text-gray-600 dark:text-gray-400 mr-3"
+          />
+          <span class="font-medium text-gray-900 dark:text-white">
+            {item.title}
           </span>
         </div>
-        <Accordion.ItemIndicator class="ml-2 transition-transform duration-200 data-[state=open]:rotate-180">
-          <ChevronDown class="w-4 h-4 text-gray-600 dark:text-gray-400" />
+        <Accordion.ItemIndicator
+          class="ml-2 transition-transform duration-200 data-[state=open]:rotate-180"
+        >
+          <ChevronDownIcon class="w-4 h-4 text-gray-600 dark:text-gray-400" />
         </Accordion.ItemIndicator>
       </Accordion.ItemTrigger>
-      <Accordion.ItemContent class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-        <div class="px-4 pb-3">
-          <div class="pt-1 mb-3">
-            {item.content}
-          </div>
-
-          <!-- Nested accordion -->
-          <Accordion.Root
-            collapsible
-            class="border-l-2 border-blue-500/20 ml-2"
-          >
-            {#each items as item}
+      <Accordion.ItemContent
+        class="px-4 pb-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed"
+      >
+        <div class="pt-3 pl-8">
+          <Accordion.Root collapsible class="space-y-2">
+            {#each item.items as subItem (subItem.id)}
               <Accordion.Item
-                value={item.id}
-                class="group border-b border-gray-200/30 dark:border-gray-700/30 last:border-b-0"
+                value={subItem.id}
+                class="group border border-gray-200/50 dark:border-gray-700/50 rounded-lg bg-gradient-to-r from-gray-50/50 dark:from-gray-800/50 to-transparent"
               >
-                <Accordion.ItemTrigger class="w-full px-3 py-2 flex items-center justify-between text-left hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200">
+                <Accordion.ItemTrigger
+                  class="w-full px-3 py-2 flex items-center justify-between text-left hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200"
+                >
                   <div class="flex items-center">
-                    <svelte:component this={nestedItem.icon} class="w-3 h-3 text-blue-500 dark:text-blue-400 mr-2" />
-                    <span class="font-medium text-gray-800 dark:text-gray-200 text-sm">
-                      {nestedItem.text}
+                    <svelte:component
+                      this={subItem.icon}
+                      class="w-4 h-4 text-gray-500 dark:text-gray-500 mr-2"
+                    />
+                    <span
+                      class="font-medium text-gray-800 dark:text-gray-200 text-sm"
+                    >
+                      {subItem.title}
                     </span>
                   </div>
-                  <Accordion.ItemIndicator class="ml-2 transition-transform duration-200 data-[state=open]:rotate-180">
-                    <ChevronDown class="w-3 h-3 text-gray-500 dark:text-gray-500" />
+                  <Accordion.ItemIndicator
+                    class="ml-2 transition-transform duration-200 data-[state=open]:rotate-180"
+                  >
+                    <ChevronDownIcon
+                      class="w-3 h-3 text-gray-500 dark:text-gray-500"
+                    />
                   </Accordion.ItemIndicator>
                 </Accordion.ItemTrigger>
-                <Accordion.ItemContent class="px-3 pb-2 text-xs text-gray-600 dark:text-gray-400">
-                  <div class="pt-1">
-                    {item.content}
-                  </div>
+                <Accordion.ItemContent
+                  class="px-3 pb-2 text-xs text-gray-600 dark:text-gray-400 leading-relaxed"
+                >
+                  <div class="pt-2 pl-6">{subItem.content}</div>
                 </Accordion.ItemContent>
               </Accordion.Item>
             {/each}
