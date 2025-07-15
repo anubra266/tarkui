@@ -10,7 +10,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { getRegistryUrl } from "@/lib/utils";
-import { createHighlighter } from "shiki";
+import { codeToHtml, createHighlighter } from "shiki";
 import { useTheme } from "next-themes";
 
 interface CodeModalProps {
@@ -53,10 +53,9 @@ export function CodeModal({
       case "svelte":
         return "svelte";
       case "solid":
-        return "typescript"; // Solid uses TSX, use typescript for better highlighting
       case "react":
       default:
-        return "typescript"; // React TSX, use typescript for better highlighting
+        return "tsx";
     }
   };
 
@@ -66,17 +65,13 @@ export function CodeModal({
       const highlightCode = async () => {
         try {
           setIsLoading(true);
-          const highlighter = await createHighlighter({
-            themes: ["github-light", "github-dark"],
-            langs: ["typescript", "vue", "svelte", "jsx", "tsx"],
-          });
 
           const language = getLanguage(framework);
           // Use the appropriate theme based on current theme
           const currentTheme =
-            resolvedTheme === "dark" ? "github-dark" : "github-light";
+            resolvedTheme === "dark" ? "houston" : "github-light";
 
-          const html = highlighter.codeToHtml(sourceCode, {
+          const html = await codeToHtml(sourceCode, {
             lang: language,
             theme: currentTheme,
           });
