@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { Header } from "@/components/header";
-import { getComponentRegistry } from "@/lib/registry";
+import { getComponentRegistry } from "@/lib/registry.server";
 import { ComponentExamples } from "./component-examples";
 import { components } from "@/lib/components";
 
