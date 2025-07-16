@@ -11,11 +11,11 @@ export const components: Component[] = [
     slug: "accordion",
     category: "Disclosure",
   },
-  // {
-  //   name: "Angle Slider",
-  //   slug: "angle-slider",
-  //   category: "Form",
-  // },
+  {
+    name: "Angle Slider",
+    slug: "angle-slider",
+    category: "Form",
+  },
   //   {
   //     name: "Avatar",
   //     slug: "avatar",

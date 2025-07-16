@@ -1,0 +1,36 @@
+"use client";
+import { AngleSlider } from "@ark-ui/react/angle-slider";
+
+export default function WithMarksAngleSlider() {
+  return (
+    <AngleSlider.Root
+      defaultValue={45}
+      step={10}
+      className="relative flex items-center justify-center"
+    >
+      <AngleSlider.Control className="[--size:200px] [--thumb-color:rgb(59_130_246)] dark:[--thumb-color:rgb(96_165_250)] [--thumb-size:40px] [--thumb-indicator-size:min(var(--thumb-size),calc(var(--size)/2))] w-[var(--size)] h-[var(--size)] rounded-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 flex items-center justify-center user-select:none relative">
+        <AngleSlider.Thumb className="absolute top-0 right-0 bottom-0 left-[calc(50%-1.5px)] pointer-events-none h-full w-[3px] outline-none before:absolute before:right-0 before:top-0 before:h-[var(--thumb-indicator-size)] before:bg-[var(--thumb-color)] before:w-[3px] before:rounded-full" />
+        <AngleSlider.MarkerGroup className="absolute inset-[1px] rounded-[var(--size)] pointer-events-none">
+          {[0, 45, 90, 135, 180, 225, 270, 315].map((value, i) => (
+            <AngleSlider.Marker
+              key={i}
+              value={value}
+              className="w-0.5 absolute top-0 bottom-0 left-[calc(50%-1px)] [--marker-color:rgb(156_163_175)] dark:[--marker-color:rgb(209_213_219)] before:absolute before:top-[calc(var(--thumb-size)/3)] before:left-[0.5px] before:h-[calc(var(--thumb-size)/1.5)] before:bg-[var(--marker-color)] before:w-[2px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full"
+            />
+          ))}
+        </AngleSlider.MarkerGroup>
+        <div className="flex items-center flex-col gap-0">
+          <AngleSlider.ValueText className="text-4xl text-gray-900 dark:text-white font-bold">
+            <AngleSlider.Context>
+              {(context) => <>{context.value}°</>}
+            </AngleSlider.Context>
+          </AngleSlider.ValueText>
+          <AngleSlider.Label className="text-sm text-gray-600 dark:text-gray-300 font-medium">
+            degrees
+          </AngleSlider.Label>
+        </div>
+      </AngleSlider.Control>
+      <AngleSlider.HiddenInput />
+    </AngleSlider.Root>
+  );
+}

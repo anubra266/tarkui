@@ -1,6 +1,7 @@
 import { Accordion } from "@ark-ui/solid/accordion";
 import { ChevronDownIcon, Link, Bell, Shield, HelpCircle } from "lucide-solid";
-import { For, Dynamic } from "solid-js";
+import { For } from "solid-js";
+import { Dynamic } from "solid-js/web";
 
 export default function WithIconSubHeaderAndChevronAccordion() {
   const items = [

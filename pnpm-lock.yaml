@@ -87,6 +87,9 @@ importers:
       shiki:
         specifier: ^3.7.0
         version: 3.7.0
+      solid-js:
+        specifier: ^1.9.7
+        version: 1.9.7
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17

@@ -6,7 +6,8 @@ import {
   Clock,
   HelpCircle,
 } from "lucide-solid";
-import { For, Dynamic } from "solid-js";
+import { For } from "solid-js";
+import { Dynamic } from "solid-js/web";
 
 export default function WithIconAndChevronAccordion() {
   const items = [

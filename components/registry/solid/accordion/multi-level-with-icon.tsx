@@ -9,7 +9,8 @@ import {
   BarChart3,
   Code,
 } from "lucide-solid";
-import { For, Show, Dynamic } from "solid-js";
+import { For, Show } from "solid-js";
+import { Dynamic } from "solid-js/web";
 
 export default function MultiLevelWithIconAccordion() {
   const items = [

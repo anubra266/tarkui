@@ -1,4 +1,4 @@
-import { readFile } from "fs/promises";
+import { readFile, access } from "fs/promises";
 import { join } from "path";
 import type { ComponentRegistry, ComponentExample } from "./registry";
 import { components } from "./components";
@@ -33,6 +33,14 @@ export async function getComponentSource(
       slug,
       `${exampleName}.${extension}`
     );
+
+    // Check if file exists before reading
+    try {
+      await access(filePath);
+    } catch {
+      console.warn(`File not found: ${filePath}`);
+      return null;
+    }
 
     // Read the file content
     const sourceCode = await readFile(filePath, "utf-8");

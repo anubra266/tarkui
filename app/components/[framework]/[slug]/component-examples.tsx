@@ -142,7 +142,7 @@ export function ComponentExamples({
           <div className="relative">
             <div className="bg-gradient-to-br from-gray-200/60 to-gray-300/60 dark:from-gray-900/60 dark:to-gray-800/60 backdrop-blur-sm rounded-xl p-6 border border-gray-300/30 dark:border-gray-700/30 group-hover:border-gray-400/50 dark:group-hover:border-gray-600/50 transition-all duration-300 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-900/2 dark:via-white/2 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative z-10">{children}</div>
+              <div className="relative z-10 flex justify-center">{children}</div>
             </div>
 
             {/* Floating indicator */}
