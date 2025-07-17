@@ -16,21 +16,26 @@ export const components: Component[] = [
     slug: "angle-slider",
     category: "Form",
   },
-    {
-      name: "Avatar",
-      slug: "avatar",
-      category: "Data Display",
-    },
-    {
-      name: "Carousel",
-      slug: "carousel",
-      category: "Data Display",
-    },
-  //   {
-  //     name: "Checkbox",
-  //     slug: "checkbox",
-  //     category: "Form",
-  //   },
+  {
+    name: "Avatar",
+    slug: "avatar",
+    category: "Data Display",
+  },
+  {
+    name: "Carousel",
+    slug: "carousel",
+    category: "Data Display",
+  },
+  {
+    name: "Checkbox",
+    slug: "checkbox",
+    category: "Form",
+  },
+  {
+    name: "Checkbox",
+    slug: "checkbox",
+    category: "Form",
+  },
   //   {
   //     name: "Clipboard",
   //     slug: "clipboard",
