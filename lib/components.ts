@@ -16,11 +16,11 @@ export const components: Component[] = [
     slug: "angle-slider",
     category: "Form",
   },
-  //   {
-  //     name: "Avatar",
-  //     slug: "avatar",
-  //     category: "Data Display",
-  //   },
+    {
+      name: "Avatar",
+      slug: "avatar",
+      category: "Data Display",
+    },
   //   {
   //     name: "Carousel",
   //     slug: "carousel",
