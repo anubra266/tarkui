@@ -55,19 +55,21 @@ export const AvatarPreview = () => (
 );
 
 export const CarouselPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-    <div className="relative">
-      <div className="flex space-x-1 mb-2">
-        <div className="w-12 h-8 bg-blue-500/30 border border-blue-500/50 rounded"></div>
-        <div className="w-12 h-8 bg-gray-700/50 border border-gray-600/50 rounded"></div>
-        <div className="w-12 h-8 bg-gray-700/50 border border-gray-600/50 rounded"></div>
+  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-blue-900 rounded-lg p-4 relative overflow-hidden">
+    {/* Simple carousel slides */}
+    <div className="mb-3">
+      <div className="flex space-x-2">
+        <div className="w-16 h-10 bg-gray-700/40 rounded border border-gray-600/50 opacity-60"></div>
+        <div className="w-16 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded border-2 border-blue-400/50"></div>
+        <div className="w-16 h-10 bg-gray-700/40 rounded border border-gray-600/50 opacity-60"></div>
       </div>
-      <div className="flex justify-center space-x-1">
-        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-        <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
-        <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
-      </div>
+    </div>
+
+    {/* Simple dot indicators */}
+    <div className="flex justify-center space-x-1.5">
+      <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+      <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
     </div>
   </div>
 );

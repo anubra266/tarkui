@@ -3,11 +3,13 @@ import { ReactElement } from "react";
 export interface ComponentExampleMeta {
   name: string;
   title: string;
+  span?: number;
 }
 
 export interface ComponentExample {
   id: string;
   title: string;
+  span?: number;
   component: () => ReactElement;
   sourceCode: {
     [framework: string]: string | null;

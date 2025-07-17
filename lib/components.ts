@@ -21,11 +21,11 @@ export const components: Component[] = [
       slug: "avatar",
       category: "Data Display",
     },
-  //   {
-  //     name: "Carousel",
-  //     slug: "carousel",
-  //     category: "Data Display",
-  //   },
+    {
+      name: "Carousel",
+      slug: "carousel",
+      category: "Data Display",
+    },
   //   {
   //     name: "Checkbox",
   //     slug: "checkbox",

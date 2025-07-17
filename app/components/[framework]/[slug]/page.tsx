@@ -136,15 +136,24 @@ export default async function ComponentDetailPage({
           {componentRegistry.examples.map((example, index) => {
             const ExampleComponent = example.component;
             return (
-              <ComponentExamples
+              <div
                 key={example.id}
-                id={example.id}
-                title={example.title}
-                index={index}
-                sourceCode={example.sourceCode}
+                style={
+                  {
+                    "--span": example.span,
+                  } as React.CSSProperties
+                }
+                className="lg:col-[span_var(--span)_/_span_var(--span)]"
               >
-                <ExampleComponent />
-              </ComponentExamples>
+                <ComponentExamples
+                  id={example.id}
+                  title={example.title}
+                  index={index}
+                  sourceCode={example.sourceCode}
+                >
+                  <ExampleComponent />
+                </ComponentExamples>
+              </div>
             );
           })}
         </div>

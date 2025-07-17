@@ -93,6 +93,7 @@ export async function getComponentRegistry(
         examples.push({
           id: exampleMeta.name,
           title: exampleMeta.title,
+          span: exampleMeta.span,
           component: exampleModule.default,
           sourceCode,
         });

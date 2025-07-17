@@ -55,7 +55,7 @@ export function ComponentExamples({
   return (
     <TooltipProvider>
       <div
-        className="group relative bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-500 overflow-hidden hover:scale-[1.02] hover:-translate-y-1"
+        className="group relative bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-500 overflow-hidden hover:scale-[1.02] hover:-translate-y-1 h-full flex flex-col"
         onMouseEnter={() => setHoveredCard(id)}
         onMouseLeave={() => setHoveredCard(null)}
         style={{
@@ -68,7 +68,7 @@ export function ComponentExamples({
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%]"></div>
 
         {/* Preview Section */}
-        <div className="p-8 relative">
+        <div className="p-8 relative flex-1 flex flex-col">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
               {title}
@@ -139,10 +139,12 @@ export function ComponentExamples({
           </div>
 
           {/* Enhanced Preview Container */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-gray-200/60 to-gray-300/60 dark:from-gray-900/60 dark:to-gray-800/60 backdrop-blur-sm rounded-xl p-6 border border-gray-300/30 dark:border-gray-700/30 group-hover:border-gray-400/50 dark:group-hover:border-gray-600/50 transition-all duration-300 relative overflow-hidden">
+          <div className="relative flex-1">
+            <div className="bg-gradient-to-br from-gray-200/60 to-gray-300/60 dark:from-gray-900/60 dark:to-gray-800/60 backdrop-blur-sm rounded-xl p-6 border border-gray-300/30 dark:border-gray-700/30 group-hover:border-gray-400/50 dark:group-hover:border-gray-600/50 transition-all duration-300 relative overflow-hidden h-full">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-900/2 dark:via-white/2 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative z-10 flex justify-center">{children}</div>
+              <div className="relative z-10 flex justify-center items-center h-full">
+                {children}
+              </div>
             </div>
 
             {/* Floating indicator */}
