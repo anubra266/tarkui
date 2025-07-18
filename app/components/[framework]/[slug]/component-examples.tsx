@@ -3,7 +3,7 @@
 import { useState, ReactNode } from "react";
 import { Code, Sparkles, Zap } from "lucide-react";
 import { useParams } from "next/navigation";
-import { getRegistryUrl } from "@/lib/utils";
+import { getRegistryUrlByIndex } from "@/lib/registry.utils";
 import { CodeModal } from "./code-modal";
 import {
   Tooltip,
@@ -37,19 +37,16 @@ export function ComponentExamples({
     ? params.framework[0]
     : params.framework || "react";
 
+  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug || "";
+
+  // Calculate v0 URL directly (synchronous)
+  const registryUrl = getRegistryUrlByIndex(framework, slug, index);
+  const v0Url = `https://v0.dev/chat/api/open?url=${encodeURIComponent(
+    registryUrl
+  )}`;
+
   const openCodeModal = () => {
     setIsModalOpen(true);
-  };
-
-  const getV0Url = (exampleId: string) => {
-    const params = useParams();
-    const slug = Array.isArray(params.slug)
-      ? params.slug[0]
-      : params.slug || "";
-    const registryUrl = getRegistryUrl(framework, slug, exampleId);
-    return `https://v0.dev/chat/api/open?url=${encodeURIComponent(
-      registryUrl
-    )}`;
   };
 
   return (
@@ -79,7 +76,7 @@ export function ComponentExamples({
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a
-                    href={getV0Url(id)}
+                    href={v0Url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group/btn relative overflow-hidden bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/40 hover:to-purple-500/40 border border-blue-500/30 hover:border-blue-400/50 rounded-xl p-2 transition-all duration-300 hover:scale-110 hover:rotate-3 inline-flex items-center justify-center"
@@ -176,7 +173,7 @@ export function ComponentExamples({
           title={title}
           framework={framework}
           slug={Array.isArray(params.slug) ? params.slug[0] : params.slug || ""}
-          exampleId={id}
+          exampleIndex={index}
           sourceCode={
             sourceCode[framework] ||
             "// Source code not available for this framework"

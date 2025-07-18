@@ -1,17 +1,27 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getComponentSource } from "@/lib/registry.server";
+import { getRegistryParams } from "@/lib/registry.utils";
 
 interface RouteParams {
   params: Promise<{
-    framework: string;
-    slug: string;
-    example: string;
+    frameworkCode: string; // Short framework code: r, v, s, sv
+    componentIndex: string; // Component index number in registry
+    exampleIndex: string; // Example index number in component
   }>;
 }
 
 export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
-    const { framework, slug, example } = await params;
+    const registryParams = await getRegistryParams(await params);
+
+    if (!registryParams) {
+      return NextResponse.json(
+        { error: "Invalid component parameters" },
+        { status: 404 }
+      );
+    }
+
+    const { framework, slug, example } = registryParams;
 
     // Remove .json extension if present
     const exampleName = example.replace(/\.json$/, "");

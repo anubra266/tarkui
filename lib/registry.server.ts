@@ -2,6 +2,7 @@ import { readFile, access } from "fs/promises";
 import { join } from "path";
 import type { ComponentRegistry, ComponentExample } from "./registry";
 import { components } from "./components";
+import { loadComponentManifest } from "./registry.utils";
 
 // Server-only function to get source code for a specific framework
 export async function getComponentSource(
@@ -66,11 +67,11 @@ export async function getComponentRegistry(
       return null;
     }
 
-    // Load shared manifest (always expect one to exist)
-    const manifestModule = await import(
-      `@/components/registry/manifest/${slug}.ts`
-    );
-    const manifest = manifestModule.default;
+    // Load shared manifest using centralized function
+    const manifest = await loadComponentManifest(slug);
+    if (!manifest) {
+      return null;
+    }
 
     // Load examples based on manifest (order is determined by array position)
     // Always render React components in the UI, regardless of selected framework

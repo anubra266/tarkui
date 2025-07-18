@@ -9,8 +9,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { getRegistryUrl } from "@/lib/utils";
-import { codeToHtml, createHighlighter } from "shiki";
+import { getRegistryUrlByIndex } from "@/lib/registry.utils";
+import { codeToHtml } from "shiki";
 import { useTheme } from "next-themes";
 
 interface CodeModalProps {
@@ -19,7 +19,7 @@ interface CodeModalProps {
   title: string;
   framework: string;
   slug: string;
-  exampleId: string;
+  exampleIndex: number;
   sourceCode: string;
 }
 
@@ -36,7 +36,7 @@ export function CodeModal({
   title,
   framework,
   slug,
-  exampleId,
+  exampleIndex,
   sourceCode,
 }: CodeModalProps) {
   const [activePackageManager, setActivePackageManager] = useState("pnpm");
@@ -44,6 +44,9 @@ export function CodeModal({
   const [highlightedCode, setHighlightedCode] = useState<string>("");
   const [isLoading, setIsLoading] = useState(true);
   const { resolvedTheme } = useTheme();
+
+  // Calculate registry URL directly (synchronous)
+  const registryUrl = getRegistryUrlByIndex(framework, slug, exampleIndex);
 
   // Get language based on framework
   const getLanguage = (framework: string): string => {
@@ -94,7 +97,6 @@ export function CodeModal({
     }
   }, [isOpen, sourceCode, framework, resolvedTheme]);
 
-  const registryUrl = getRegistryUrl(framework, slug, exampleId);
   const selectedPM = packageManagers.find(
     (pm) => pm.name === activePackageManager
   );

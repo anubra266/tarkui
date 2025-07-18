@@ -37,11 +37,6 @@ export const components: Component[] = [
     category: "Form",
   },
   //   {
-  //     name: "Clipboard",
-  //     slug: "clipboard",
-  //     category: "Utility",
-  //   },
-  //   {
   //     name: "Collapsible",
   //     slug: "collapsible",
   //     category: "Disclosure",

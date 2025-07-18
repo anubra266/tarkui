@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import { loadComponentManifest } from "./registry.utils";
 
 export interface ComponentExampleMeta {
   name: string;
@@ -30,11 +31,11 @@ export interface ComponentRegistry {
 // Dynamic component count functions
 export async function getComponentCount(slug: string): Promise<number> {
   try {
-    // Load the manifest for this component
-    const manifestModule = await import(
-      `@/components/registry/manifest/${slug}.ts`
-    );
-    const manifest = manifestModule.default;
+    // Load the manifest using centralized function
+    const manifest = await loadComponentManifest(slug);
+    if (!manifest) {
+      return 1; // Default to 1 if manifest not found
+    }
 
     // Return the number of examples
     return manifest.examples.length;
