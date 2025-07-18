@@ -36,11 +36,11 @@ export const components: Component[] = [
     slug: "collapsible",
     category: "Disclosure",
   },
-  //   {
-  //     name: "Color Picker",
-  //     slug: "color-picker",
-  //     category: "Form",
-  //   },
+    {
+      name: "Color Picker",
+      slug: "color-picker",
+      category: "Form",
+    },
   //   {
   //     name: "Combobox",
   //     slug: "combobox",
