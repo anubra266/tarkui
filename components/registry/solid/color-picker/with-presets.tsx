@@ -1,7 +1,7 @@
-import { Portal } from "@ark-ui/solid";
 import { ColorPicker, parseColor } from "@ark-ui/solid/color-picker";
 import { PipetteIcon } from "lucide-solid";
 import { For } from "solid-js";
+import { Portal } from "solid-js/web";
 
 export default function WithPresetsColorPicker() {
   const presets = [

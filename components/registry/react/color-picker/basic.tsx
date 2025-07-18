@@ -1,5 +1,5 @@
 "use client";
-import { Portal } from "@ark-ui/react";
+import { Portal } from "@ark-ui/react/portal";
 import { ColorPicker, parseColor } from "@ark-ui/react/color-picker";
 import { PipetteIcon } from "lucide-react";
 

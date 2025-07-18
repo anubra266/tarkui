@@ -1,5 +1,5 @@
 <script>
-  import { Portal } from "@ark-ui/svelte";
+  import { Portal } from "@ark-ui/svelte/portal";
   import { ColorPicker, parseColor } from "@ark-ui/svelte/color-picker";
   import { PipetteIcon } from "lucide-svelte";
 

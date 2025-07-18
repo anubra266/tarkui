@@ -1,5 +1,4 @@
 <script setup>
-import { Portal } from "@ark-ui/vue";
 import { ColorPicker, parseColor } from "@ark-ui/vue/color-picker";
 import { PipetteIcon } from "lucide-vue-next";
 
@@ -40,7 +39,7 @@ const presets = [
         </div>
 
         <!-- Color Picker Content -->
-        <Portal>
+        <Teleport to="body">
           <ColorPicker.Positioner>
             <ColorPicker.Content
               class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-lg space-y-4 z-50 w-80"
@@ -133,7 +132,7 @@ const presets = [
               </div>
             </ColorPicker.Content>
           </ColorPicker.Positioner>
-        </Portal>
+        </Teleport>
       </div>
       <ColorPicker.HiddenInput />
     </ColorPicker.Root>
