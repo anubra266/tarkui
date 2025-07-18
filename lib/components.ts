@@ -32,15 +32,10 @@ export const components: Component[] = [
     category: "Form",
   },
   {
-    name: "Checkbox",
-    slug: "checkbox",
-    category: "Form",
+    name: "Collapsible",
+    slug: "collapsible",
+    category: "Disclosure",
   },
-  //   {
-  //     name: "Collapsible",
-  //     slug: "collapsible",
-  //     category: "Disclosure",
-  //   },
   //   {
   //     name: "Color Picker",
   //     slug: "color-picker",
