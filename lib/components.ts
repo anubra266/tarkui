@@ -41,11 +41,11 @@ export const components: Component[] = [
       slug: "color-picker",
       category: "Form",
     },
-  //   {
-  //     name: "Combobox",
-  //     slug: "combobox",
-  //     category: "Form",
-  //   },
+    {
+      name: "Combobox",
+      slug: "combobox",
+      category: "Form",
+    },
   //   {
   //     name: "Date Picker",
   //     slug: "date-picker",
