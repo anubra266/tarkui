@@ -67,8 +67,13 @@ export function ComponentExamples({
         {/* Preview Section */}
         <div className="p-8 relative flex-1 flex flex-col">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
-              {title}
+            <h3 className="relative text-xl font-semibold transition-all duration-300">
+              <span className="text-gray-900 dark:text-white group-hover:opacity-0 transition-opacity duration-300">
+                {title}
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {title}
+              </span>
             </h3>
 
             {/* Enhanced Action Buttons */}
