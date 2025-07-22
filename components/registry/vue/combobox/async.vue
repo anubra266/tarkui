@@ -165,7 +165,7 @@ watch(inputValue, async (newValue) => {
                   </div>
                 </div>
                 <Combobox.ItemIndicator
-                  class="absolute inset-y-0 right-0 flex items-center pr-3 text-blue-600 dark:text-blue-400"
+                  class="absolute inset-y-0 pr-3 text-blue-600 dark:text-blue-400"
                 >
                   ✓
                 </Combobox.ItemIndicator>

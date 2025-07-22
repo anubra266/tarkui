@@ -108,7 +108,7 @@ export default function MultipleCombobox() {
                     <Combobox.ItemText className="block truncate">
                       {item}
                     </Combobox.ItemText>
-                    <Combobox.ItemIndicator className="absolute inset-y-0 right-0 flex items-center pr-3 text-blue-600 dark:text-blue-400">
+                    <Combobox.ItemIndicator className="absolute inset-y-0 pr-3 text-blue-600 dark:text-blue-400">
                       ✓
                     </Combobox.ItemIndicator>
                   </Combobox.Item>

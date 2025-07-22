@@ -65,7 +65,7 @@ export default function WithHighlightCombobox() {
                           )}
                         </Combobox.Context>
                       </Combobox.ItemText>
-                      <Combobox.ItemIndicator class="absolute inset-y-0 right-0 flex items-center pr-3 text-blue-600 dark:text-blue-400">
+                      <Combobox.ItemIndicator class="absolute inset-y-0 pr-3 text-blue-600 dark:text-blue-400">
                         ✓
                       </Combobox.ItemIndicator>
                     </Combobox.Item>
