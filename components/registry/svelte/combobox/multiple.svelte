@@ -49,10 +49,11 @@
     </Combobox.Label>
 
     <!-- Selected Skills Tags -->
-    <Combobox.Context let:context>
-      {#if context.value.length > 0}
-        <div class="flex flex-wrap gap-1.5 mb-2">
-          {#each context.value as item (item)}
+    <Combobox.Context>
+      {#snippet children(context)}
+        {#if context().value.length > 0}
+          <div class="flex flex-wrap gap-1.5 mb-2">
+            {#each context().value as item (item)}
             <span
               class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 border border-blue-200 dark:border-blue-700"
             >
@@ -60,7 +61,7 @@
               <button
                 type="button"
                 on:click={() =>
-                  context.setValue(context.value.filter((v) => v !== item))}
+                  context().setValue(context().value.filter((v) => v !== item))}
                 class="hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
               >
                 <XIcon class="h-3 w-3" />
@@ -68,7 +69,8 @@
             </span>
           {/each}
         </div>
-      {/if}
+        {/if}
+      {/snippet}
     </Combobox.Context>
 
     <Combobox.Control class="relative">

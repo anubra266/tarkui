@@ -59,13 +59,15 @@
                 class="relative cursor-pointer select-none py-2 pl-3 pr-9 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 data-[highlighted]:bg-gray-50 dark:data-[highlighted]:bg-gray-700 transition-colors"
               >
                 <Combobox.ItemText class="block truncate">
-                  <Combobox.Context let:context>
-                    <Highlight
-                      text={item}
-                      query={context.inputValue}
-                      ignoreCase
-                      class="[&_mark]:bg-blue-100 [&_mark]:dark:bg-blue-900/50 [&_mark]:text-blue-900 [&_mark]:dark:text-blue-100 [&_mark]:font-semibold [&_mark]:px-0.5 [&_mark]:py-0.5 [&_mark]:rounded"
-                    />
+                  <Combobox.Context>
+                    {#snippet children(context)}
+                      <Highlight
+                        text={item}
+                        query={context().inputValue}
+                        ignoreCase
+                        class="[&_mark]:bg-blue-100 [&_mark]:dark:bg-blue-900/50 [&_mark]:text-blue-900 [&_mark]:dark:text-blue-100 [&_mark]:font-semibold [&_mark]:px-0.5 [&_mark]:py-0.5 [&_mark]:rounded"
+                      />
+                    {/snippet}
                   </Combobox.Context>
                 </Combobox.ItemText>
                 <Combobox.ItemIndicator
