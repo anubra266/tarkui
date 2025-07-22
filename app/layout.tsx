@@ -5,6 +5,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 export const metadata: Metadata = {
   title: "Tark UI",
   description: "Beautiful UI components built with Ark UI and Tailwind CSS",
+  openGraph: {
+    images: ["https://tarkui.com/api/og"],
+  },
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
