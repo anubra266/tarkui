@@ -34,14 +34,14 @@ export async function getComponentCount(slug: string): Promise<number> {
     // Load the manifest using centralized function
     const manifest = await loadComponentManifest(slug);
     if (!manifest) {
-      return 1; // Default to 1 if manifest not found
+      return 0; // Default to 1 if manifest not found
     }
 
     // Return the number of examples
     return manifest.examples.length;
   } catch (error) {
     console.warn(`Failed to load manifest for ${slug}:`, error);
-    return 1; // Default to 1 if manifest not found
+    return 0; // Default to 1 if manifest not found
   }
 }
 

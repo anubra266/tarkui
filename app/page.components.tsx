@@ -95,12 +95,13 @@ export function Components({ counts }: ComponentsProps) {
         {filteredComponents.map((component, index) => {
           const PreviewComponent =
             componentPreviews[component.slug as keyof typeof componentPreviews];
-          const count = counts[component.slug] || 1;
+          const count = counts[component.slug];
           return (
             <Link
               key={index}
               href={`/components/${framework}/${component.slug}`}
-              className="group relative bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-300 cursor-pointer overflow-hidden"
+              aria-disabled={count === 0}
+              className="group relative bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-300 cursor-pointer overflow-hidden aria-disabled:opacity-20 aria-disabled:pointer-events-none"
             >
               {/* Card Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

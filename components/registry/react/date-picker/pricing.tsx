@@ -3,16 +3,46 @@ import { DatePicker, parseDate } from "@ark-ui/react/date-picker";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 const NUM_OF_MONTHS = 2;
-export default function TwoMonthsDatePicker() {
+const GOOD_PRICE_THRESHOLD = 100;
+
+const formatDate = (date: Date) => {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+};
+
+const generateMockPriceData = () => {
+  const data: Record<string, number> = {};
+  const today = new Date();
+
+  for (let i = 0; i < 180; i++) {
+    const date = new Date(today);
+    date.setDate(today.getDate() + i);
+    const dateKey = formatDate(date);
+    const randomPrice = Math.floor(Math.random() * (200 - 80 + 1)) + 80;
+    data[dateKey] = randomPrice;
+  }
+  return data;
+};
+
+const mockPriceData = generateMockPriceData();
+
+const isDateUnavailable = (date: Date) => {
+  return !mockPriceData[formatDate(date)];
+};
+
+export default function PricingDatePicker() {
   return (
     <DatePicker.Root
       inline
-      defaultValue={[
-        parseDate(new Date()),
-        parseDate(new Date()).add({ days: 25 }),
-      ]}
-      selectionMode="range"
+      defaultValue={[parseDate(new Date())]}
       timeZone={Intl.DateTimeFormat().resolvedOptions().timeZone}
+      isDateUnavailable={(date) => {
+        return isDateUnavailable(
+          date.toDate(Intl.DateTimeFormat().resolvedOptions().timeZone)
+        );
+      }}
       numOfMonths={NUM_OF_MONTHS}
     >
       <DatePicker.Content className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm py-3 inline-block">
@@ -40,7 +70,9 @@ export default function TwoMonthsDatePicker() {
                           {new Intl.DateTimeFormat("default", {
                             month: "long",
                           }).format(
-                            offset.visibleRange.start.toDate("UTC")
+                            offset.visibleRange.start.toDate(
+                              Intl.DateTimeFormat().resolvedOptions().timeZone
+                            )
                           )}{" "}
                           {offset.visibleRange.start.year}
                         </span>
@@ -52,7 +84,7 @@ export default function TwoMonthsDatePicker() {
                           {api.weekDays.map((weekDay, id) => (
                             <DatePicker.TableHeader
                               key={id}
-                              className="text-sm font-medium text-gray-500 dark:text-gray-400 w-9 h-7 text-center"
+                              className="text-sm font-medium text-gray-500 dark:text-gray-400 w-12 h-7 text-center"
                             >
                               {weekDay.narrow}
                             </DatePicker.TableHeader>
@@ -69,8 +101,33 @@ export default function TwoMonthsDatePicker() {
                                 className="pe-0 ps-0"
                                 visibleRange={offset.visibleRange}
                               >
-                                <DatePicker.TableCellTrigger className="relative w-9 h-9 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:rounded-lg transition-colors data-[in-range]:bg-gray-100 dark:data-[in-range]:bg-gray-700 data-[outside-range]:hidden flex items-center justify-center font-medium data-[today]:after:content-[''] data-[today]:after:absolute data-[today]:after:bottom-0.5 data-[today]:after:w-1 data-[today]:after:h-1 data-[today]:after:bg-gray-900 data-[today]:after:rounded-full dark:data-[today]:after:bg-gray-300 data-[selected]:data-[today]:after:bg-white dark:data-[selected]:data-[today]:after:bg-gray-900 data-[in-range]:rounded-none data-[in-range]:data-[range-start]:bg-gray-900 data-[in-range]:data-[range-start]:text-white dark:data-[in-range]:data-[range-start]:bg-gray-200 dark:data-[in-range]:data-[range-start]:text-gray-900 data-[in-range]:data-[range-end]:bg-gray-900 data-[in-range]:data-[range-end]:text-white dark:data-[in-range]:data-[range-end]:bg-gray-200 dark:data-[in-range]:data-[range-end]:text-gray-900 data-[range-start]:rounded-l-lg data-[range-end]:rounded-r-lg">
-                                  {day.day}
+                                <DatePicker.TableCellTrigger className="group relative w-12 h-12 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:rounded-lg data-[selected]:bg-gray-900 data-[selected]:text-white rounded-lg dark:data-[selected]:bg-gray-200 dark:data-[selected]:text-gray-900 transition-colors data-[outside-range]:hidden flex flex-col items-center justify-center font-medium gap-0.5">
+                                  <span>{day.day}</span>
+                                  {(() => {
+                                    const dateKey = formatDate(
+                                      day.toDate(
+                                        Intl.DateTimeFormat().resolvedOptions()
+                                          .timeZone
+                                      )
+                                    );
+                                    const price = mockPriceData[dateKey];
+                                    if (price) {
+                                      const isGoodPrice =
+                                        price <= GOOD_PRICE_THRESHOLD;
+                                      return (
+                                        <span
+                                          className={`text-xs font-normal ${
+                                            isGoodPrice
+                                              ? "text-green-600 dark:text-green-400 dark:group-data-[selected]:text-green-600"
+                                              : "text-gray-400 dark:text-gray-400 dark:group-data-[selected]:text-gray-600"
+                                          }`}
+                                        >
+                                          ${price}
+                                        </span>
+                                      );
+                                    }
+                                    return null;
+                                  })()}
                                 </DatePicker.TableCellTrigger>
                               </DatePicker.TableCell>
                             ))}

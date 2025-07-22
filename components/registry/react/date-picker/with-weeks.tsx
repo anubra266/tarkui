@@ -1,87 +1,85 @@
 "use client";
-import { DatePicker, parseDate } from "@ark-ui/react/date-picker";
+import { DatePicker, DateValue, parseDate } from "@ark-ui/react/date-picker";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
-const NUM_OF_MONTHS = 2;
-export default function TwoMonthsDatePicker() {
+function getWeekOfYear(dateValue: DateValue) {
+  const date = dateValue.toDate(
+    Intl.DateTimeFormat().resolvedOptions().timeZone
+  );
+  const jan1 = new Date(date.getFullYear(), 0, 1);
+  const dayOfYear =
+    Math.floor(
+      (Number(date) -
+        Number(jan1) +
+        (jan1.getTimezoneOffset() - date.getTimezoneOffset()) * 60000) /
+        86400000
+    ) + 1;
+
+  const jan1Day = jan1.getDay(); // Sunday = 0, Monday = 1, ..., Saturday = 6
+  return Math.ceil((dayOfYear + jan1Day) / 7);
+}
+
+export default function BasicDatePicker() {
   return (
     <DatePicker.Root
       inline
-      defaultValue={[
-        parseDate(new Date()),
-        parseDate(new Date()).add({ days: 25 }),
-      ]}
-      selectionMode="range"
+      defaultValue={[parseDate(new Date())]}
+      fixedWeeks
       timeZone={Intl.DateTimeFormat().resolvedOptions().timeZone}
-      numOfMonths={NUM_OF_MONTHS}
     >
-      <DatePicker.Content className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm py-3 inline-block">
-        <DatePicker.View
-          view="day"
-          className="flex divide-x divide-gray-200 dark:divide-gray-700 relative"
-        >
-          <nav className="absolute w-full top-0 flex justify-between px-3 z-10">
-            <DatePicker.PrevTrigger className="p-2.5 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors text-gray-700 dark:text-gray-300">
-              <ChevronLeftIcon className="w-4 h-4" />
-            </DatePicker.PrevTrigger>
-            <DatePicker.NextTrigger className="p-2.5 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors text-gray-700 dark:text-gray-300">
-              <ChevronRightIcon className="w-4 h-4" />
-            </DatePicker.NextTrigger>
-          </nav>
+      <DatePicker.Content className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm p-3 inline-block">
+        <DatePicker.View view="day">
           <DatePicker.Context>
-            {(api) =>
-              Array.from({ length: NUM_OF_MONTHS }).map((_, index) => {
-                const offset = api.getOffset({ months: index });
-                return (
-                  <div key={index} className="px-3">
-                    <DatePicker.ViewControl className="flex justify-center items-center mx-10 mb-1 h-9">
-                      <DatePicker.ViewTrigger className="z-20 text-sm font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 px-2 py-1 rounded-md transition-colors">
-                        <span>
-                          {new Intl.DateTimeFormat("default", {
-                            month: "long",
-                          }).format(
-                            offset.visibleRange.start.toDate("UTC")
-                          )}{" "}
-                          {offset.visibleRange.start.year}
-                        </span>
-                      </DatePicker.ViewTrigger>
-                    </DatePicker.ViewControl>
-                    <DatePicker.Table>
-                      <DatePicker.TableHead>
-                        <DatePicker.TableRow>
-                          {api.weekDays.map((weekDay, id) => (
-                            <DatePicker.TableHeader
-                              key={id}
-                              className="text-sm font-medium text-gray-500 dark:text-gray-400 w-9 h-7 text-center"
-                            >
-                              {weekDay.narrow}
-                            </DatePicker.TableHeader>
-                          ))}
-                        </DatePicker.TableRow>
-                      </DatePicker.TableHead>
-                      <DatePicker.TableBody>
-                        {offset.weeks.map((week, id) => (
-                          <DatePicker.TableRow key={id}>
-                            {week.map((day, id) => (
-                              <DatePicker.TableCell
-                                key={id}
-                                value={day}
-                                className="pe-0 ps-0"
-                                visibleRange={offset.visibleRange}
-                              >
-                                <DatePicker.TableCellTrigger className="relative w-9 h-9 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:rounded-lg transition-colors data-[in-range]:bg-gray-100 dark:data-[in-range]:bg-gray-700 data-[outside-range]:hidden flex items-center justify-center font-medium data-[today]:after:content-[''] data-[today]:after:absolute data-[today]:after:bottom-0.5 data-[today]:after:w-1 data-[today]:after:h-1 data-[today]:after:bg-gray-900 data-[today]:after:rounded-full dark:data-[today]:after:bg-gray-300 data-[selected]:data-[today]:after:bg-white dark:data-[selected]:data-[today]:after:bg-gray-900 data-[in-range]:rounded-none data-[in-range]:data-[range-start]:bg-gray-900 data-[in-range]:data-[range-start]:text-white dark:data-[in-range]:data-[range-start]:bg-gray-200 dark:data-[in-range]:data-[range-start]:text-gray-900 data-[in-range]:data-[range-end]:bg-gray-900 data-[in-range]:data-[range-end]:text-white dark:data-[in-range]:data-[range-end]:bg-gray-200 dark:data-[in-range]:data-[range-end]:text-gray-900 data-[range-start]:rounded-l-lg data-[range-end]:rounded-r-lg">
-                                  {day.day}
-                                </DatePicker.TableCellTrigger>
-                              </DatePicker.TableCell>
-                            ))}
-                          </DatePicker.TableRow>
+            {(api) => (
+              <>
+                <DatePicker.ViewControl className="flex items-center justify-between mb-3">
+                  <DatePicker.PrevTrigger className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors text-gray-700 dark:text-gray-300">
+                    <ChevronLeftIcon className="w-4 h-4" />
+                  </DatePicker.PrevTrigger>
+                  <DatePicker.ViewTrigger className="text-sm font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 px-2 py-1 rounded-md transition-colors">
+                    <DatePicker.RangeText />
+                  </DatePicker.ViewTrigger>
+                  <DatePicker.NextTrigger className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors text-gray-700 dark:text-gray-300">
+                    <ChevronRightIcon className="w-4 h-4" />
+                  </DatePicker.NextTrigger>
+                </DatePicker.ViewControl>
+                <DatePicker.Table className="w-full">
+                  <DatePicker.TableHead>
+                    <DatePicker.TableRow>
+                      <th />
+                      {api.weekDays.map((weekDay, id) => (
+                        <DatePicker.TableHeader
+                          key={id}
+                          className="text-sm font-medium text-gray-500 dark:text-gray-400 w-9 h-7 text-center"
+                        >
+                          {weekDay.narrow}
+                        </DatePicker.TableHeader>
+                      ))}
+                    </DatePicker.TableRow>
+                  </DatePicker.TableHead>
+                  <DatePicker.TableBody>
+                    {api.weeks.map((week, id) => (
+                      <DatePicker.TableRow key={id}>
+                        <td className="relative w-9 h-9 text-sm transition-colors rounded-lg text-gray-400 dark:text-gray-500 pointer-events-none flex items-center justify-center font-medium">
+                          {getWeekOfYear(week[0])}
+                        </td>
+                        {week.map((day, id) => (
+                          <DatePicker.TableCell
+                            key={id}
+                            value={day}
+                            className="p-0"
+                          >
+                            <DatePicker.TableCellTrigger className="relative w-9 h-9 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors data-[selected]:bg-gray-900 data-[selected]:text-white rounded-lg dark:data-[selected]:bg-gray-200 dark:data-[selected]:text-gray-900 data-[outside-range]:text-gray-400 dark:data-[outside-range]:text-gray-500 flex items-center justify-center font-medium data-[today]:after:content-[''] data-[today]:after:absolute data-[today]:after:bottom-0.5 data-[today]:after:w-1 data-[today]:after:h-1 data-[today]:after:bg-gray-900 data-[today]:after:rounded-full dark:data-[today]:after:bg-gray-300 data-[selected]:data-[today]:after:bg-white dark:data-[selected]:data-[today]:after:bg-gray-900">
+                              {day.day}
+                            </DatePicker.TableCellTrigger>
+                          </DatePicker.TableCell>
                         ))}
-                      </DatePicker.TableBody>
-                    </DatePicker.Table>
-                  </div>
-                );
-              })
-            }
+                      </DatePicker.TableRow>
+                    ))}
+                  </DatePicker.TableBody>
+                </DatePicker.Table>
+              </>
+            )}
           </DatePicker.Context>
         </DatePicker.View>
         <DatePicker.View view="month">

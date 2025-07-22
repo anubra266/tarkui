@@ -43,7 +43,7 @@ export async function loadComponentManifest(
     );
     return manifestModule.default;
   } catch (error) {
-    console.warn(`Failed to load manifest for ${slug}:`, error);
+    console.warn(`Failed to load manifest for ${slug}.`);
     return null;
   }
 }

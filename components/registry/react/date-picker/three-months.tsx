@@ -2,14 +2,14 @@
 import { DatePicker, parseDate } from "@ark-ui/react/date-picker";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
-const NUM_OF_MONTHS = 2;
-export default function TwoMonthsDatePicker() {
+const NUM_OF_MONTHS = 3;
+export default function ThreeMonthsDatePicker() {
   return (
     <DatePicker.Root
       inline
       defaultValue={[
         parseDate(new Date()),
-        parseDate(new Date()).add({ days: 25 }),
+        parseDate(new Date()).add({ days: 48 }),
       ]}
       selectionMode="range"
       timeZone={Intl.DateTimeFormat().resolvedOptions().timeZone}
