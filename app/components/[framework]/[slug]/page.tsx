@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: ComponentDetailPageProps) {
       title: "Component Not Found | Tark UI",
       description: "The requested component could not be found.",
       openGraph: {
-        images: ["https://tarkui.com/api/og"],
+        images: ["https://tarkui.com/open-graph.png"],
       },
     };
   }

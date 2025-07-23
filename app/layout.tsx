@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Tark UI",
   description: "Beautiful UI components built with Ark UI and Tailwind CSS",
   openGraph: {
-    images: ["https://tarkui.com/api/og"],
+    images: ["https://tarkui.com/open-graph.png"],
   },
   icons: {
     icon: [

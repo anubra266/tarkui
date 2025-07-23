@@ -8,15 +8,15 @@ This directory contains the component registry for Tark UI, organized for maximu
 components/registry/
 ├── manifest/                    # Component manifests (shared across all frameworks)
 │   ├── accordion.ts
-│   ├── button.ts
-│   ├── dialog.ts
+│   ├── carousel.ts
+│   ├── checkbox.ts
 │   └── ...
 ├── react/                       # React implementations
 │   ├── accordion/
 │   │   ├── basic-accordion.tsx
 │   │   ├── multiple-items.tsx
 │   │   └── ...
-│   ├── button/
+│   ├── carousel/
 │   │   ├── default-button.tsx
 │   │   └── ...
 │   └── ...

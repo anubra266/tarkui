@@ -51,7 +51,6 @@ export const components: Component[] = [
     slug: "date-picker",
     category: "Form",
   },
-  // TODO
   {
     name: "Dialog",
     slug: "dialog",
