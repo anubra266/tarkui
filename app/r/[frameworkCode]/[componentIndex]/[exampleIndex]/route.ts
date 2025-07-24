@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getComponentSource } from "@/lib/registry.server";
-import { getRegistryParams } from "@/lib/registry.utils";
+import { getRegistryParams, loadComponentManifest } from "@/lib/registry.utils";
 
 interface RouteParams {
   params: Promise<{
@@ -69,6 +69,13 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const fileName = `${exampleName}.${fileExtension}`;
     const dependencies = getDependencies(framework);
 
+    // Load manifest to get CSS and CSS variables from the specific example
+    const manifest = await loadComponentManifest(slug);
+    const manifestExample = manifest?.examples.find(
+      (ex) => ex.name === exampleName
+    );
+    const { css, cssVars } = manifestExample || {};
+
     // Create the shadcn-compatible registry response
     const registryItem = {
       $schema: "https://ui.shadcn.com/schema/registry-item.json",
@@ -87,6 +94,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         tags: [slug, "ark-ui"],
         colSpan: 2,
       },
+      ...(css && { css }), // Include css if present
+      ...(cssVars && { cssVars }), // Include cssVars if present
     };
 
     return NextResponse.json(registryItem);

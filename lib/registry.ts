@@ -5,6 +5,8 @@ export interface ComponentExampleMeta {
   name: string;
   title: string;
   span?: number;
+  cssVars?: Record<"theme", Record<string, string>>;
+  css?: Record<string, Record<string, any>>;
 }
 
 export interface ComponentExample {
