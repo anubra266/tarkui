@@ -2,11 +2,10 @@ import { ComponentExampleMeta, ComponentManifest } from "@/lib/registry";
 
 const cssVars: ComponentExampleMeta["cssVars"] = {
   theme: {
-    "ease-emphasized-in": "cubic-bezier(0.05,0.7,0.1,1.0)",
-    "ease-emphasized-out": "cubic-bezier(0.3,0.0,0.8,0.15)",
-
-    "animate-backdrop-out": "fade-out 200ms var(--ease-emphasized-out)",
-    "animate-backdrop-in": "fade-in 250ms var(--ease-emphasized-in)",
+    "animate-backdrop-out": "fade-out 200ms cubic-bezier(0.3,0.0,0.8,0.15)",
+    "animate-backdrop-in": "fade-in 250ms cubic-bezier(0.05,0.7,0.1,1.0)",
+    "animate-dialog-out": "slide-out 200ms cubic-bezier(0.3,0.0,0.8,0.15)",
+    "animate-dialog-in": "slide-in 400ms cubic-bezier(0.05,0.7,0.1,1.0)",
   },
 };
 
@@ -25,6 +24,26 @@ const css: ComponentExampleMeta["css"] = {
     },
     "100%": {
       opacity: 0,
+    },
+  },
+  "@keyframes slide-in": {
+    "0%": {
+      opacity: "0",
+      transform: "translateY(64px)",
+    },
+    "100%": {
+      opacity: "1",
+      transform: "translateY(0)",
+    },
+  },
+  "@keyframes slide-out": {
+    "0%": {
+      opacity: "1",
+      transform: "translateY(0)",
+    },
+    "100%": {
+      opacity: "0",
+      transform: "translateY(64px)",
     },
   },
 };
