@@ -98,7 +98,7 @@ export default function PricingDatePicker() {
                                 class="pe-0 ps-0"
                                 visibleRange={offset.visibleRange}
                               >
-                                <DatePicker.TableCellTrigger class="group relative w-12 h-12 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:rounded-lg data-[selected]:bg-gray-900 data-[selected]:text-white rounded-lg dark:data-[selected]:bg-gray-200 dark:data-[selected]:text-gray-900 transition-colors data-[outside-range]:hidden flex flex-col items-center justify-center font-medium gap-0.5">
+                                <DatePicker.TableCellTrigger class="group relative w-12 h-12 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:rounded-lg data-[selected]:bg-gray-900 data-[selected]:text-white rounded-lg dark:data-[selected]:bg-gray-200 dark:data-[selected]:text-gray-900 transition-colors data-[outside-range]:hidden data-[unavailable]:text-gray-400 dark:data-[unavailable]:text-gray-500 data-[unavailable]:line-through data-[unavailable]:pointer-events-none cursor-pointer flex flex-col items-center justify-center font-medium gap-0.5">
                                   <span>{day.day}</span>
                                   {(() => {
                                     const dateKey = formatDate(
