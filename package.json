@@ -13,6 +13,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@ark-ui/react": "^5.18.2",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-select": "^2.2.5",
     "@radix-ui/react-tooltip": "^1.2.7",
@@ -28,7 +29,6 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@ark-ui/react": "latest",
     "@ark-ui/solid": "latest",
     "@ark-ui/svelte": "latest",
     "@ark-ui/vue": "latest",

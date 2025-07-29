@@ -132,6 +132,9 @@ const config: Config = {
 
         "dialog-in": "slide-in 400ms cubic-bezier(0.05,0.7,0.1,1.0)",
         "dialog-out": "slide-out 200ms cubic-bezier(0.3,0.0,0.8,0.15)",
+
+        "fade-in": "fade-in 0.25s ease-out",
+        "fade-out": "fade-out 0.2s ease-out",
       },
     },
   },

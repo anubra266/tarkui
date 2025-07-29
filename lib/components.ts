@@ -67,11 +67,6 @@ export const components: Component[] = [
     category: "Form",
   },
   {
-    name: "Fieldset",
-    slug: "fieldset",
-    category: "Form",
-  },
-  {
     name: "File Upload",
     slug: "file-upload",
     category: "Form",
