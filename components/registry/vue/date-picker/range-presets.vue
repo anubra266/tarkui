@@ -29,7 +29,7 @@ const presets = [
     "
   >
     <DatePicker.Content
-      class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm p-3 flex"
+      class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xs p-3 flex"
     >
       <div
         class="border-r border-gray-200 dark:border-gray-700 pr-3 w-28 space-y-1"
@@ -65,7 +65,7 @@ const presets = [
               <ChevronRight class="w-4 h-4" />
             </DatePicker.NextTrigger>
           </DatePicker.ViewControl>
-          <DatePicker.Table class="w-full">
+          <DatePicker.Table class="w-full border-separate border-spacing-y-0.5">
             <DatePicker.TableHead>
               <DatePicker.TableRow>
                 <DatePicker.TableHeader
@@ -86,7 +86,7 @@ const presets = [
                   class="pe-0 ps-0"
                 >
                   <DatePicker.TableCellTrigger
-                    class="relative w-9 h-9 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:rounded-lg transition-colors data-[in-range]:bg-gray-100 dark:data-[in-range]:bg-gray-700 data-[outside-range]:pointer-events-none data-[outside-range]:text-gray-400 dark:data-[outside-range]:text-gray-500 flex items-center justify-center font-medium data-[today]:after:content-[''] data-[today]:after:absolute data-[today]:after:bottom-0.5 data-[today]:after:w-1 data-[today]:after:h-1 data-[today]:after:bg-gray-900 data-[today]:after:rounded-full dark:data-[today]:after:bg-gray-300 data-[selected]:data-[today]:after:bg-white dark:data-[selected]:data-[today]:after:bg-gray-900 data-[in-range]:rounded-none data-[in-range]:data-[range-start]:bg-gray-900 data-[in-range]:data-[range-start]:text-white dark:data-[in-range]:data-[range-start]:bg-gray-200 dark:data-[in-range]:data-[range-start]:text-gray-900 data-[in-range]:data-[range-end]:bg-gray-900 data-[in-range]:data-[range-end]:text-white dark:data-[in-range]:data-[range-end]:bg-gray-200 dark:data-[in-range]:data-[range-end]:text-gray-900 data-[range-start]:rounded-l-lg data-[range-end]:rounded-r-lg"
+                    class="relative w-9 h-9 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:rounded-lg transition-colors data-in-range:bg-gray-100 dark:data-in-range:bg-gray-700 data-outside-range:pointer-events-none data-outside-range:text-gray-400 dark:data-outside-range:text-gray-500 flex items-center justify-center font-medium data-today:after:content-[''] data-today:after:absolute data-today:after:bottom-0.5 data-today:after:w-1 data-today:after:h-1 data-today:after:bg-gray-900 data-today:after:rounded-full dark:data-today:after:bg-gray-300 data-selected:data-today:after:bg-white dark:data-selected:data-today:after:bg-gray-900 data-in-range:rounded-none data-in-range:data-range-start:bg-gray-900 data-in-range:data-range-start:text-white dark:data-in-range:data-range-start:bg-gray-200 dark:data-in-range:data-range-start:text-gray-900 data-in-range:data-range-end:bg-gray-900 data-in-range:data-range-end:text-white dark:data-in-range:data-range-end:bg-gray-200 dark:data-in-range:data-range-end:text-gray-900 data-range-start:rounded-l-lg data-range-end:rounded-r-lg"
                   >
                     {{ day.day }}
                   </DatePicker.TableCellTrigger>
@@ -117,7 +117,7 @@ const presets = [
               <ChevronRight class="w-4 h-4" />
             </DatePicker.NextTrigger>
           </DatePicker.ViewControl>
-          <DatePicker.Table class="w-full">
+          <DatePicker.Table class="w-full border-separate border-spacing-y-0.5">
             <DatePicker.TableBody>
               <DatePicker.TableRow
                 v-for="(months, id) in api.getMonthsGrid({
@@ -132,7 +132,7 @@ const presets = [
                   :value="month.value"
                 >
                   <DatePicker.TableCellTrigger
-                    class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-[selected]:bg-gray-900 data-[selected]:text-white data-[selected]:rounded-lg dark:data-[selected]:bg-gray-200 dark:data-[selected]:text-gray-900 flex items-center justify-center font-medium"
+                    class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-selected:bg-gray-900 data-selected:text-white data-selected:rounded-lg dark:data-selected:bg-gray-200 dark:data-selected:text-gray-900 flex items-center justify-center font-medium"
                   >
                     {{ month.label }}
                   </DatePicker.TableCellTrigger>
@@ -163,7 +163,7 @@ const presets = [
               <ChevronRight class="w-4 h-4" />
             </DatePicker.NextTrigger>
           </DatePicker.ViewControl>
-          <DatePicker.Table class="w-full">
+          <DatePicker.Table class="w-full border-separate border-spacing-y-0.5">
             <DatePicker.TableBody>
               <DatePicker.TableRow
                 v-for="(years, id) in api.getYearsGrid({ columns: 4 })"
@@ -175,7 +175,7 @@ const presets = [
                   :value="year.value"
                 >
                   <DatePicker.TableCellTrigger
-                    class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-[selected]:bg-gray-900 data-[selected]:text-white data-[selected]:rounded-lg dark:data-[selected]:bg-gray-200 dark:data-[selected]:text-gray-900 flex items-center justify-center font-medium"
+                    class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-selected:bg-gray-900 data-selected:text-white data-selected:rounded-lg dark:data-selected:bg-gray-200 dark:data-selected:text-gray-900 flex items-center justify-center font-medium"
                   >
                     {{ year.label }}
                   </DatePicker.TableCellTrigger>

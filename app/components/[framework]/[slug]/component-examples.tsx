@@ -52,7 +52,7 @@ export function ComponentExamples({
   return (
     <TooltipProvider>
       <div
-        className="group relative bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-500 overflow-hidden hover:scale-[1.02] hover:-translate-y-1 h-full flex flex-col"
+        className="group relative bg-linear-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs rounded-2xl border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-500 overflow-hidden hover:scale-[1.02] hover:-translate-y-1 h-full flex flex-col"
         onMouseEnter={() => setHoveredCard(id)}
         onMouseLeave={() => setHoveredCard(null)}
         style={{
@@ -61,8 +61,8 @@ export function ComponentExamples({
         }}
       >
         {/* Enhanced Card Glow Effect */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%]"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 transform -skew-x-12 -translate-x-full group-hover:translate-x-[200%]"></div>
 
         {/* Preview Section */}
         <div className="p-8 relative flex-1 flex flex-col">
@@ -71,7 +71,7 @@ export function ComponentExamples({
               <span className="text-gray-900 dark:text-white group-hover:opacity-0 transition-opacity duration-300">
                 {title}
               </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="absolute inset-0 bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {title}
               </span>
             </h3>
@@ -84,9 +84,9 @@ export function ComponentExamples({
                     href={v0Url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/btn relative overflow-hidden bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/40 hover:to-purple-500/40 border border-blue-500/30 hover:border-blue-400/50 rounded-xl p-2 transition-all duration-300 hover:scale-110 hover:rotate-3 inline-flex items-center justify-center"
+                    className="group/btn relative overflow-hidden bg-linear-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/40 hover:to-purple-500/40 border border-blue-500/30 hover:border-blue-400/50 rounded-xl p-2 transition-all duration-300 hover:scale-110 hover:rotate-3 inline-flex items-center justify-center"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover/btn:opacity-20 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-500 opacity-0 group-hover/btn:opacity-20 transition-opacity duration-300"></div>
                     <svg
                       height="16"
                       xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@ export function ComponentExamples({
                 </TooltipTrigger>
                 <TooltipContent
                   side="top"
-                  className="bg-gradient-to-r from-blue-500/90 to-purple-500/90 backdrop-blur-sm border-blue-400/50 text-white shadow-xl"
+                  className="bg-linear-to-r from-blue-500/90 to-purple-500/90 backdrop-blur-xs border-blue-400/50 text-white shadow-xl"
                 >
                   <div className="flex items-center gap-2">
                     <Sparkles className="w-3 h-3" />
@@ -120,16 +120,16 @@ export function ComponentExamples({
                 <TooltipTrigger asChild>
                   <button
                     onClick={openCodeModal}
-                    className="group/btn relative overflow-hidden bg-gradient-to-r from-emerald-500/20 to-teal-500/20 hover:from-emerald-500/40 hover:to-teal-500/40 border border-emerald-500/30 hover:border-emerald-400/50 rounded-xl p-2 transition-all duration-300 hover:scale-110 hover:-rotate-3"
+                    className="group/btn relative overflow-hidden bg-linear-to-r from-emerald-500/20 to-teal-500/20 hover:from-emerald-500/40 hover:to-teal-500/40 border border-emerald-500/30 hover:border-emerald-400/50 rounded-xl p-2 transition-all duration-300 hover:scale-110 hover:-rotate-3"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 opacity-0 group-hover/btn:opacity-20 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-linear-to-r from-emerald-500 to-teal-500 opacity-0 group-hover/btn:opacity-20 transition-opacity duration-300"></div>
                     <Code className="w-4 h-4 text-emerald-400 group-hover/btn:text-emerald-100 relative z-10 group-hover/btn:scale-110 transition-all duration-200" />
                     <Sparkles className="w-3 h-3 text-yellow-400 absolute -top-1 -right-1 opacity-0 group-hover/btn:opacity-100 transition-all duration-300 animate-pulse delay-100" />
                   </button>
                 </TooltipTrigger>
                 <TooltipContent
                   side="top"
-                  className="bg-gradient-to-r from-emerald-500/90 to-teal-500/90 backdrop-blur-sm border-emerald-400/50 text-white shadow-xl"
+                  className="bg-linear-to-r from-emerald-500/90 to-teal-500/90 backdrop-blur-xs border-emerald-400/50 text-white shadow-xl"
                 >
                   <div className="flex items-center gap-2">
                     <Code className="w-3 h-3" />
@@ -142,8 +142,8 @@ export function ComponentExamples({
 
           {/* Enhanced Preview Container */}
           <div className="relative flex-1">
-            <div className="bg-gradient-to-br from-gray-200/60 to-gray-300/60 dark:from-gray-900/60 dark:to-gray-800/60 backdrop-blur-sm rounded-xl p-6 border border-gray-300/30 dark:border-gray-700/30 group-hover:border-gray-400/50 dark:group-hover:border-gray-600/50 transition-all duration-300 relative overflow-hidden h-full">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-900/2 dark:via-white/2 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="bg-linear-to-br from-gray-200/60 to-gray-300/60 dark:from-gray-900/60 dark:to-gray-800/60 backdrop-blur-xs rounded-xl p-6 border border-gray-300/30 dark:border-gray-700/30 group-hover:border-gray-400/50 dark:group-hover:border-gray-600/50 transition-all duration-300 relative overflow-hidden h-full">
+              <div className="absolute inset-0 bg-linear-to-r from-transparent via-gray-900/2 dark:via-white/2 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10 flex justify-center items-center h-full">
                 {children}
               </div>
@@ -151,7 +151,7 @@ export function ComponentExamples({
 
             {/* Floating indicator */}
             {hoveredCard === id && (
-              <div className="absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full p-2 animate-bounce">
+              <div className="absolute -top-2 -right-2 bg-linear-to-r from-blue-500 to-purple-500 rounded-full p-2 animate-bounce">
                 <div className="w-2 h-2 bg-white rounded-full"></div>
               </div>
             )}

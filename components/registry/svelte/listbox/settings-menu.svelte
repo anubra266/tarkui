@@ -133,7 +133,7 @@
       Configure your application settings
     </div>
     <Listbox.Content
-      class="bg-[var(--listbox-bg)] border border-[var(--listbox-border)] rounded-lg px-1 py-2 w-96 max-h-80 overflow-y-auto shadow-lg"
+      class="bg-(--listbox-bg) border border-(--listbox-border) rounded-lg px-1 py-2 w-96 max-h-80 overflow-y-auto shadow-lg"
     >
       {#each Object.entries(groupedItems) as [category, items] (category)}
         <div>
@@ -146,7 +146,7 @@
             {@const IconComponent = setting.icon}
             <Listbox.Item
               item={setting}
-              class="flex items-center justify-between px-3 py-3 mx-1 rounded-md cursor-pointer text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 data-[highlighted]:bg-gray-100 dark:data-[highlighted]:bg-gray-800 data-[selected]:bg-blue-50 dark:data-[selected]:bg-blue-900/20 data-[selected]:text-blue-700 dark:data-[selected]:text-blue-300 transition-colors"
+              class="flex items-center justify-between px-3 py-3 mx-1 rounded-md cursor-pointer text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 data-selected:bg-blue-50 dark:data-selected:bg-blue-900/20 data-selected:text-blue-700 dark:data-selected:text-blue-300 transition-colors"
             >
               <div class="flex items-center gap-3 flex-1">
                 <IconComponent class="w-5 h-5 {getIconColor(setting.value)}" />

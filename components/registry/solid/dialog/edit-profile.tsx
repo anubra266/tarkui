@@ -29,7 +29,7 @@ export default function EditProfileDialog() {
         </button>
       </Dialog.Trigger>
       <Portal>
-        <Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" />
+        <Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs" />
         <Dialog.Positioner class="fixed inset-0 z-50 flex items-center justify-center p-4">
           <Dialog.Content class="relative w-full max-w-lg rounded-lg bg-white dark:bg-gray-900 shadow-lg overflow-hidden">
             <Dialog.CloseTrigger asChild>
@@ -84,7 +84,7 @@ export default function EditProfileDialog() {
                         onInput={(e) =>
                           handleInputChange("firstName", e.currentTarget.value)
                         }
-                        class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
+                        class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
                       />
                     </div>
 
@@ -98,7 +98,7 @@ export default function EditProfileDialog() {
                         onInput={(e) =>
                           handleInputChange("lastName", e.currentTarget.value)
                         }
-                        class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
+                        class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
                       />
                     </div>
                   </div>
@@ -114,7 +114,7 @@ export default function EditProfileDialog() {
                         onInput={(e) =>
                           handleInputChange("username", e.currentTarget.value)
                         }
-                        class="w-full px-3 py-2 pr-10 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
+                        class="w-full px-3 py-2 pr-10 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
                       />
                       <Check class="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-green-600 dark:text-green-400" />
                     </div>
@@ -134,7 +134,7 @@ export default function EditProfileDialog() {
                         onInput={(e) =>
                           handleInputChange("website", e.currentTarget.value)
                         }
-                        class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-r-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
+                        class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-r-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
                       />
                     </div>
                   </div>
@@ -149,7 +149,7 @@ export default function EditProfileDialog() {
                         handleInputChange("biography", e.currentTarget.value)
                       }
                       rows={3}
-                      class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors resize-none"
+                      class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors resize-none"
                     />
                     <div class="text-right">
                       <span class="text-xs text-gray-500 dark:text-gray-400">

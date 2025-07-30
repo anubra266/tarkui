@@ -21,7 +21,7 @@ import { ChevronUp, ChevronDown, Move } from "lucide-vue-next";
             <Move class="w-4 h-4" />
           </NumberInput.Scrubber>
           <NumberInput.Input
-            class="w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-medium pl-10 pr-3 py-1 border-none outline-none focus:outline-none focus-visible:outline-none"
+            class="w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-medium pl-10 pr-3 py-1 border-none outline-hidden focus:outline-hidden focus-visible:outline-hidden"
           />
         </div>
         <NumberInput.IncrementTrigger

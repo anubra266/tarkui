@@ -16,8 +16,8 @@ export default function DoubleClick() {
           </Editable.Label>
         </div>
         <Editable.Area class="relative">
-          <Editable.Input class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors min-h-[2.5rem]" />
-          <Editable.Preview class="w-full px-3 py-2 text-sm border border-dashed border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white hover:border-blue-400 dark:hover:border-blue-500 cursor-pointer transition-colors min-h-[2.5rem]" />
+          <Editable.Input class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors min-h-10" />
+          <Editable.Preview class="w-full px-3 py-2 text-sm border border-dashed border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white hover:border-blue-400 dark:hover:border-blue-500 cursor-pointer transition-colors min-h-10" />
         </Editable.Area>
         <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">
           💡 Double-click the text above to start editing

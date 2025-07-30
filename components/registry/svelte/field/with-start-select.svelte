@@ -12,7 +12,7 @@
   >
     <div class="relative">
       <Field.Select
-        class="appearance-none border-0 bg-transparent pl-3 pr-8 py-2 text-sm text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-0"
+        class="appearance-none border-0 bg-transparent pl-3 pr-8 py-2 text-sm text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-0"
       >
         <option>https://</option>
         <option>http://</option>
@@ -26,7 +26,7 @@
     <Field.Input
       type="text"
       placeholder="api.myservice.io"
-      class="min-w-0 flex-1 border-0 bg-transparent px-3 py-2 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-0"
+      class="min-w-0 flex-1 border-0 bg-transparent px-3 py-2 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-hidden focus:ring-0"
     />
   </div>
 </Field.Root>

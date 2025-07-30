@@ -4,7 +4,7 @@ export default function AvatarWithStatus() {
   return (
     <div className="relative">
       <Avatar.Root className="w-16 h-16">
-        <Avatar.Fallback className="w-full h-full bg-gradient-to-br from-orange-500 to-red-600 text-white font-semibold text-lg flex items-center justify-center rounded-full">
+        <Avatar.Fallback className="w-full h-full bg-linear-to-br from-orange-500 to-red-600 text-white font-semibold text-lg flex items-center justify-center rounded-full">
           SM
         </Avatar.Fallback>
         <Avatar.Image

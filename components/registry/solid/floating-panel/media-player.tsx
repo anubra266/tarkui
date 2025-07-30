@@ -39,7 +39,7 @@ export default function MediaPlayer() {
         class="w-full h-full"
       >
         <FloatingPanel.Positioner class="fixed">
-          <FloatingPanel.Content class="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border border-gray-700 rounded-lg shadow-lg text-white data-[stage=maximized]:rounded-none">
+          <FloatingPanel.Content class="bg-linear-to-br from-indigo-900 via-purple-900 to-pink-900 border border-gray-700 rounded-lg shadow-lg text-white data-[stage=maximized]:rounded-none">
             <FloatingPanel.Header class="flex items-center justify-between p-4 rounded-t-lg">
               <h3 class="text-sm font-medium opacity-90">Now Playing</h3>
               <FloatingPanel.CloseTrigger class="w-6 h-6 flex items-center justify-center text-gray-300 hover:text-white rounded hover:bg-white/10 transition-colors">

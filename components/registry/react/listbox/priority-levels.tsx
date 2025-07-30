@@ -62,14 +62,14 @@ export default function PriorityLevels() {
         <Listbox.Label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 block">
           Task Priority
         </Listbox.Label>
-        <Listbox.Content className="bg-[var(--listbox-bg)] border border-[var(--listbox-border)] rounded-lg px-1 py-2 w-80 shadow-lg">
+        <Listbox.Content className="bg-(--listbox-bg) border border-(--listbox-border) rounded-lg px-1 py-2 w-80 shadow-lg">
           {collection.items.map((priority) => {
             const Icon = priority.icon;
             return (
               <Listbox.Item
                 key={priority.value}
                 item={priority}
-                className="flex items-center justify-between px-3 py-3 mx-1 rounded-md cursor-pointer text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 data-[highlighted]:bg-gray-100 dark:data-[highlighted]:bg-gray-800 transition-colors"
+                className="flex items-center justify-between px-3 py-3 mx-1 rounded-md cursor-pointer text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 transition-colors"
               >
                 <div className="flex items-center gap-3">
                   <div

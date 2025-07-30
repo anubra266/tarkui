@@ -14,12 +14,12 @@ import { ChevronDown } from "lucide-vue-next";
       <Field.Input
         type="text"
         placeholder="myproject"
-        class="min-w-0 flex-1 border-0 bg-transparent px-3 py-2 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-0"
+        class="min-w-0 flex-1 border-0 bg-transparent px-3 py-2 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-hidden focus:ring-0"
       />
       <div class="border-l border-gray-300 dark:border-gray-600" />
       <div class="relative">
         <Field.Select
-          class="appearance-none border-0 bg-transparent pl-3 pr-8 py-2 text-sm text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-0"
+          class="appearance-none border-0 bg-transparent pl-3 pr-8 py-2 text-sm text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-0"
         >
           <option>.com</option>
           <option>.org</option>

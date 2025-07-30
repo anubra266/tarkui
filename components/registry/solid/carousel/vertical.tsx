@@ -45,7 +45,7 @@ export default function VerticalCarousel() {
             {(_, index) => (
               <Carousel.Indicator
                 index={index()}
-                class="w-2 h-8 rounded-full bg-gray-300 dark:bg-gray-600 data-[current]:bg-blue-500 dark:data-[current]:bg-blue-400 transition-colors cursor-pointer"
+                class="w-2 h-8 rounded-full bg-gray-300 dark:bg-gray-600 data-current:bg-blue-500 dark:data-current:bg-blue-400 transition-colors cursor-pointer"
               />
             )}
           </For>

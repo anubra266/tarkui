@@ -105,7 +105,7 @@ const defaultFiles = [
             >
               <!-- File Icon/Preview -->
               <div
-                class="w-10 h-10 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center flex-shrink-0 overflow-hidden"
+                class="w-10 h-10 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center shrink-0 overflow-hidden"
               >
                 <FileUpload.ItemPreview
                   v-if="file.type.startsWith('image/')"
@@ -134,7 +134,7 @@ const defaultFiles = [
 
               <!-- Delete Button -->
               <FileUpload.ItemDeleteTrigger
-                class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 flex-shrink-0"
+                class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 shrink-0"
               >
                 <X class="w-4 h-4" />
               </FileUpload.ItemDeleteTrigger>
@@ -144,7 +144,7 @@ const defaultFiles = [
 
         <!-- Remove All Button -->
         <FileUpload.ClearTrigger
-          class="inline-flex items-center px-3 py-1.5 text-xs font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2"
+          class="inline-flex items-center px-3 py-1.5 text-xs font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2"
         >
           Remove all files
         </FileUpload.ClearTrigger>

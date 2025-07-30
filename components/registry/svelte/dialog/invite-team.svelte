@@ -37,7 +37,7 @@
     </button>
   </Dialog.Trigger>
   <Portal>
-    <Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" />
+    <Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs" />
     <Dialog.Positioner
       class="fixed inset-0 z-50 flex items-center justify-center p-4"
     >
@@ -86,7 +86,7 @@
                     placeholder={index === 2 ? "email@acme.com" : ""}
                     value={email}
                     on:input={(e) => updateEmail(index, e.target.value)}
-                    class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
+                    class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
                   />
                 {/each}
               </div>
@@ -118,7 +118,7 @@
                   type="text"
                   value={state.magicLink}
                   readonly
-                  class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-l-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none"
+                  class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-l-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden"
                 />
                 <button
                   on:click={copyToClipboard}

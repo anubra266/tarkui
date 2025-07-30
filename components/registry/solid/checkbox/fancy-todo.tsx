@@ -12,7 +12,7 @@ export default function FancyTodoCheckbox() {
         onCheckedChange={(details) => setCompleted(details.checked === true)}
         class="flex items-center gap-3 cursor-pointer"
       >
-        <Checkbox.Control class="w-5 h-5 bg-white border-2 border-gray-300 rounded-full data-[state=checked]:bg-green-600 data-[state=checked]:border-green-600 data-[hover]:border-gray-400 dark:bg-gray-900 dark:border-gray-600 dark:data-[state=checked]:bg-green-400 dark:data-[state=checked]:border-green-400 dark:data-[hover]:border-gray-400 transition-all duration-200 flex items-center justify-center">
+        <Checkbox.Control class="w-5 h-5 bg-white border-2 border-gray-300 rounded-full data-[state=checked]:bg-green-600 data-[state=checked]:border-green-600 data-hover:border-gray-400 dark:bg-gray-900 dark:border-gray-600 dark:data-[state=checked]:bg-green-400 dark:data-[state=checked]:border-green-400 dark:data-hover:border-gray-400 transition-all duration-200 flex items-center justify-center">
           <Checkbox.Indicator>
             <CheckIcon class="w-3.5 h-3.5 text-white dark:text-green-800" />
           </Checkbox.Indicator>

@@ -8,14 +8,14 @@ export default function WithMarksAngleSlider() {
       step={10}
       className="relative flex items-center justify-center"
     >
-      <AngleSlider.Control className="[--size:200px] [--thumb-color:rgb(59_130_246)] dark:[--thumb-color:rgb(96_165_250)] [--thumb-size:40px] [--thumb-indicator-size:min(var(--thumb-size),calc(var(--size)/2))] w-[var(--size)] h-[var(--size)] rounded-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 flex items-center justify-center user-select:none relative">
-        <AngleSlider.Thumb className="absolute top-0 right-0 bottom-0 left-[calc(50%-1.5px)] pointer-events-none h-full w-[3px] outline-none before:absolute before:right-0 before:top-0 before:h-[var(--thumb-indicator-size)] before:bg-[var(--thumb-color)] before:w-[3px] before:rounded-full" />
-        <AngleSlider.MarkerGroup className="absolute inset-[1px] rounded-[var(--size)] pointer-events-none">
+      <AngleSlider.Control className="[--size:200px] [--thumb-color:rgb(59_130_246)] dark:[--thumb-color:rgb(96_165_250)] [--thumb-size:40px] [--thumb-indicator-size:min(var(--thumb-size),calc(var(--size)/2))] w-(--size) h-(--size) rounded-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-600 flex items-center justify-center user-select:none relative">
+        <AngleSlider.Thumb className="absolute top-0 right-0 bottom-0 left-[calc(50%-1.5px)] pointer-events-none h-full w-[3px] outline-hidden before:absolute before:right-0 before:top-0 before:h-(--thumb-indicator-size) before:bg-(--thumb-color) before:w-[3px] before:rounded-full" />
+        <AngleSlider.MarkerGroup className="absolute inset-px rounded-(--size) pointer-events-none">
           {[0, 45, 90, 135, 180, 225, 270, 315].map((value, i) => (
             <AngleSlider.Marker
               key={i}
               value={value}
-              className="w-0.5 absolute top-0 bottom-0 left-[calc(50%-1px)] [--marker-color:rgb(156_163_175)] dark:[--marker-color:rgb(209_213_219)] before:absolute before:top-[calc(var(--thumb-size)/3)] before:left-[0.5px] before:h-[calc(var(--thumb-size)/1.5)] before:bg-[var(--marker-color)] before:w-[2px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full"
+              className="w-0.5 absolute top-0 bottom-0 left-[calc(50%-1px)] [--marker-color:rgb(156_163_175)] dark:[--marker-color:rgb(209_213_219)] before:absolute before:top-[calc(var(--thumb-size)/3)] before:left-[0.5px] before:h-[calc(var(--thumb-size)/1.5)] before:bg-(--marker-color) before:w-[2px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full"
             />
           ))}
         </AngleSlider.MarkerGroup>

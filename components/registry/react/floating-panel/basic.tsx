@@ -7,13 +7,13 @@ import { ArrowDownLeft, Maximize2, Minus, X, GripVertical } from "lucide-react";
 export default function Basic() {
   return (
     <FloatingPanel.Root>
-      <FloatingPanel.Trigger className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+      <FloatingPanel.Trigger className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
         Open Panel
       </FloatingPanel.Trigger>
 
       <Portal>
         <FloatingPanel.Positioner className="z-50">
-          <FloatingPanel.Content className="flex flex-col bg-white dark:bg-gray-900 rounded-lg data-[maximized]:rounded-none border border-gray-200 dark:border-gray-700 w-full shadow-md min-w-80">
+          <FloatingPanel.Content className="flex flex-col bg-white dark:bg-gray-900 rounded-lg data-maximized:rounded-none border border-gray-200 dark:border-gray-700 w-full shadow-md min-w-80">
             <FloatingPanel.DragTrigger>
               <FloatingPanel.Header className="py-2 px-4 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center cursor-move">
                 <div className="flex items-center gap-2">

@@ -41,14 +41,14 @@ export default function TaskInspector() {
 
   return (
     <FloatingPanel.Root defaultSize={{ width: 400, height: 670 }}>
-      <FloatingPanel.Trigger className="px-3 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 flex items-center gap-2">
+      <FloatingPanel.Trigger className="px-3 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 focus:outline-hidden focus:ring-2 focus:ring-green-500 focus:ring-offset-2 flex items-center gap-2">
         <Eye className="w-4 h-4" />
         Inspect Task
       </FloatingPanel.Trigger>
 
       <Portal>
         <FloatingPanel.Positioner className="z-50">
-          <FloatingPanel.Content className="flex flex-col bg-white dark:bg-gray-900 rounded-lg data-[maximized]:rounded-none border border-gray-200 dark:border-gray-700 w-full shadow-md">
+          <FloatingPanel.Content className="flex flex-col bg-white dark:bg-gray-900 rounded-lg data-maximized:rounded-none border border-gray-200 dark:border-gray-700 w-full shadow-md">
             <FloatingPanel.DragTrigger>
               <FloatingPanel.Header className="py-2 px-4 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center cursor-move">
                 <div className="flex items-center gap-2">

@@ -27,7 +27,7 @@ function togglePasswordVisibility() {
     </Dialog.Trigger>
     <Teleport to="body">
       <Dialog.Backdrop
-        class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
+        class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs"
       />
       <Dialog.Positioner
         class="fixed inset-0 z-50 flex items-center justify-center p-4"
@@ -76,7 +76,7 @@ function togglePasswordVisibility() {
                     type="email"
                     placeholder="name@example.com"
                     v-model="state.credentials.email"
-                    class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
+                    class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
                   />
                 </div>
 
@@ -91,7 +91,7 @@ function togglePasswordVisibility() {
                       :type="state.showPassword ? 'text' : 'password'"
                       placeholder="Enter your password"
                       v-model="state.credentials.password"
-                      class="w-full px-3 py-2 pr-10 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
+                      class="w-full px-3 py-2 pr-10 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
                     />
                     <button
                       type="button"

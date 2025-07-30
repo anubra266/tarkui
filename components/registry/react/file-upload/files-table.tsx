@@ -106,12 +106,12 @@ export default function FilesTable() {
                 Files ({acceptedFiles.length})
               </h3>
               <div className="flex items-center gap-2">
-                <FileUpload.Trigger className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
+                <FileUpload.Trigger className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
                   <Upload className="w-3 h-3" />
                   Add files
                 </FileUpload.Trigger>
                 {acceptedFiles.length > 0 && (
-                  <FileUpload.ClearTrigger className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
+                  <FileUpload.ClearTrigger className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
                     <Trash2 className="w-3 h-3" />
                     Remove all
                   </FileUpload.ClearTrigger>
@@ -151,7 +151,7 @@ export default function FilesTable() {
                       >
                         {/* Name */}
                         <div className="col-span-5 flex items-center gap-2 min-w-0">
-                          <div className="w-4 h-4 flex items-center justify-center flex-shrink-0">
+                          <div className="w-4 h-4 flex items-center justify-center shrink-0">
                             {file.type.startsWith("image/") ? (
                               <FileUpload.ItemPreview type="image/*">
                                 <FileUpload.ItemPreviewImage className="w-4 h-4 object-cover rounded" />

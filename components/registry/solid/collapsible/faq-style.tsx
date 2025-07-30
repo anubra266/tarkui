@@ -33,7 +33,7 @@ export default function FAQStyleCollapsible() {
               <span class="font-medium text-gray-900 dark:text-gray-100 pr-4">
                 {faq.question}
               </span>
-              <Collapsible.Indicator class="transition-transform duration-200 flex-shrink-0 data-[state=open]:rotate-180">
+              <Collapsible.Indicator class="transition-transform duration-200 shrink-0 data-[state=open]:rotate-180">
                 <ChevronDownIcon class="w-5 h-5 text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300" />
               </Collapsible.Indicator>
             </Collapsible.Trigger>

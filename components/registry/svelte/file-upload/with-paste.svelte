@@ -30,7 +30,7 @@
       <div class="space-y-4">
         <!-- Dropzone -->
         <FileUpload.Dropzone
-          class="relative w-full border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-800 flex flex-col items-center justify-center py-12 px-6 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2 focus:outline-none transition-colors"
+          class="relative w-full border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-800 flex flex-col items-center justify-center py-12 px-6 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2 focus:outline-hidden transition-colors"
           onclick={(e) => e.preventDefault()}
           tabindex="0"
         >
@@ -77,7 +77,7 @@
                   <FileUpload.Item {file}>
                     <div class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900">
                       <!-- File Icon or Preview -->
-                      <div class="w-10 h-10 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                      <div class="w-10 h-10 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center shrink-0 overflow-hidden">
                         {#if file.type.startsWith("image/")}
                           <FileUpload.ItemPreview type="image/*">
                             <FileUpload.ItemPreviewImage class="w-full h-full object-cover" />
@@ -94,7 +94,7 @@
                       </div>
 
                       <!-- Delete Button -->
-                      <FileUpload.ItemDeleteTrigger class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 flex-shrink-0">
+                      <FileUpload.ItemDeleteTrigger class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 shrink-0">
                         <X class="w-4 h-4" />
                       </FileUpload.ItemDeleteTrigger>
                     </div>
@@ -104,7 +104,7 @@
             </FileUpload.ItemGroup>
 
             <!-- Clear All Button -->
-            <FileUpload.ClearTrigger class="inline-flex items-center px-3 py-1.5 text-xs font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
+            <FileUpload.ClearTrigger class="inline-flex items-center px-3 py-1.5 text-xs font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
               Clear all files
             </FileUpload.ClearTrigger>
           </div>

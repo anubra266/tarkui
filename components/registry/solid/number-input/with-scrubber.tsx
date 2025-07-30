@@ -15,7 +15,7 @@ export default function WithScrubber() {
             <NumberInput.Scrubber class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500 cursor-ew-resize">
               <Move class="w-4 h-4" />
             </NumberInput.Scrubber>
-            <NumberInput.Input class="w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-medium pl-10 pr-3 py-1 border-none outline-none focus:outline-none focus-visible:outline-none" />
+            <NumberInput.Input class="w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-medium pl-10 pr-3 py-1 border-none outline-hidden focus:outline-hidden focus-visible:outline-hidden" />
           </div>
           <NumberInput.IncrementTrigger class="flex items-center justify-center bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100 transition-colors cursor-pointer border-l border-gray-200 dark:border-gray-700">
             <ChevronUp class="w-3 h-3" />

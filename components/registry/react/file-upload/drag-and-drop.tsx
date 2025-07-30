@@ -28,7 +28,7 @@ export default function DragAndDrop() {
                 {/* Close Button */}
                 <FileUpload.ItemGroup>
                   <FileUpload.Item file={acceptedFiles[0]}>
-                    <FileUpload.ItemDeleteTrigger className="absolute top-4 right-4 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2">
+                    <FileUpload.ItemDeleteTrigger className="absolute top-4 right-4 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 focus:ring-offset-2">
                       <X className="w-4 h-4" />
                     </FileUpload.ItemDeleteTrigger>
                   </FileUpload.Item>
@@ -36,7 +36,7 @@ export default function DragAndDrop() {
               </div>
             ) : (
               /* Empty State - Dropzone */
-              <FileUpload.Dropzone className="w-full h-64 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-800 flex flex-col items-center justify-center gap-3 hover:bg-gray-100 dark:hover:bg-gray-700 data-[dragging]:border-gray-900 dark:data-[dragging]:border-gray-100 data-[dragging]:bg-gray-100 dark:data-[dragging]:bg-gray-700 transition-colors cursor-pointer">
+              <FileUpload.Dropzone className="w-full h-64 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl bg-gray-50 dark:bg-gray-800 flex flex-col items-center justify-center gap-3 hover:bg-gray-100 dark:hover:bg-gray-700 data-dragging:border-gray-900 dark:data-dragging:border-gray-100 data-dragging:bg-gray-100 dark:data-dragging:bg-gray-700 transition-colors cursor-pointer">
                 {/* Image Icon in Circle */}
                 <div className="w-12 h-12 rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 flex items-center justify-center">
                   <ImageIcon className="w-5 h-5 text-gray-400 dark:text-gray-500" />

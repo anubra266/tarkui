@@ -13,7 +13,7 @@ export default function BasicColorPicker() {
             <ColorPicker.Control className="flex-1">
               <ColorPicker.ChannelInput
                 channel="hex"
-                className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </ColorPicker.Control>
             <ColorPicker.Trigger className="w-12 h-10 rounded-md border-2 border-gray-300 dark:border-gray-600 overflow-hidden cursor-pointer hover:border-gray-400 dark:hover:border-gray-500 transition-colors">
@@ -29,7 +29,7 @@ export default function BasicColorPicker() {
                 {/* Color Area */}
                 <ColorPicker.Area className="w-full h-36 rounded-md overflow-hidden relative">
                   <ColorPicker.AreaBackground className="w-full h-full" />
-                  <ColorPicker.AreaThumb className="absolute w-3 h-3 bg-white border-2 border-black rounded-full shadow-sm -translate-x-1/2 -translate-y-1/2" />
+                  <ColorPicker.AreaThumb className="absolute w-3 h-3 bg-white border-2 border-black rounded-full shadow-xs -translate-x-1/2 -translate-y-1/2" />
                 </ColorPicker.Area>
 
                 {/* Eye Dropper and Sliders */}
@@ -44,8 +44,8 @@ export default function BasicColorPicker() {
                       channel="hue"
                       className="relative w-full h-3 rounded-full overflow-hidden"
                     >
-                      <ColorPicker.ChannelSliderTrack className="w-full h-full bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-cyan-500 via-blue-500 via-purple-500 to-red-500" />
-                      <ColorPicker.ChannelSliderThumb className="absolute top-1/2 w-3 h-3 bg-white border-2 border-black rounded-full shadow-sm -translate-y-1/2 -translate-x-1/2" />
+                      <ColorPicker.ChannelSliderTrack className="w-full h-full bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-cyan-500 via-blue-500 via-purple-500 to-red-500" />
+                      <ColorPicker.ChannelSliderThumb className="absolute top-1/2 w-3 h-3 bg-white border-2 border-black rounded-full shadow-xs -translate-y-1/2 -translate-x-1/2" />
                     </ColorPicker.ChannelSlider>
 
                     {/* Alpha Slider */}
@@ -55,7 +55,7 @@ export default function BasicColorPicker() {
                     >
                       <ColorPicker.TransparencyGrid className="w-full h-full [--size:8px]" />
                       <ColorPicker.ChannelSliderTrack className="w-full h-full" />
-                      <ColorPicker.ChannelSliderThumb className="absolute top-1/2 w-3 h-3 bg-white border-2 border-black rounded-full shadow-sm -translate-y-1/2 -translate-x-1/2" />
+                      <ColorPicker.ChannelSliderThumb className="absolute top-1/2 w-3 h-3 bg-white border-2 border-black rounded-full shadow-xs -translate-y-1/2 -translate-x-1/2" />
                     </ColorPicker.ChannelSlider>
                   </div>
                 </div>
@@ -64,11 +64,11 @@ export default function BasicColorPicker() {
                 <div className="flex gap-2">
                   <ColorPicker.ChannelInput
                     channel="hex"
-                    className="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                   <ColorPicker.ChannelInput
                     channel="alpha"
-                    className="w-16 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-16 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </ColorPicker.Content>

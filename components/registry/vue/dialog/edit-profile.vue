@@ -36,7 +36,7 @@ function handleInputChange(field, value) {
     </Dialog.Trigger>
     <Teleport to="body">
       <Dialog.Backdrop
-        class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
+        class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs"
       />
       <Dialog.Positioner
         class="fixed inset-0 z-50 flex items-center justify-center p-4"
@@ -103,7 +103,7 @@ function handleInputChange(field, value) {
                     <input
                       type="text"
                       v-model="state.profileData.firstName"
-                      class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
+                      class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
                     />
                   </div>
 
@@ -116,7 +116,7 @@ function handleInputChange(field, value) {
                     <input
                       type="text"
                       v-model="state.profileData.lastName"
-                      class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
+                      class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
                     />
                   </div>
                 </div>
@@ -131,7 +131,7 @@ function handleInputChange(field, value) {
                     <input
                       type="text"
                       v-model="state.profileData.username"
-                      class="w-full px-3 py-2 pr-10 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
+                      class="w-full px-3 py-2 pr-10 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
                     />
                     <Check
                       class="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-green-600 dark:text-green-400"
@@ -154,7 +154,7 @@ function handleInputChange(field, value) {
                     <input
                       type="text"
                       v-model="state.profileData.website"
-                      class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-r-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
+                      class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-r-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors"
                     />
                   </div>
                 </div>
@@ -171,7 +171,7 @@ function handleInputChange(field, value) {
                       (e) => handleInputChange('biography', e.target.value)
                     "
                     rows="3"
-                    class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors resize-none"
+                    class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors resize-none"
                   ></textarea>
                   <div class="text-right">
                     <span class="text-xs text-gray-500 dark:text-gray-400">

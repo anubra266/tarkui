@@ -1,8 +1,8 @@
 import React from "react";
 
 export const AccordionPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-pink-500/10"></div>
     <div className="relative space-y-2">
       <div className="bg-gray-800/80 rounded-md p-2 border border-gray-700/50">
         <div className="flex items-center justify-between">
@@ -29,8 +29,8 @@ export const AccordionPreview = () => (
 );
 
 export const AngleSliderPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-orange-500/10 to-red-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="relative w-16 h-16">
         <div className="absolute inset-0 border-4 border-gray-700 rounded-full"></div>
@@ -42,25 +42,25 @@ export const AngleSliderPreview = () => (
 );
 
 export const AvatarPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-indigo-500/10 to-purple-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="flex items-center space-x-2">
-        <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full"></div>
-        <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-teal-500 rounded-full"></div>
-        <div className="w-4 h-4 bg-gradient-to-br from-pink-400 to-rose-500 rounded-full"></div>
+        <div className="w-8 h-8 bg-linear-to-br from-blue-400 to-purple-500 rounded-full"></div>
+        <div className="w-6 h-6 bg-linear-to-br from-green-400 to-teal-500 rounded-full"></div>
+        <div className="w-4 h-4 bg-linear-to-br from-pink-400 to-rose-500 rounded-full"></div>
       </div>
     </div>
   </div>
 );
 
 export const CarouselPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-blue-900 rounded-lg p-4 relative overflow-hidden">
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-blue-900 rounded-lg p-4 relative overflow-hidden">
     {/* Simple carousel slides */}
     <div className="mb-3">
       <div className="flex space-x-2">
         <div className="w-16 h-10 bg-gray-700/40 rounded border border-gray-600/50 opacity-60"></div>
-        <div className="w-16 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded border-2 border-blue-400/50"></div>
+        <div className="w-16 h-10 bg-linear-to-r from-blue-500 to-purple-500 rounded border-2 border-blue-400/50"></div>
         <div className="w-16 h-10 bg-gray-700/40 rounded border border-gray-600/50 opacity-60"></div>
       </div>
     </div>
@@ -75,13 +75,13 @@ export const CarouselPreview = () => (
 );
 
 export const CheckboxPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-green-500/10 to-emerald-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="space-y-2">
         <div className="flex items-center space-x-2">
           <div className="w-4 h-4 bg-green-500 border border-green-400 rounded flex items-center justify-center">
-            <div className="w-2 h-1 border-b-2 border-l-2 border-white transform rotate-[-45deg] translate-y-[-1px]"></div>
+            <div className="w-2 h-1 border-b-2 border-l-2 border-white transform -rotate-45 -translate-y-px"></div>
           </div>
           <div className="w-8 h-1 bg-gray-500 rounded"></div>
         </div>
@@ -95,8 +95,8 @@ export const CheckboxPreview = () => (
 );
 
 export const ClipboardPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-purple-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-violet-500/10 to-purple-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="relative">
         <div className="w-10 h-12 bg-gray-800 border border-gray-600 rounded-md">
@@ -116,8 +116,8 @@ export const ClipboardPreview = () => (
 );
 
 export const CollapsiblePreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-cyan-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-teal-500/10 to-cyan-500/10"></div>
     <div className="relative space-y-2">
       <div className="flex items-center space-x-2">
         <div className="w-3 h-3 border border-teal-400 rounded flex items-center justify-center">
@@ -135,11 +135,11 @@ export const CollapsiblePreview = () => (
 );
 
 export const ColorPickerPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-rose-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-pink-500/10 to-rose-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="space-y-2">
-        <div className="w-12 h-8 bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500 rounded border border-gray-600"></div>
+        <div className="w-12 h-8 bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500 rounded border border-gray-600"></div>
         <div className="flex space-x-1">
           <div className="w-3 h-3 bg-red-500 rounded-full"></div>
           <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
@@ -152,8 +152,8 @@ export const ColorPickerPreview = () => (
 );
 
 export const ComboboxPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 to-indigo-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-16 h-6 border border-gray-600 rounded bg-gray-800 flex items-center justify-between px-2">
         <div className="w-8 h-1 bg-blue-400 rounded"></div>
@@ -164,8 +164,8 @@ export const ComboboxPreview = () => (
 );
 
 export const DatePickerPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-emerald-500/10 to-teal-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-14 h-10 bg-gray-800 border border-gray-600 rounded p-1">
         <div className="grid grid-cols-3 gap-0.5 h-full">
@@ -182,8 +182,8 @@ export const DatePickerPreview = () => (
 );
 
 export const DialogPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-slate-500/10 to-gray-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-slate-500/10 to-gray-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-14 h-10 bg-gray-800 border border-gray-600 rounded shadow-lg">
         <div className="p-2 space-y-1">
@@ -200,8 +200,8 @@ export const DialogPreview = () => (
 );
 
 export const EditablePreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-yellow-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-amber-500/10 to-yellow-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="relative">
         <div className="w-12 h-1.5 bg-amber-400 rounded"></div>
@@ -212,8 +212,8 @@ export const EditablePreview = () => (
 );
 
 export const FieldPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-blue-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-indigo-500/10 to-blue-500/10"></div>
     <div className="relative space-y-1">
       <div className="w-8 h-1 bg-gray-500 rounded"></div>
       <div className="w-16 h-4 border border-gray-600 rounded bg-gray-800 px-1 flex items-center">
@@ -225,8 +225,8 @@ export const FieldPreview = () => (
 );
 
 export const FieldsetPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-violet-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-violet-500/10"></div>
     <div className="relative">
       <div className="border border-gray-600 rounded p-2 relative">
         <div className="absolute -top-1 left-2 bg-gray-800 px-1">
@@ -242,8 +242,8 @@ export const FieldsetPreview = () => (
 );
 
 export const FileUploadPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-sky-500/10 to-blue-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-sky-500/10 to-blue-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-14 h-10 border-2 border-dashed border-sky-400 rounded flex flex-col items-center justify-center">
         <div className="w-4 h-3 border border-sky-400 rounded-t"></div>
@@ -254,8 +254,8 @@ export const FileUploadPreview = () => (
 );
 
 export const FloatingPanelPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-teal-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-cyan-500/10 to-teal-500/10"></div>
     <div className="relative">
       <div className="w-12 h-8 bg-gray-800 border border-gray-600 rounded shadow-lg absolute top-2 right-2">
         <div className="p-1 space-y-0.5">
@@ -269,8 +269,8 @@ export const FloatingPanelPreview = () => (
 );
 
 export const HoverCardPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-rose-500/10 to-pink-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-rose-500/10 to-pink-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="relative">
         <div className="w-8 h-1.5 bg-rose-400 rounded"></div>
@@ -286,8 +286,8 @@ export const HoverCardPreview = () => (
 );
 
 export const ListboxPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-purple-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-violet-500/10 to-purple-500/10"></div>
     <div className="relative">
       <div className="w-16 h-10 border border-gray-600 rounded bg-gray-800 p-1">
         <div className="space-y-1">
@@ -307,8 +307,8 @@ export const ListboxPreview = () => (
 );
 
 export const MenuPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-green-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-emerald-500/10 to-green-500/10"></div>
     <div className="relative">
       <div className="w-14 h-10 bg-gray-800 border border-gray-600 rounded shadow-lg p-1">
         <div className="space-y-1">
@@ -329,8 +329,8 @@ export const MenuPreview = () => (
 );
 
 export const NumberInputPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 to-cyan-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-12 h-6 border border-gray-600 rounded bg-gray-800 flex items-center">
         <div className="flex-1 px-1">
@@ -356,8 +356,8 @@ export const NumberInputPreview = () => (
 );
 
 export const PaginationPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-blue-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-indigo-500/10 to-blue-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="flex items-center space-x-1">
         <div className="w-4 h-4 border border-gray-600 rounded flex items-center justify-center">
@@ -378,8 +378,8 @@ export const PaginationPreview = () => (
 );
 
 export const PasswordInputPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-pink-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-red-500/10 to-pink-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-16 h-6 border border-gray-600 rounded bg-gray-800 flex items-center justify-between px-2">
         <div className="flex space-x-0.5">
@@ -397,8 +397,8 @@ export const PasswordInputPreview = () => (
 );
 
 export const PinInputPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-cyan-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-teal-500/10 to-cyan-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="flex space-x-1">
         <div className="w-4 h-6 border border-teal-400 rounded bg-gray-800 flex items-center justify-center">
@@ -413,8 +413,8 @@ export const PinInputPreview = () => (
 );
 
 export const PopoverPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-amber-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-orange-500/10 to-amber-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="relative">
         <div className="w-6 h-4 bg-orange-500 rounded"></div>
@@ -432,8 +432,8 @@ export const PopoverPreview = () => (
 );
 
 export const ProgressCircularPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-green-500/10 to-emerald-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="relative w-10 h-10">
         <div className="absolute inset-0 border-2 border-gray-700 rounded-full"></div>
@@ -447,19 +447,19 @@ export const ProgressCircularPreview = () => (
 );
 
 export const ProgressLinearPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 to-indigo-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-16 h-2 bg-gray-700 rounded-full overflow-hidden">
-        <div className="w-10 h-full bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full"></div>
+        <div className="w-10 h-full bg-linear-to-r from-blue-400 to-indigo-500 rounded-full"></div>
       </div>
     </div>
   </div>
 );
 
 export const QRCodePreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-slate-500/10 to-gray-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-slate-500/10 to-gray-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-10 h-10 bg-white rounded grid grid-cols-5 gap-0.5 p-0.5">
         <div className="bg-black rounded-sm"></div>
@@ -493,8 +493,8 @@ export const QRCodePreview = () => (
 );
 
 export const RadioGroupPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-violet-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-violet-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="space-y-2">
         <div className="flex items-center space-x-2">
@@ -513,8 +513,8 @@ export const RadioGroupPreview = () => (
 );
 
 export const RatingGroupPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-amber-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-yellow-500/10 to-amber-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="flex space-x-0.5">
         <div
@@ -558,8 +558,8 @@ export const RatingGroupPreview = () => (
 );
 
 export const SegmentGroupPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-teal-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-cyan-500/10 to-teal-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="flex bg-gray-800 border border-gray-600 rounded p-0.5">
         <div className="px-2 py-1 bg-cyan-500 text-white rounded text-xs flex items-center justify-center">
@@ -577,8 +577,8 @@ export const SegmentGroupPreview = () => (
 );
 
 export const SelectPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-indigo-500/10 to-purple-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-16 h-6 border border-gray-600 rounded bg-gray-800 flex items-center justify-between px-2">
         <div className="w-8 h-1 bg-gray-500 rounded"></div>
@@ -589,8 +589,8 @@ export const SelectPreview = () => (
 );
 
 export const SignaturePadPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-rose-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-pink-500/10 to-rose-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-16 h-10 border border-gray-600 rounded bg-gray-800 p-1 relative">
         <svg className="w-full h-full" viewBox="0 0 60 40">
@@ -607,8 +607,8 @@ export const SignaturePadPreview = () => (
 );
 
 export const SliderPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 to-indigo-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-16 h-2 bg-gray-700 rounded-full relative">
         <div className="w-10 h-2 bg-blue-500 rounded-full"></div>
@@ -619,8 +619,8 @@ export const SliderPreview = () => (
 );
 
 export const SplitterPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-gray-500/10 to-slate-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-gray-500/10 to-slate-500/10"></div>
     <div className="relative flex h-full">
       <div className="w-8 h-full bg-gray-800 border border-gray-600 rounded-l"></div>
       <div className="w-1 h-full bg-gray-600 cursor-col-resize flex items-center justify-center">
@@ -632,8 +632,8 @@ export const SplitterPreview = () => (
 );
 
 export const StepsPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-green-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-emerald-500/10 to-green-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="flex items-center space-x-2">
         <div className="w-4 h-4 bg-emerald-500 rounded-full flex items-center justify-center">
@@ -651,19 +651,19 @@ export const StepsPreview = () => (
 );
 
 export const SwitchPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-green-500/10 to-emerald-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-8 h-4 bg-green-500 rounded-full relative">
-        <div className="absolute right-0.5 top-0.5 w-3 h-3 bg-white rounded-full shadow-sm"></div>
+        <div className="absolute right-0.5 top-0.5 w-3 h-3 bg-white rounded-full shadow-xs"></div>
       </div>
     </div>
   </div>
 );
 
 export const TabsPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 to-indigo-500/10"></div>
     <div className="relative">
       <div className="flex border-b border-gray-700">
         <div className="px-2 py-1 border-b-2 border-blue-500">
@@ -685,8 +685,8 @@ export const TabsPreview = () => (
 );
 
 export const TagsInputPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-purple-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-violet-500/10 to-purple-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-16 h-6 border border-gray-600 rounded bg-gray-800 p-1 flex items-center space-x-1">
         <div className="px-1 py-0.5 bg-violet-500/30 border border-violet-500/50 rounded text-xs">
@@ -701,8 +701,8 @@ export const TagsInputPreview = () => (
 );
 
 export const TimerPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-red-500/10 to-orange-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="text-center">
         <div className="flex space-x-1 mb-1">
@@ -723,8 +723,8 @@ export const TimerPreview = () => (
 );
 
 export const ToastPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-green-500/10 to-emerald-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-16 h-6 bg-gray-800 border border-gray-600 rounded shadow-lg flex items-center px-2 space-x-2">
         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -741,8 +741,8 @@ export const ToastPreview = () => (
 );
 
 export const ToggleGroupPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-violet-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-violet-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="flex border border-gray-600 rounded">
         <div className="w-4 h-4 bg-purple-500 border-r border-gray-600 flex items-center justify-center">
@@ -760,8 +760,8 @@ export const ToggleGroupPreview = () => (
 );
 
 export const TogglePreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 to-indigo-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="w-6 h-6 bg-blue-500 border border-blue-400 rounded flex items-center justify-center">
         <div className="w-2 h-1 bg-white rounded"></div>
@@ -771,8 +771,8 @@ export const TogglePreview = () => (
 );
 
 export const TooltipPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-amber-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-yellow-500/10 to-amber-500/10"></div>
     <div className="relative flex items-center justify-center h-full">
       <div className="relative">
         <div className="w-6 h-4 bg-yellow-500 rounded"></div>
@@ -786,8 +786,8 @@ export const TooltipPreview = () => (
 );
 
 export const TourPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-blue-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-indigo-500/10 to-blue-500/10"></div>
     <div className="relative">
       <div className="w-6 h-4 bg-indigo-500 rounded mb-2"></div>
       <div className="w-12 h-8 bg-gray-800 border-2 border-indigo-500 rounded shadow-lg p-1 relative">
@@ -805,8 +805,8 @@ export const TourPreview = () => (
 );
 
 export const TreeViewPreview = () => (
-  <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-teal-500/10"></div>
+  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
+    <div className="absolute inset-0 bg-linear-to-r from-green-500/10 to-teal-500/10"></div>
     <div className="relative space-y-1">
       <div className="flex items-center space-x-1">
         <div className="w-2 h-2 border border-green-400 rounded-sm flex items-center justify-center">

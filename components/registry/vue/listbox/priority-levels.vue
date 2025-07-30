@@ -70,13 +70,13 @@ const getColorClasses = (color: string) => {
         Task Priority
       </Listbox.Label>
       <Listbox.Content
-        class="bg-[var(--listbox-bg)] border border-[var(--listbox-border)] rounded-lg px-1 py-2 w-80 shadow-lg"
+        class="bg-(--listbox-bg) border border-(--listbox-border) rounded-lg px-1 py-2 w-80 shadow-lg"
       >
         <Listbox.Item
           v-for="priority in collection.items"
           :key="priority.value"
           :item="priority"
-          class="flex items-center justify-between px-3 py-3 mx-1 rounded-md cursor-pointer text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 data-[highlighted]:bg-gray-100 dark:data-[highlighted]:bg-gray-800 transition-colors"
+          class="flex items-center justify-between px-3 py-3 mx-1 rounded-md cursor-pointer text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 transition-colors"
         >
           <div class="flex items-center gap-3">
             <div

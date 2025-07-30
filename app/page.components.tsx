@@ -36,11 +36,11 @@ export function Components({ counts }: ComponentsProps) {
     <main className="relative max-w-7xl mx-auto px-6 py-20 pt-32">
       <div className="text-center mb-20">
         <h1 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
-          <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-600 dark:from-white dark:via-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-gray-900 via-gray-700 to-gray-600 dark:from-white dark:via-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
             Beautiful UI components built with
           </span>
           <br />
-          <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Ark UI and Tailwind.
           </span>
         </h1>
@@ -51,8 +51,8 @@ export function Components({ counts }: ComponentsProps) {
 
         {/* Search Bar */}
         <div className="relative max-w-lg mx-auto mb-12">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-xl"></div>
-          <div className="relative bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 rounded-xl p-1 focus-within:ring-1 focus-within:ring-ring focus-within:ring-offset-1">
+          <div className="absolute inset-0 bg-linear-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-xl"></div>
+          <div className="relative bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur-xs border border-gray-300/50 dark:border-gray-700/50 rounded-xl p-1 focus-within:ring-1 focus-within:ring-ring focus-within:ring-offset-1">
             <div className="flex items-center">
               <Search className="ml-4 text-gray-500 dark:text-gray-400 w-5 h-5" />
               <Input
@@ -60,7 +60,7 @@ export function Components({ counts }: ComponentsProps) {
                 placeholder="Quick search..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="flex-1 bg-transparent border-0 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-lg px-4 py-4 focus-:ring-0 focus:outline-none"
+                className="flex-1 bg-transparent border-0 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-lg px-4 py-4 focus-:ring-0 focus:outline-hidden"
               />
               <div className="mr-4 flex items-center space-x-1">
                 <kbd className="px-2 py-1 text-xs text-gray-600 dark:text-gray-400 bg-gray-200/80 dark:bg-gray-800/80 rounded border border-gray-300/50 dark:border-gray-700/50 flex items-center space-x-1">
@@ -80,7 +80,7 @@ export function Components({ counts }: ComponentsProps) {
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-full text-sm transition-all duration-200 ${
                 selectedCategory === category
-                  ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg"
+                  ? "bg-linear-to-r from-blue-500 to-purple-500 text-white shadow-lg"
                   : "bg-gray-200/50 dark:bg-gray-800/50 text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-300/50 dark:hover:bg-gray-700/50"
               }`}
             >
@@ -101,10 +101,10 @@ export function Components({ counts }: ComponentsProps) {
               key={index}
               href={`/components/${framework}/${component.slug}`}
               aria-disabled={count === 0}
-              className="group relative bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-300 cursor-pointer overflow-hidden aria-disabled:opacity-20 aria-disabled:pointer-events-none"
+              className="group relative bg-linear-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs rounded-2xl border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-300 cursor-pointer overflow-hidden aria-disabled:opacity-20 aria-disabled:pointer-events-none"
             >
               {/* Card Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               <div className="aspect-video p-6 flex items-center justify-center relative">
                 {PreviewComponent ? <PreviewComponent /> : null}
@@ -120,7 +120,7 @@ export function Components({ counts }: ComponentsProps) {
               </div>
 
               {/* Hover Effect */}
-              <div className="absolute inset-0 bg-gradient-to-t from-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </Link>
           );
         })}

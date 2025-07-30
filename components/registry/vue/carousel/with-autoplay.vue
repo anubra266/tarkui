@@ -22,8 +22,8 @@
       <CarouselAutoplayTrigger
         class="group px-3 py-2 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900 dark:hover:bg-blue-800 rounded-lg transition-colors"
       >
-        <Play class="w-4 h-4 group-data-[pressed]:hidden" />
-        <Pause class="w-4 h-4 hidden group-data-[pressed]:block" />
+        <Play class="w-4 h-4 group-data-pressed:hidden" />
+        <Pause class="w-4 h-4 hidden group-data-pressed:block" />
       </CarouselAutoplayTrigger>
     </CarouselControl>
 
@@ -46,7 +46,7 @@
         v-for="(_, index) in images"
         :key="index"
         :index="index"
-        class="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600 data-[current]:bg-blue-500 dark:data-[current]:bg-blue-400 transition-colors cursor-pointer hover:bg-gray-400 dark:hover:bg-gray-500"
+        class="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600 data-current:bg-blue-500 dark:data-current:bg-blue-400 transition-colors cursor-pointer hover:bg-gray-400 dark:hover:bg-gray-500"
       />
     </CarouselIndicatorGroup>
   </CarouselRoot>

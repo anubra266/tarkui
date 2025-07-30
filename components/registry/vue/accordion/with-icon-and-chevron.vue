@@ -44,7 +44,7 @@ const items = [
   <Accordion
     :default-value="['creative-talents']"
     collapsible
-    class="w-full max-w-md mx-auto bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm"
+    class="w-full max-w-md mx-auto bg-linear-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs"
   >
     <AccordionItem
       v-for="item in items"
@@ -53,7 +53,7 @@ const items = [
       class="group border-b border-gray-200/50 dark:border-gray-700/50 last:border-b-0"
     >
       <AccordionItemTrigger
-        class="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200"
+        class="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-linear-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200"
       >
         <div class="flex items-center">
           <component

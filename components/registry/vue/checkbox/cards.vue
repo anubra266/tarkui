@@ -12,7 +12,7 @@ import { CheckIcon, CreditCardIcon, SmartphoneIcon } from "lucide-vue-next";
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Checkbox.Root class="cursor-pointer group h-full">
           <div
-            class="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-4 bg-white dark:bg-gray-900 shadow-sm group-data-[state=checked]:border-blue-500 group-data-[state=checked]:bg-blue-50 group-data-[state=checked]:shadow-md dark:group-data-[state=checked]:bg-blue-950 transition-all duration-200 hover:border-gray-400 hover:shadow-md dark:hover:border-gray-400 h-full flex flex-col"
+            class="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-4 bg-white dark:bg-gray-900 shadow-xs group-data-[state=checked]:border-blue-500 group-data-[state=checked]:bg-blue-50 group-data-[state=checked]:shadow-md dark:group-data-[state=checked]:bg-blue-950 transition-all duration-200 hover:border-gray-400 hover:shadow-md dark:hover:border-gray-400 h-full flex flex-col"
           >
             <div class="flex items-start justify-between flex-1">
               <div class="flex-1 flex flex-col">
@@ -44,7 +44,7 @@ import { CheckIcon, CreditCardIcon, SmartphoneIcon } from "lucide-vue-next";
 
         <Checkbox.Root class="cursor-pointer group h-full">
           <div
-            class="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-4 bg-white dark:bg-gray-900 shadow-sm group-data-[state=checked]:border-blue-500 group-data-[state=checked]:bg-blue-50 group-data-[state=checked]:shadow-md dark:group-data-[state=checked]:bg-blue-950 transition-all duration-200 hover:border-gray-400 hover:shadow-md dark:hover:border-gray-400 h-full flex flex-col"
+            class="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-4 bg-white dark:bg-gray-900 shadow-xs group-data-[state=checked]:border-blue-500 group-data-[state=checked]:bg-blue-50 group-data-[state=checked]:shadow-md dark:group-data-[state=checked]:bg-blue-950 transition-all duration-200 hover:border-gray-400 hover:shadow-md dark:hover:border-gray-400 h-full flex flex-col"
           >
             <div class="flex items-start justify-between flex-1">
               <div class="flex-1 flex flex-col">
@@ -76,7 +76,7 @@ import { CheckIcon, CreditCardIcon, SmartphoneIcon } from "lucide-vue-next";
 
         <Checkbox.Root class="cursor-pointer group h-full">
           <div
-            class="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-4 bg-white dark:bg-gray-900 shadow-sm group-data-[state=checked]:border-blue-500 group-data-[state=checked]:bg-blue-50 group-data-[state=checked]:shadow-md dark:group-data-[state=checked]:bg-blue-950 transition-all duration-200 hover:border-gray-400 hover:shadow-md dark:hover:border-gray-400 h-full flex flex-col"
+            class="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-4 bg-white dark:bg-gray-900 shadow-xs group-data-[state=checked]:border-blue-500 group-data-[state=checked]:bg-blue-50 group-data-[state=checked]:shadow-md dark:group-data-[state=checked]:bg-blue-950 transition-all duration-200 hover:border-gray-400 hover:shadow-md dark:hover:border-gray-400 h-full flex flex-col"
           >
             <div class="flex items-start justify-between flex-1">
               <div class="flex-1 flex flex-col">
@@ -115,7 +115,7 @@ import { CheckIcon, CreditCardIcon, SmartphoneIcon } from "lucide-vue-next";
       <div class="space-y-4">
         <Checkbox.Root class="cursor-pointer group">
           <div
-            class="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-3 bg-white dark:bg-gray-900 shadow-sm group-data-[state=checked]:border-blue-500 group-data-[state=checked]:bg-blue-50 group-data-[state=checked]:shadow-md dark:group-data-[state=checked]:bg-blue-950 transition-all duration-200 hover:border-gray-400 hover:shadow-md dark:hover:border-gray-400"
+            class="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-3 bg-white dark:bg-gray-900 shadow-xs group-data-[state=checked]:border-blue-500 group-data-[state=checked]:bg-blue-50 group-data-[state=checked]:shadow-md dark:group-data-[state=checked]:bg-blue-950 transition-all duration-200 hover:border-gray-400 hover:shadow-md dark:hover:border-gray-400"
           >
             <div class="flex items-center gap-3">
               <CreditCardIcon
@@ -145,7 +145,7 @@ import { CheckIcon, CreditCardIcon, SmartphoneIcon } from "lucide-vue-next";
 
         <Checkbox.Root class="cursor-pointer group">
           <div
-            class="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-3 bg-white dark:bg-gray-900 shadow-sm group-data-[state=checked]:border-blue-500 group-data-[state=checked]:bg-blue-50 group-data-[state=checked]:shadow-md dark:group-data-[state=checked]:bg-blue-950 transition-all duration-200 hover:border-gray-400 hover:shadow-md dark:hover:border-gray-400"
+            class="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-3 bg-white dark:bg-gray-900 shadow-xs group-data-[state=checked]:border-blue-500 group-data-[state=checked]:bg-blue-50 group-data-[state=checked]:shadow-md dark:group-data-[state=checked]:bg-blue-950 transition-all duration-200 hover:border-gray-400 hover:shadow-md dark:hover:border-gray-400"
           >
             <div class="flex items-center gap-3">
               <SmartphoneIcon

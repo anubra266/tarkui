@@ -82,7 +82,7 @@ export default async function ComponentDetailPage({
   return (
     <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white relative overflow-hidden transition-colors duration-300">
       {/* Enhanced Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500"></div>
@@ -115,16 +115,16 @@ export default async function ComponentDetailPage({
         <div className="text-center mb-20">
           <div className="relative inline-block mb-8">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-600 dark:from-white dark:via-gray-100 dark:to-gray-300 bg-clip-text text-transparent animate-pulse">
+              <span className="bg-linear-to-r from-gray-900 via-gray-700 to-gray-600 dark:from-white dark:via-gray-100 dark:to-gray-300 bg-clip-text text-transparent animate-pulse">
                 {componentRegistry.title}
               </span>
             </h1>
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-2xl opacity-50"></div>
+            <div className="absolute -inset-4 bg-linear-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-2xl opacity-50"></div>
           </div>
 
           {/* Stats Badge */}
           <div className="flex items-center justify-center space-x-4 mb-8">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 rounded-full px-6 py-3">
+            <div className="inline-flex items-center space-x-2 bg-linear-to-r from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs border border-gray-300/50 dark:border-gray-700/50 rounded-full px-6 py-3">
               <Sparkles className="w-4 h-4 text-yellow-400" />
               <span className="text-sm text-gray-700 dark:text-gray-300">
                 {componentRegistry.count} Examples Available
@@ -146,7 +146,7 @@ export default async function ComponentDetailPage({
                     "--span": example.span,
                   } as React.CSSProperties
                 }
-                className="lg:col-[span_var(--span)_/_span_var(--span)]"
+                className="lg:col-[span_var(--span)/span_var(--span)]"
               >
                 <ComponentExamples
                   id={example.id}
@@ -163,9 +163,9 @@ export default async function ComponentDetailPage({
 
         {/* Enhanced CTA Section */}
         <div className="text-center py-20 border-t border-gray-300/50 dark:border-gray-800/50 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-transparent via-blue-500/5 to-transparent"></div>
           <div className="relative">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 bg-linear-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
               Didn't find what you were looking for?
             </h2>
             <Link
@@ -173,8 +173,8 @@ export default async function ComponentDetailPage({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="group relative overflow-hidden bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 text-lg font-medium">
-                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <Button className="group relative overflow-hidden bg-linear-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 text-lg font-medium">
+                <div className="absolute inset-0 bg-linear-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <span className="relative z-10 flex items-center space-x-2">
                   <Sparkles className="w-5 h-5 group-hover:animate-spin" />
                   <span>Suggest component</span>
@@ -186,12 +186,12 @@ export default async function ComponentDetailPage({
       </main>
 
       {/* Enhanced Footer */}
-      <footer className="relative border-t border-gray-300/50 dark:border-gray-800/50 px-6 py-8 backdrop-blur-sm">
+      <footer className="relative border-t border-gray-300/50 dark:border-gray-800/50 px-6 py-8 backdrop-blur-xs">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-sm text-gray-600 dark:text-gray-400">
           <div className="flex items-center space-x-2">
             <span>© {new Date().getFullYear()} Tark UI</span>
             <div className="w-1 h-1 bg-gray-500 dark:bg-gray-600 rounded-full"></div>
-            <span className="text-xs bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-xs bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Made with ❤️
             </span>
           </div>

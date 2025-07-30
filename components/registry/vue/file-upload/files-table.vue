@@ -93,14 +93,14 @@ const defaultFiles = [
           </h3>
           <div class="flex items-center gap-2">
             <FileUpload.Trigger
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2"
             >
               <Upload class="w-3 h-3" />
               Add files
             </FileUpload.Trigger>
             <FileUpload.ClearTrigger
               v-if="context.acceptedFiles.length > 0"
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2"
             >
               <Trash2 class="w-3 h-3" />
               Remove all
@@ -156,7 +156,7 @@ const defaultFiles = [
                 <!-- Name -->
                 <div class="col-span-5 flex items-center gap-2 min-w-0">
                   <div
-                    class="w-4 h-4 flex items-center justify-center flex-shrink-0"
+                    class="w-4 h-4 flex items-center justify-center shrink-0"
                   >
                     <FileUpload.ItemPreview
                       v-if="file.type.startsWith('image/')"

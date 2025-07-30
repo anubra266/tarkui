@@ -36,7 +36,7 @@ function getColorClasses(color) {
       class="flex items-center gap-3 cursor-pointer"
     >
       <Checkbox.Control
-        :class="`w-5 h-5 bg-white border-2 border-gray-300 rounded data-[hover]:border-gray-400 dark:bg-gray-900 dark:border-gray-600 dark:data-[hover]:border-gray-400 transition-all duration-200 flex items-center justify-center ${getColorClasses(
+        :class="`w-5 h-5 bg-white border-2 border-gray-300 rounded data-hover:border-gray-400 dark:bg-gray-900 dark:border-gray-600 dark:data-hover:border-gray-400 transition-all duration-200 flex items-center justify-center ${getColorClasses(
           color.color
         )}`"
       >

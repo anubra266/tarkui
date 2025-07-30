@@ -33,7 +33,7 @@ export default function WithLeftPlusMinusAccordion() {
     <Accordion.Root
       defaultValue={["react"]}
       collapsible
-      className="w-full max-w-md mx-auto bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm"
+      className="w-full max-w-md mx-auto bg-linear-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs"
     >
       {items.map((item) => (
         <Accordion.Item
@@ -41,7 +41,7 @@ export default function WithLeftPlusMinusAccordion() {
           value={item.id}
           className="group border-b border-gray-200/50 dark:border-gray-700/50 last:border-b-0"
         >
-          <Accordion.ItemTrigger className="w-full px-4 py-3 flex items-center text-left hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200">
+          <Accordion.ItemTrigger className="w-full px-4 py-3 flex items-center text-left hover:bg-linear-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200">
             <Accordion.ItemIndicator className="mr-3 transition-all duration-200 group">
               <Plus className="w-4 h-4 text-gray-600 dark:text-gray-400 group-data-[state=open]:hidden" />
               <Minus className="w-4 h-4 text-gray-600 dark:text-gray-400 group-data-[state=closed]:hidden" />

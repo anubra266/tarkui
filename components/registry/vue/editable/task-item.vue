@@ -75,7 +75,7 @@ const getPriorityColor = (priority) => {
         >
           <button
             @click="toggleTask(task.id)"
-            :class="`flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
+            :class="`shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
               task.completed
                 ? 'bg-green-500 border-green-500 text-white'
                 : 'border-gray-300 dark:border-gray-600 hover:border-green-400 dark:hover:border-green-500'
@@ -94,10 +94,10 @@ const getPriorityColor = (priority) => {
             >
               <Editable.Area>
                 <Editable.Input
-                  class="w-full px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 min-h-[2rem]"
+                  class="w-full px-2 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 min-h-8"
                 />
                 <Editable.Preview
-                  :class="`w-full px-2 py-1 text-sm rounded hover:bg-gray-50 dark:hover:bg-gray-800 cursor-text transition-colors min-h-[2rem] ${
+                  :class="`w-full px-2 py-1 text-sm rounded hover:bg-gray-50 dark:hover:bg-gray-800 cursor-text transition-colors min-h-8 ${
                     task.completed
                       ? 'text-gray-500 dark:text-gray-400 line-through'
                       : 'text-gray-900 dark:text-white'
@@ -108,7 +108,7 @@ const getPriorityColor = (priority) => {
           </div>
 
           <span
-            :class="`flex-shrink-0 px-2 py-1 text-xs font-medium rounded-full ${getPriorityColor(
+            :class="`shrink-0 px-2 py-1 text-xs font-medium rounded-full ${getPriorityColor(
               task.priority
             )}`"
           >
@@ -117,7 +117,7 @@ const getPriorityColor = (priority) => {
 
           <button
             @click="deleteTask(task.id)"
-            class="flex-shrink-0 opacity-0 group-hover:opacity-100 p-1 text-gray-400 hover:text-red-500 dark:hover:text-red-400 transition-all"
+            class="shrink-0 opacity-0 group-hover:opacity-100 p-1 text-gray-400 hover:text-red-500 dark:hover:text-red-400 transition-all"
           >
             <Trash2 class="h-4 w-4" />
           </button>

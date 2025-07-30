@@ -47,14 +47,14 @@ export default function ProfileField() {
           <div className="flex items-center space-x-2">
             <Editable.Area className="flex-1">
               <Editable.Input
-                className={`w-full px-3 py-2 text-sm border rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 transition-colors min-h-[2.5rem] ${
+                className={`w-full px-3 py-2 text-sm border rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 transition-colors min-h-10 ${
                   !isValid
                     ? "border-red-300 dark:border-red-600 focus:ring-red-500 dark:focus:ring-red-400"
                     : "border-gray-300 dark:border-gray-600 focus:ring-blue-500 dark:focus:ring-blue-400"
                 }`}
               />
               <Editable.Preview
-                className={`w-full px-3 py-2 text-sm border border-transparent rounded-md bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white hover:border-gray-300 dark:hover:border-gray-600 cursor-text transition-colors min-h-[2.5rem] ${
+                className={`w-full px-3 py-2 text-sm border border-transparent rounded-md bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white hover:border-gray-300 dark:hover:border-gray-600 cursor-text transition-colors min-h-10 ${
                   !isValid ? "ring-1 ring-red-200 dark:ring-red-800" : ""
                 }`}
               />

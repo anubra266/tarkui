@@ -28,10 +28,10 @@ const currentHexColor = computed(() => getHexColor(hue.value));
           type="text"
           :value="`${currentHueColor} • ${currentHexColor}`"
           readonly
-          class="flex-1 px-4 py-3 text-sm font-mono border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 shadow-sm"
+          class="flex-1 px-4 py-3 text-sm font-mono border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 shadow-xs"
         />
         <div
-          class="w-14 h-12 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm"
+          class="w-14 h-12 rounded-lg border border-gray-200 dark:border-gray-700 shadow-xs"
           :style="{ backgroundColor: currentHueColor }"
         />
       </div>
@@ -63,10 +63,10 @@ const currentHexColor = computed(() => getHexColor(hue.value));
             }"
           >
             <AngleSlider.Thumb
-              class="absolute top-0 right-0 bottom-0 left-[calc(50%-1.5px)] pointer-events-none h-full w-[3px] flex items-start outline-none"
+              class="absolute top-0 right-0 bottom-0 left-[calc(50%-1.5px)] pointer-events-none h-full w-[3px] flex items-start outline-hidden"
             >
               <span
-                class="border-2 border-white size-5 rounded-full flex-shrink-0 shadow-gray-600 shadow-sm m-1.5"
+                class="border-2 border-white size-5 rounded-full shrink-0 shadow-gray-600 shadow-xs m-1.5"
               />
             </AngleSlider.Thumb>
           </AngleSlider.Control>

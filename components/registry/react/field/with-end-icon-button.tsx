@@ -11,10 +11,10 @@ export default function InputWithEndIconButton() {
         <Field.Input
           type="url"
           placeholder="https://files.example.com/document.pdf"
-          className="min-w-0 flex-1 border-0 bg-transparent px-3 py-2 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-0"
+          className="min-w-0 flex-1 border-0 bg-transparent px-3 py-2 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-hidden focus:ring-0"
         />
         <div className="border-l border-gray-300 dark:border-gray-600" />
-        <button className="border-0 bg-transparent p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-0">
+        <button className="border-0 bg-transparent p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-hidden focus:ring-0">
           <Download className="h-4 w-4" />
         </button>
       </div>

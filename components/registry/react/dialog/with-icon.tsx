@@ -11,11 +11,11 @@ export default function WithIconDialog() {
         </button>
       </Dialog.Trigger>
       <Portal>
-        <Dialog.Backdrop className="data-[state=open]:animate-backdrop-in data-[state=closed]:animate-backdrop-out fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" />
+        <Dialog.Backdrop className="data-[state=open]:animate-backdrop-in data-[state=closed]:animate-backdrop-out fixed inset-0 z-50 bg-black/50 backdrop-blur-xs" />
         <Dialog.Positioner className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <Dialog.Content className="data-[state=open]:animate-dialog-in data-[state=closed]:animate-dialog-out relative w-full max-w-md rounded-lg bg-white dark:bg-gray-800 p-6 shadow-lg">
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0">
+              <div className="shrink-0">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-gray-300 dark:border-gray-600">
                   <AlertCircle className="h-5 w-5 text-gray-600 dark:text-gray-400" />
                 </div>

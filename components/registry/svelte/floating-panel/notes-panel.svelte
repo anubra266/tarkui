@@ -95,7 +95,7 @@
                     {noteItem.title}
                   </h4>
                   <span
-                    class="text-xs text-gray-500 dark:text-gray-400 ml-2 flex-shrink-0"
+                    class="text-xs text-gray-500 dark:text-gray-400 ml-2 shrink-0"
                   >
                     {noteItem.date}
                   </span>
@@ -122,7 +122,7 @@
               <textarea
                 bind:value={note}
                 placeholder="Jot down a quick note..."
-                class="w-full h-20 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 resize-none"
+                class="w-full h-20 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 resize-none"
               />
               <button
                 disabled={!note.trim()}

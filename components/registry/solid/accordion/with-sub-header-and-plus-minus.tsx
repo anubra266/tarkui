@@ -38,7 +38,7 @@ export default function WithSubHeaderAndPlusMinusAccordion() {
     <Accordion
       defaultValue={["mindful-living"]}
       collapsible
-      class="w-full max-w-md mx-auto bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm"
+      class="w-full max-w-md mx-auto bg-linear-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs"
     >
       <For each={items}>
         {(item) => (
@@ -46,7 +46,7 @@ export default function WithSubHeaderAndPlusMinusAccordion() {
             value={item.id}
             class="group border-b border-gray-200/50 dark:border-gray-700/50 last:border-b-0"
           >
-            <Accordion.ItemTrigger class="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200">
+            <Accordion.ItemTrigger class="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-linear-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200">
               <div class="flex-1">
                 <div class="font-medium text-gray-900 dark:text-white">
                   {item.title}

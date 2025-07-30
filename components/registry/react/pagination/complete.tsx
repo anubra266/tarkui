@@ -28,7 +28,7 @@ export default function Complete() {
         )}
       </Pagination.Context>
 
-      <Pagination.PrevTrigger className="inline-flex items-center justify-center w-8 h-8 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors data-[disabled]:opacity-50 data-[disabled]:cursor-not-allowed data-[disabled]:pointer-events-none">
+      <Pagination.PrevTrigger className="inline-flex items-center justify-center w-8 h-8 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors data-disabled:opacity-50 data-disabled:cursor-not-allowed data-disabled:pointer-events-none">
         <ChevronLeft className="w-4 h-4" />
       </Pagination.PrevTrigger>
 
@@ -39,7 +39,7 @@ export default function Complete() {
               <Pagination.Item
                 key={index}
                 {...page}
-                className="inline-flex items-center justify-center w-8 h-8 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors data-[selected]:bg-blue-500 data-[selected]:text-white data-[selected]:hover:bg-blue-600"
+                className="inline-flex items-center justify-center w-8 h-8 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors data-selected:bg-blue-500 data-selected:text-white data-selected:hover:bg-blue-600"
               >
                 {page.value}
               </Pagination.Item>
@@ -56,7 +56,7 @@ export default function Complete() {
         }
       </Pagination.Context>
 
-      <Pagination.NextTrigger className="inline-flex items-center justify-center w-8 h-8 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors data-[disabled]:opacity-50 data-[disabled]:cursor-not-allowed data-[disabled]:pointer-events-none">
+      <Pagination.NextTrigger className="inline-flex items-center justify-center w-8 h-8 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors data-disabled:opacity-50 data-disabled:cursor-not-allowed data-disabled:pointer-events-none">
         <ChevronRight className="w-4 h-4" />
       </Pagination.NextTrigger>
 

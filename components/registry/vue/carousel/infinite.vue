@@ -47,7 +47,7 @@
           v-for="(_, index) in brands"
           :key="index"
           :index="index"
-          class="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 data-[current]:bg-blue-500 dark:data-[current]:bg-blue-400 transition-colors cursor-pointer"
+          class="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 data-current:bg-blue-500 dark:data-current:bg-blue-400 transition-colors cursor-pointer"
         />
       </CarouselIndicatorGroup>
 

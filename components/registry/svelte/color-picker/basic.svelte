@@ -12,7 +12,7 @@
         <ColorPicker.Control class="flex-1">
           <ColorPicker.ChannelInput
             channel="hex"
-            class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </ColorPicker.Control>
         <ColorPicker.Trigger
@@ -37,7 +37,7 @@
             >
               <ColorPicker.AreaBackground class="w-full h-full" />
               <ColorPicker.AreaThumb
-                class="absolute w-3 h-3 bg-white border-2 border-black rounded-full shadow-sm -translate-x-1/2 -translate-y-1/2"
+                class="absolute w-3 h-3 bg-white border-2 border-black rounded-full shadow-xs -translate-x-1/2 -translate-y-1/2"
               />
             </ColorPicker.Area>
 
@@ -56,10 +56,10 @@
                   class="relative w-full h-3 rounded-full overflow-hidden"
                 >
                   <ColorPicker.ChannelSliderTrack
-                    class="w-full h-full bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-cyan-500 via-blue-500 via-purple-500 to-red-500"
+                    class="w-full h-full bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-cyan-500 via-blue-500 via-purple-500 to-red-500"
                   />
                   <ColorPicker.ChannelSliderThumb
-                    class="absolute top-1/2 w-3 h-3 bg-white border-2 border-black rounded-full shadow-sm -translate-y-1/2 -translate-x-1/2"
+                    class="absolute top-1/2 w-3 h-3 bg-white border-2 border-black rounded-full shadow-xs -translate-y-1/2 -translate-x-1/2"
                   />
                 </ColorPicker.ChannelSlider>
 
@@ -73,7 +73,7 @@
                   />
                   <ColorPicker.ChannelSliderTrack class="w-full h-full" />
                   <ColorPicker.ChannelSliderThumb
-                    class="absolute top-1/2 w-3 h-3 bg-white border-2 border-black rounded-full shadow-sm -translate-y-1/2 -translate-x-1/2"
+                    class="absolute top-1/2 w-3 h-3 bg-white border-2 border-black rounded-full shadow-xs -translate-y-1/2 -translate-x-1/2"
                   />
                 </ColorPicker.ChannelSlider>
               </div>
@@ -83,11 +83,11 @@
             <div class="flex gap-2">
               <ColorPicker.ChannelInput
                 channel="hex"
-                class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="flex-1 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <ColorPicker.ChannelInput
                 channel="alpha"
-                class="w-16 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-16 px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
           </ColorPicker.Content>

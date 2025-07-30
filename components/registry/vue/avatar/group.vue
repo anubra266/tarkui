@@ -17,7 +17,7 @@ const avatars = [
       class="w-12 h-12 relative z-10"
     >
       <Avatar.Fallback
-        class="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 text-white font-semibold text-sm flex items-center justify-center rounded-full"
+        class="w-full h-full bg-linear-to-br from-blue-500 to-purple-600 text-white font-semibold text-sm flex items-center justify-center rounded-full"
       >
         {{ avatar.fallback }}
       </Avatar.Fallback>

@@ -13,7 +13,7 @@
     </button>
   </Dialog.Trigger>
   <Portal>
-    <Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" />
+    <Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs" />
     <Dialog.Positioner
       class="fixed inset-0 z-50 flex items-center justify-center p-4"
     >

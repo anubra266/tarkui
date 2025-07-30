@@ -2,7 +2,7 @@
   <Accordion.Root
     :defaultValue="['human-behavior']"
     collapsible
-    class="w-full max-w-md mx-auto bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm"
+    class="w-full max-w-md mx-auto bg-linear-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs"
   >
     <Accordion.Item
       v-for="item in items"
@@ -11,7 +11,7 @@
       class="group border-b border-gray-200/50 dark:border-gray-700/50 last:border-b-0"
     >
       <Accordion.ItemTrigger
-        class="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200"
+        class="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-linear-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200"
       >
         <span class="font-medium text-gray-900 dark:text-white">
           {{ item.title }}
@@ -31,10 +31,10 @@
               v-for="subItem in item.items"
               :key="subItem.id"
               :value="subItem.id"
-              class="group border border-gray-200/50 dark:border-gray-700/50 rounded-lg bg-gradient-to-r from-gray-50/50 dark:from-gray-800/50 to-transparent"
+              class="group border border-gray-200/50 dark:border-gray-700/50 rounded-lg bg-linear-to-r from-gray-50/50 dark:from-gray-800/50 to-transparent"
             >
               <Accordion.ItemTrigger
-                class="w-full px-3 py-2 flex items-center justify-between text-left hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200"
+                class="w-full px-3 py-2 flex items-center justify-between text-left hover:bg-linear-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200"
               >
                 <span
                   class="font-medium text-gray-800 dark:text-gray-200 text-sm"

@@ -12,7 +12,7 @@ export default function Basic() {
         </HoverCard.Trigger>
         <Portal>
           <HoverCard.Positioner>
-            <HoverCard.Content className="data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out border border-gray-200 dark:border-gray-700 [--hover-card-background:#ffffff] dark:[--hover-card-background:#111827] bg-[var(--hover-card-background)] rounded-lg shadow-lg p-4 max-w-sm z-50">
+            <HoverCard.Content className="data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out border border-gray-200 dark:border-gray-700 [--hover-card-background:#ffffff] dark:[--hover-card-background:#111827] bg-(--hover-card-background) rounded-lg shadow-lg p-4 max-w-sm z-50">
               <HoverCard.Arrow className="[--arrow-size:10px] [--arrow-background:var(--hover-card-background)]">
                 <HoverCard.ArrowTip className="border-l border-t border-gray-200 dark:border-gray-700" />
               </HoverCard.Arrow>

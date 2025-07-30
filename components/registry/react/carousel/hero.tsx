@@ -59,10 +59,10 @@ export default function HeroCarousel() {
         </Carousel.ItemGroup>
 
         <Carousel.Control className="absolute inset-x-4 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none">
-          <Carousel.PrevTrigger className="p-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full transition-all pointer-events-auto text-white backdrop-blur-sm">
+          <Carousel.PrevTrigger className="p-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full transition-all pointer-events-auto text-white backdrop-blur-xs">
             ←
           </Carousel.PrevTrigger>
-          <Carousel.NextTrigger className="p-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full transition-all pointer-events-auto text-white backdrop-blur-sm">
+          <Carousel.NextTrigger className="p-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full transition-all pointer-events-auto text-white backdrop-blur-xs">
             →
           </Carousel.NextTrigger>
         </Carousel.Control>
@@ -73,7 +73,7 @@ export default function HeroCarousel() {
           <Carousel.Indicator
             key={index}
             index={index}
-            className="w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 data-[current]:bg-blue-500 dark:data-[current]:bg-blue-400 data-[current]:w-8 transition-all cursor-pointer"
+            className="w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 data-current:bg-blue-500 dark:data-current:bg-blue-400 data-current:w-8 transition-all cursor-pointer"
           />
         ))}
       </Carousel.IndicatorGroup>

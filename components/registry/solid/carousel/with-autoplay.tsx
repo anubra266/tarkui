@@ -26,8 +26,8 @@ export default function CarouselWithAutoplay() {
         </div>
 
         <Carousel.AutoplayTrigger class="group px-3 py-2 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900 dark:hover:bg-blue-800 rounded-lg transition-colors">
-          <PlayIcon class="w-4 h-4 group-data-[pressed]:hidden" />
-          <PauseIcon class="w-4 h-4 hidden group-data-[pressed]:block" />
+          <PlayIcon class="w-4 h-4 group-data-pressed:hidden" />
+          <PauseIcon class="w-4 h-4 hidden group-data-pressed:block" />
         </Carousel.AutoplayTrigger>
       </Carousel.Control>
 
@@ -50,7 +50,7 @@ export default function CarouselWithAutoplay() {
           {(_, index) => (
             <Carousel.Indicator
               index={index()}
-              class="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600 data-[current]:bg-blue-500 dark:data-[current]:bg-blue-400 transition-colors cursor-pointer hover:bg-gray-400 dark:hover:bg-gray-500"
+              class="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600 data-current:bg-blue-500 dark:data-current:bg-blue-400 transition-colors cursor-pointer hover:bg-gray-400 dark:hover:bg-gray-500"
             />
           )}
         </For>

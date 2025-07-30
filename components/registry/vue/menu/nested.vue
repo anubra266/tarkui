@@ -16,7 +16,7 @@ import {
   <div class="flex items-center justify-center min-h-32">
     <Menu.Root>
       <Menu.Trigger
-        class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2"
+        class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2"
       >
         File
         <ChevronDown class="w-4 h-4" />
@@ -24,7 +24,7 @@ import {
       <Teleport to="body">
         <Menu.Positioner>
           <Menu.Content
-            class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-48 focus-visible:outline-none"
+            class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-48 focus-visible:outline-hidden"
           >
             <Menu.Item
               value="new"
@@ -53,7 +53,7 @@ import {
               <Teleport to="body">
                 <Menu.Positioner>
                   <Menu.Content
-                    class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-44 focus-visible:outline-none"
+                    class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-44 focus-visible:outline-hidden"
                   >
                     <Menu.Item
                       value="account"

@@ -11,7 +11,7 @@ export default function WithIconDialog() {
         </button>
       </Dialog.Trigger>
       <Portal>
-        <Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" />
+        <Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs" />
         <Dialog.Positioner class="fixed inset-0 z-50 flex items-center justify-center p-4">
           <Dialog.Content class="relative w-full max-w-sm rounded-lg bg-white dark:bg-gray-900 p-5 shadow-lg">
             <Dialog.CloseTrigger asChild>

@@ -13,7 +13,7 @@ import { User, X } from "lucide-vue-next";
       <!-- Avatar Area -->
       <div class="relative">
         <FileUpload.Trigger
-          class="size-24 rounded-2xl border-2 border-dashed border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 flex items-center justify-center overflow-hidden hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2 transition-colors"
+          class="size-24 rounded-2xl border-2 border-dashed border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 flex items-center justify-center overflow-hidden hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2 transition-colors"
         >
           <FileUpload.ItemGroup v-if="context.acceptedFiles.length > 0">
             <FileUpload.Item :file="context.acceptedFiles[0]">
@@ -31,7 +31,7 @@ import { User, X } from "lucide-vue-next";
         <FileUpload.ItemGroup v-if="context.acceptedFiles.length > 0">
           <FileUpload.Item :file="context.acceptedFiles[0]">
             <FileUpload.ItemDeleteTrigger
-              class="absolute -top-2 -right-2 w-6 h-6 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+              class="absolute -top-2 -right-2 w-6 h-6 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
             >
               <X class="w-4 h-4" />
             </FileUpload.ItemDeleteTrigger>

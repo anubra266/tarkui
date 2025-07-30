@@ -18,7 +18,7 @@ export default function ProductInfo() {
         <HoverCard.Root>
           <HoverCard.Trigger className="group cursor-pointer">
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 hover:border-blue-300 dark:hover:border-blue-600">
-              <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mb-4 flex items-center justify-center shadow-lg">
+              <div className="w-24 h-24 mx-auto bg-linear-to-br from-blue-500 to-blue-600 rounded-2xl mb-4 flex items-center justify-center shadow-lg">
                 <Smartphone className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
@@ -45,7 +45,7 @@ export default function ProductInfo() {
           </HoverCard.Trigger>
           <Portal>
             <HoverCard.Positioner>
-              <HoverCard.Content className="data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out border border-gray-200 dark:border-gray-700 [--hover-card-background:#ffffff] dark:[--hover-card-background:#111827] bg-[var(--hover-card-background)] rounded-lg shadow-xl p-6 max-w-sm z-50">
+              <HoverCard.Content className="data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out border border-gray-200 dark:border-gray-700 [--hover-card-background:#ffffff] dark:[--hover-card-background:#111827] bg-(--hover-card-background) rounded-lg shadow-xl p-6 max-w-sm z-50">
                 <HoverCard.Arrow className="[--arrow-size:10px] [--arrow-background:var(--hover-card-background)]">
                   <HoverCard.ArrowTip className="border-l border-t border-gray-200 dark:border-gray-700" />
                 </HoverCard.Arrow>
@@ -53,7 +53,7 @@ export default function ProductInfo() {
                 <div className="space-y-4">
                   {/* Product Header */}
                   <div className="flex items-start gap-3">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-md">
+                    <div className="w-16 h-16 bg-linear-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-md">
                       <Smartphone className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
@@ -117,7 +117,7 @@ export default function ProductInfo() {
         <HoverCard.Root>
           <HoverCard.Trigger className="group cursor-pointer">
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 hover:border-purple-300 dark:hover:border-purple-600">
-              <div className="w-24 h-24 mx-auto bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl mb-4 flex items-center justify-center shadow-lg">
+              <div className="w-24 h-24 mx-auto bg-linear-to-br from-purple-500 to-purple-600 rounded-2xl mb-4 flex items-center justify-center shadow-lg">
                 <Headphones className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
@@ -145,7 +145,7 @@ export default function ProductInfo() {
           </HoverCard.Trigger>
           <Portal>
             <HoverCard.Positioner>
-              <HoverCard.Content className="data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out border border-gray-200 dark:border-gray-700 [--hover-card-background:#ffffff] dark:[--hover-card-background:#111827] bg-[var(--hover-card-background)] rounded-lg shadow-xl p-6 max-w-sm z-50">
+              <HoverCard.Content className="data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out border border-gray-200 dark:border-gray-700 [--hover-card-background:#ffffff] dark:[--hover-card-background:#111827] bg-(--hover-card-background) rounded-lg shadow-xl p-6 max-w-sm z-50">
                 <HoverCard.Arrow className="[--arrow-size:10px] [--arrow-background:var(--hover-card-background)]">
                   <HoverCard.ArrowTip className="border-l border-t border-gray-200 dark:border-gray-700" />
                 </HoverCard.Arrow>
@@ -153,7 +153,7 @@ export default function ProductInfo() {
                 <div className="space-y-4">
                   {/* Product Header */}
                   <div className="flex items-start gap-3">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-md">
+                    <div className="w-16 h-16 bg-linear-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center shadow-md">
                       <Headphones className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">

@@ -29,15 +29,15 @@ export default function MediaPlayer() {
 
   return (
     <FloatingPanel.Root defaultSize={{ width: 400, height: 300 }}>
-      <FloatingPanel.Trigger className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 shadow-lg">
+      <FloatingPanel.Trigger className="px-4 py-2 bg-linear-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 focus:outline-hidden focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 shadow-lg">
         Open Media Player
       </FloatingPanel.Trigger>
 
       <Portal>
         <FloatingPanel.Positioner className="z-50">
-          <FloatingPanel.Content className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-xl border border-purple-500/20 w-full shadow-2xl overflow-hidden data-[stage=maximized]:rounded-none">
+          <FloatingPanel.Content className="bg-linear-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-xl border border-purple-500/20 w-full shadow-2xl overflow-hidden data-[stage=maximized]:rounded-none">
             <FloatingPanel.DragTrigger>
-              <FloatingPanel.Header className="py-3 px-4 bg-black/20 backdrop-blur-sm border-b border-white/10 flex justify-between items-center rounded-t-xl cursor-move">
+              <FloatingPanel.Header className="py-3 px-4 bg-black/20 backdrop-blur-xs border-b border-white/10 flex justify-between items-center rounded-t-xl cursor-move">
                 <FloatingPanel.Title className="font-medium text-white text-sm">
                   Now Playing
                 </FloatingPanel.Title>
@@ -53,7 +53,7 @@ export default function MediaPlayer() {
               <div className="flex flex-col justify-center h-full max-w-md mx-auto w-full space-y-6">
                 {/* Song Info & Album Art */}
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-600 rounded-lg flex items-center justify-center shadow-lg flex-shrink-0">
+                  <div className="w-16 h-16 bg-linear-to-br from-pink-400 to-purple-600 rounded-lg flex items-center justify-center shadow-lg shrink-0">
                     <div className="w-12 h-12 bg-white/20 rounded-md flex items-center justify-center">
                       <Volume2 className="w-7 h-7 text-white" />
                     </div>
@@ -67,7 +67,7 @@ export default function MediaPlayer() {
                     </p>
                   </div>
                   <button
-                    className={`w-10 h-10 flex items-center justify-center rounded-full transition-colors flex-shrink-0 ${
+                    className={`w-10 h-10 flex items-center justify-center rounded-full transition-colors shrink-0 ${
                       isLiked
                         ? "text-pink-400 hover:text-pink-300"
                         : "text-white/50 hover:text-white/80"
@@ -83,7 +83,7 @@ export default function MediaPlayer() {
                 <div className="space-y-2">
                   <div className="w-full bg-white/20 rounded-full h-1.5">
                     <div
-                      className="bg-gradient-to-r from-pink-400 to-purple-400 h-1.5 rounded-full transition-all duration-300 relative"
+                      className="bg-linear-to-r from-pink-400 to-purple-400 h-1.5 rounded-full transition-all duration-300 relative"
                       style={{ width: `${(currentTime / duration) * 100}%` }}
                     >
                       <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-md"></div>
@@ -134,7 +134,7 @@ export default function MediaPlayer() {
                   <Volume2 className="w-5 h-5 text-white/60" />
                   <div className="flex-1 bg-white/20 rounded-full h-1.5">
                     <div
-                      className="bg-gradient-to-r from-pink-400 to-purple-400 h-1.5 rounded-full transition-all"
+                      className="bg-linear-to-r from-pink-400 to-purple-400 h-1.5 rounded-full transition-all"
                       style={{ width: `${volume}%` }}
                     />
                   </div>

@@ -79,8 +79,8 @@ export default function TitleEditor() {
           </div>
 
           <Editable.Area>
-            <Editable.Input className="w-full px-4 py-3 text-xl font-bold border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors resize-none min-h-[3.5rem]" />
-            <Editable.Preview className="w-full px-4 py-3 text-xl font-bold border border-transparent rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white hover:border-gray-300 dark:hover:border-gray-600 cursor-text transition-colors min-h-[3.5rem] flex items-center" />
+            <Editable.Input className="w-full px-4 py-3 text-xl font-bold border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors resize-none min-h-14" />
+            <Editable.Preview className="w-full px-4 py-3 text-xl font-bold border border-transparent rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white hover:border-gray-300 dark:hover:border-gray-600 cursor-text transition-colors min-h-14 flex items-center" />
           </Editable.Area>
 
           <div className="mt-4 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">

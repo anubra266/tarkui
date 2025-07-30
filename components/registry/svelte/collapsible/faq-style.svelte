@@ -36,7 +36,7 @@
           {faq.question}
         </span>
         <Collapsible.Indicator
-          class="transition-transform duration-200 flex-shrink-0 data-[state=open]:rotate-180"
+          class="transition-transform duration-200 shrink-0 data-[state=open]:rotate-180"
         >
           <ChevronDown
             class="w-5 h-5 text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300"

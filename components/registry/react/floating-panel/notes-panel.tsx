@@ -61,16 +61,16 @@ export default function NotesPanel() {
       defaultSize={{ width: 700, height: 500 }}
       minSize={{ width: 400, height: 450 }}
     >
-      <FloatingPanel.Trigger className="px-4 py-2 bg-gradient-to-r from-yellow-600 to-amber-600 text-white text-sm font-medium rounded-lg hover:from-yellow-700 hover:to-amber-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 shadow-md flex items-center gap-2 transition-all">
+      <FloatingPanel.Trigger className="px-4 py-2 bg-linear-to-r from-yellow-600 to-amber-600 text-white text-sm font-medium rounded-lg hover:from-yellow-700 hover:to-amber-700 focus:outline-hidden focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 shadow-md flex items-center gap-2 transition-all">
         <StickyNote className="w-4 h-4" />
         Quick Notes
       </FloatingPanel.Trigger>
 
       <Portal>
         <FloatingPanel.Positioner className="z-50">
-          <FloatingPanel.Content className="flex flex-col bg-white dark:bg-gray-900 rounded-lg data-[maximized]:rounded-none border border-gray-200 dark:border-gray-700 w-full shadow-md">
+          <FloatingPanel.Content className="flex flex-col bg-white dark:bg-gray-900 rounded-lg data-maximized:rounded-none border border-gray-200 dark:border-gray-700 w-full shadow-md">
             <FloatingPanel.DragTrigger>
-              <FloatingPanel.Header className="py-3 px-4 bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-gray-800 dark:to-gray-700 border-b border-amber-200 dark:border-gray-600 flex justify-between items-center cursor-move">
+              <FloatingPanel.Header className="py-3 px-4 bg-linear-to-r from-amber-50 to-yellow-50 dark:from-gray-800 dark:to-gray-700 border-b border-amber-200 dark:border-gray-600 flex justify-between items-center cursor-move">
                 <div className="flex items-center gap-3">
                   <StickyNote className="w-5 h-5 text-amber-600" />
                   <FloatingPanel.Title className="font-semibold text-gray-800 dark:text-gray-100">
@@ -115,12 +115,12 @@ export default function NotesPanel() {
                       placeholder="Search notes..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-400"
+                      className="w-full pl-10 pr-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-yellow-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-400"
                     />
                   </div>
                   <button
                     onClick={addNewNote}
-                    className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-gradient-to-r from-yellow-600 to-amber-600 text-white text-sm font-medium rounded-lg hover:from-yellow-700 hover:to-amber-700 transition-all shadow-sm"
+                    className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-linear-to-r from-yellow-600 to-amber-600 text-white text-sm font-medium rounded-lg hover:from-yellow-700 hover:to-amber-700 transition-all shadow-xs"
                   >
                     <Plus className="w-4 h-4" />
                     New Note
@@ -135,7 +135,7 @@ export default function NotesPanel() {
                       onClick={() => setActiveNote(note)}
                       className={`w-full p-4 text-left border-b border-gray-200 dark:border-gray-700/50 hover:bg-white dark:hover:bg-gray-700/50 transition-colors ${
                         activeNote.id === note.id
-                          ? "bg-white dark:bg-gray-700 shadow-sm border-l-4 border-l-yellow-500"
+                          ? "bg-white dark:bg-gray-700 shadow-xs border-l-4 border-l-yellow-500"
                           : ""
                       }`}
                     >
@@ -181,7 +181,7 @@ export default function NotesPanel() {
                             )
                           );
                         }}
-                        className="w-full text-xl font-bold bg-transparent border-none outline-none text-gray-900 dark:text-gray-100 placeholder-gray-400"
+                        className="w-full text-xl font-bold bg-transparent border-none outline-hidden text-gray-900 dark:text-gray-100 placeholder-gray-400"
                         placeholder="Note title..."
                       />
                     </div>
@@ -203,7 +203,7 @@ export default function NotesPanel() {
                           );
                         }}
                         placeholder="Start writing your note..."
-                        className="w-full h-full resize-none border-none outline-none text-base text-gray-700 dark:text-gray-300 bg-transparent placeholder-gray-400 leading-relaxed"
+                        className="w-full h-full resize-none border-none outline-hidden text-base text-gray-700 dark:text-gray-300 bg-transparent placeholder-gray-400 leading-relaxed"
                       />
                     </div>
                   </>

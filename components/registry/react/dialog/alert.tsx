@@ -10,7 +10,7 @@ export default function AlertDialog() {
         </button>
       </Dialog.Trigger>
       <Portal>
-        <Dialog.Backdrop className="data-[state=open]:animate-backdrop-in data-[state=closed]:animate-backdrop-out fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" />
+        <Dialog.Backdrop className="data-[state=open]:animate-backdrop-in data-[state=closed]:animate-backdrop-out fixed inset-0 z-50 bg-black/50 backdrop-blur-xs" />
         <Dialog.Positioner className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <Dialog.Content className="data-[state=open]:animate-dialog-in data-[state=closed]:animate-dialog-out relative w-full max-w-md rounded-lg bg-white dark:bg-gray-800 p-6 shadow-lg">
             <div className="space-y-4">

@@ -67,7 +67,7 @@ export default function DirectoryUpload() {
                       >
                         <div className="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900">
                           {/* File/Folder Icon or Preview */}
-                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+                          <div className="w-8 h-8 flex items-center justify-center shrink-0 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
                             {file.type.startsWith("image/") ? (
                               <FileUpload.ItemPreview type="image/*">
                                 <FileUpload.ItemPreviewImage className="w-full h-full object-cover" />
@@ -86,7 +86,7 @@ export default function DirectoryUpload() {
                           </div>
 
                           {/* Delete Button */}
-                          <FileUpload.ItemDeleteTrigger className="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 flex-shrink-0">
+                          <FileUpload.ItemDeleteTrigger className="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 shrink-0">
                             <X className="w-4 h-4" />
                           </FileUpload.ItemDeleteTrigger>
                         </div>
@@ -100,7 +100,7 @@ export default function DirectoryUpload() {
                   <div className="text-xs text-gray-500 dark:text-gray-400">
                     {acceptedFiles.length} files uploaded
                   </div>
-                  <FileUpload.ClearTrigger className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
+                  <FileUpload.ClearTrigger className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
                     Clear directory
                   </FileUpload.ClearTrigger>
                 </div>

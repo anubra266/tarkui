@@ -27,7 +27,7 @@
         </div>
 
         <!-- Upload/Change Button -->
-        <FileUpload.Trigger class="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-sm font-medium rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
+        <FileUpload.Trigger class="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-sm font-medium rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
           {context().acceptedFiles.length > 0 ? "Change image" : "Upload image"}
         </FileUpload.Trigger>
       </div>

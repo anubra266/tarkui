@@ -39,7 +39,7 @@ const formatTime = (seconds: number) => {
     >
       <FloatingPanel.Positioner class="fixed">
         <FloatingPanel.Content
-          class="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border border-gray-700 rounded-lg shadow-lg text-white data-[stage=maximized]:rounded-none"
+          class="bg-linear-to-br from-indigo-900 via-purple-900 to-pink-900 border border-gray-700 rounded-lg shadow-lg text-white data-[stage=maximized]:rounded-none"
         >
           <FloatingPanel.Header
             class="flex items-center justify-between p-4 rounded-t-lg"

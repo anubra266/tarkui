@@ -96,14 +96,14 @@ export default function Calculator() {
 
   return (
     <FloatingPanel.Root defaultSize={{ width: 280, height: 380 }}>
-      <FloatingPanel.Trigger className="px-3 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 flex items-center gap-2">
+      <FloatingPanel.Trigger className="px-3 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 flex items-center gap-2">
         <CalculatorIcon className="w-4 h-4" />
         Calculator
       </FloatingPanel.Trigger>
 
       <Portal>
         <FloatingPanel.Positioner className="z-50">
-          <FloatingPanel.Content className="flex flex-col bg-gray-900 dark:bg-gray-800 rounded-lg data-[maximized]:rounded-none shadow-xl border border-gray-700 dark:border-gray-600 w-full data-[stage=maximized]:rounded-none">
+          <FloatingPanel.Content className="flex flex-col bg-gray-900 dark:bg-gray-800 rounded-lg data-maximized:rounded-none shadow-xl border border-gray-700 dark:border-gray-600 w-full data-[stage=maximized]:rounded-none">
             <FloatingPanel.DragTrigger>
               <FloatingPanel.Header className="py-2 px-4 bg-gray-800 dark:bg-gray-700 border-b border-gray-700 dark:border-gray-600 flex justify-between items-center rounded-t-lg cursor-move">
                 <div className="flex items-center gap-2">

@@ -22,14 +22,14 @@ export default function VideoCall() {
 
   return (
     <FloatingPanel.Root defaultSize={{ width: 380, height: 280 }}>
-      <FloatingPanel.Trigger className="px-3 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 flex items-center gap-2">
+      <FloatingPanel.Trigger className="px-3 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 focus:outline-hidden focus:ring-2 focus:ring-green-500 focus:ring-offset-2 flex items-center gap-2">
         <Video className="w-4 h-4" />
         Start Video Call
       </FloatingPanel.Trigger>
 
       <Portal>
         <FloatingPanel.Positioner className="z-50">
-          <FloatingPanel.Content className="flex flex-col bg-black rounded-lg data-[maximized]:rounded-none shadow-xl border border-gray-700 w-full overflow-hidden">
+          <FloatingPanel.Content className="flex flex-col bg-black rounded-lg data-maximized:rounded-none shadow-xl border border-gray-700 w-full overflow-hidden">
             <FloatingPanel.DragTrigger>
               <FloatingPanel.Header className="py-2 px-4 bg-black/80 flex justify-between items-center cursor-move">
                 <div className="flex items-center gap-2">
@@ -85,7 +85,7 @@ export default function VideoCall() {
                       <VideoOff className="w-4 h-4 text-white" />
                     </div>
                   ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                    <div className="w-full h-full bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                       <span className="text-xs font-semibold text-white">
                         You
                       </span>

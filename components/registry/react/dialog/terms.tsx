@@ -28,7 +28,7 @@ export default function TermsDialog() {
         </button>
       </Dialog.Trigger>
       <Portal>
-        <Dialog.Backdrop className="data-[state=open]:animate-backdrop-in data-[state=closed]:animate-backdrop-out fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" />
+        <Dialog.Backdrop className="data-[state=open]:animate-backdrop-in data-[state=closed]:animate-backdrop-out fixed inset-0 z-50 bg-black/50 backdrop-blur-xs" />
         <Dialog.Positioner className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <Dialog.Content className="data-[state=open]:animate-dialog-in data-[state=closed]:animate-dialog-out relative w-full max-w-lg h-[70vh] rounded-lg bg-white dark:bg-gray-900 shadow-lg flex flex-col">
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">

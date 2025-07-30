@@ -32,7 +32,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/80 dark:bg-black/80 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50"
+          ? "bg-white/80 dark:bg-black/80 backdrop-blur-xs border-b border-gray-200/50 dark:border-gray-800/50"
           : "bg-transparent"
       }`}
     >
@@ -40,12 +40,12 @@ export function Header() {
         <div className="flex items-center space-x-8">
           <Link href="/" className="flex items-center space-x-3">
             <div className="relative">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-linear-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg blur-sm opacity-50"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-blue-400 to-purple-500 rounded-lg blur-xs opacity-50"></div>
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-linear-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
               Tark UI
             </span>
           </Link>
@@ -62,7 +62,7 @@ export function Header() {
           {/* Framework Selector */}
           {isLoaded && (
             <Select value={framework} onValueChange={setFramework}>
-              <SelectTrigger className="w-[120px] bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-200">
+              <SelectTrigger className="w-[120px] bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur-xs border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-200">
                 <SelectValue placeholder="Framework" />
               </SelectTrigger>
               <SelectContent>

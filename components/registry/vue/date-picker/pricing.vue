@@ -48,7 +48,7 @@ const isDateUnavailable = (date: Date) => {
     :num-of-months="NUM_OF_MONTHS"
   >
     <DatePicker.Content
-      class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm py-3 inline-block"
+      class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xs py-3 inline-block"
     >
       <DatePicker.View
         view="day"
@@ -120,7 +120,7 @@ const isDateUnavailable = (date: Date) => {
                     "
                   >
                     <DatePicker.TableCellTrigger
-                      class="group relative w-12 h-12 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:rounded-lg data-[selected]:bg-gray-900 data-[selected]:text-white rounded-lg dark:data-[selected]:bg-gray-200 dark:data-[selected]:text-gray-900 transition-colors data-[outside-range]:hidden flex flex-col items-center justify-center font-medium gap-0.5"
+                      class="group relative w-12 h-12 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 hover:rounded-lg data-selected:bg-gray-900 data-selected:text-white rounded-lg dark:data-selected:bg-gray-200 dark:data-selected:text-gray-900 transition-colors data-outside-range:hidden flex flex-col items-center justify-center font-medium gap-0.5"
                     >
                       <span>{{ day.day }}</span>
                       <span
@@ -141,8 +141,8 @@ const isDateUnavailable = (date: Date) => {
                               )
                             )
                           ] <= GOOD_PRICE_THRESHOLD
-                            ? 'text-green-600 dark:text-green-400 dark:group-data-[selected]:text-green-600'
-                            : 'text-gray-400 dark:text-gray-400 dark:group-data-[selected]:text-gray-600'
+                            ? 'text-green-600 dark:text-green-400 dark:group-data-selected:text-green-600'
+                            : 'text-gray-400 dark:text-gray-400 dark:group-data-selected:text-gray-600'
                         }`"
                       >
                         ${{
@@ -184,7 +184,7 @@ const isDateUnavailable = (date: Date) => {
               <ChevronRightIcon class="w-4 h-4" />
             </DatePicker.NextTrigger>
           </DatePicker.ViewControl>
-          <DatePicker.Table class="w-full">
+          <DatePicker.Table class="w-full border-separate border-spacing-y-0.5">
             <DatePicker.TableBody>
               <DatePicker.TableRow
                 v-for="(months, id) in api.getMonthsGrid({
@@ -199,7 +199,7 @@ const isDateUnavailable = (date: Date) => {
                   :value="month.value"
                 >
                   <DatePicker.TableCellTrigger
-                    class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-[selected]:bg-gray-900 data-[selected]:text-white data-[selected]:rounded-lg dark:data-[selected]:bg-gray-200 dark:data-[selected]:text-gray-900 data-[unavailable]:text-gray-400 dark:data-[unavailable]:text-gray-500 data-[unavailable]:line-through data-[unavailable]:pointer-events-none cursor-pointer flex items-center justify-center font-medium"
+                    class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-selected:bg-gray-900 data-selected:text-white data-selected:rounded-lg dark:data-selected:bg-gray-200 dark:data-selected:text-gray-900 data-unavailable:text-gray-400 dark:data-unavailable:text-gray-500 data-unavailable:line-through data-unavailable:pointer-events-none cursor-pointer flex items-center justify-center font-medium"
                   >
                     {{ month.label }}
                   </DatePicker.TableCellTrigger>
@@ -230,7 +230,7 @@ const isDateUnavailable = (date: Date) => {
               <ChevronRightIcon class="w-4 h-4" />
             </DatePicker.NextTrigger>
           </DatePicker.ViewControl>
-          <DatePicker.Table class="w-full">
+          <DatePicker.Table class="w-full border-separate border-spacing-y-0.5">
             <DatePicker.TableBody>
               <DatePicker.TableRow
                 v-for="(years, id) in api.getYearsGrid({ columns: 4 })"
@@ -242,7 +242,7 @@ const isDateUnavailable = (date: Date) => {
                   :value="year.value"
                 >
                   <DatePicker.TableCellTrigger
-                    class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-[selected]:bg-gray-900 data-[selected]:text-white data-[selected]:rounded-lg dark:data-[selected]:bg-gray-200 dark:data-[selected]:text-gray-900 flex items-center justify-center font-medium"
+                    class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-selected:bg-gray-900 data-selected:text-white data-selected:rounded-lg dark:data-selected:bg-gray-200 dark:data-selected:text-gray-900 flex items-center justify-center font-medium"
                   >
                     {{ year.label }}
                   </DatePicker.TableCellTrigger>

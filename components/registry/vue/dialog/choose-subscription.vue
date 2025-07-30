@@ -46,7 +46,7 @@ const features = [
     </Dialog.Trigger>
     <Teleport to="body">
       <Dialog.Backdrop
-        class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
+        class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs"
       />
       <Dialog.Positioner
         class="fixed inset-0 z-50 flex items-center justify-center p-4"
@@ -129,7 +129,7 @@ const features = [
                     class="flex items-start space-x-2"
                   >
                     <Check
-                      class="h-4 w-4 text-gray-600 dark:text-gray-400 mt-0.5 flex-shrink-0"
+                      class="h-4 w-4 text-gray-600 dark:text-gray-400 mt-0.5 shrink-0"
                     />
                     <span class="text-xs text-gray-600 dark:text-gray-400">
                       {{ feature }}

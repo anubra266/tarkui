@@ -11,7 +11,7 @@
     ]"
   >
     <DatePicker.Content
-      class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm p-3 inline-block"
+      class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xs p-3 inline-block"
     >
       <DatePicker.View view="day">
         <DatePicker.Context v-slot="api">
@@ -34,7 +34,7 @@
               <ChevronRight class="w-4 h-4" />
             </DatePicker.NextTrigger>
           </DatePicker.ViewControl>
-          <DatePicker.Table class="w-full">
+          <DatePicker.Table class="w-full border-separate border-spacing-y-0.5">
             <DatePicker.TableHead>
               <DatePicker.TableRow>
                 <DatePicker.TableHeader
@@ -55,7 +55,7 @@
                   class="p-0"
                 >
                   <DatePicker.TableCellTrigger
-                    class="relative w-9 h-9 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors data-[selected]:bg-gray-900 data-[selected]:text-white rounded-lg dark:data-[selected]:bg-gray-200 dark:data-[selected]:text-gray-900 data-[outside-range]:text-gray-400 dark:data-[outside-range]:text-gray-500 flex items-center justify-center font-medium data-[today]:after:content-[''] data-[today]:after:absolute data-[today]:after:bottom-0.5 data-[today]:after:w-1 data-[today]:after:h-1 data-[today]:after:bg-gray-900 data-[today]:after:rounded-full dark:data-[today]:after:bg-gray-300 data-[selected]:data-[today]:after:bg-white dark:data-[selected]:data-[today]:after:bg-gray-900"
+                    class="relative w-9 h-9 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors data-selected:bg-gray-900 data-selected:text-white rounded-lg dark:data-selected:bg-gray-200 dark:data-selected:text-gray-900 data-outside-range:text-gray-400 dark:data-outside-range:text-gray-500 flex items-center justify-center font-medium data-today:after:content-[''] data-today:after:absolute data-today:after:bottom-0.5 data-today:after:w-1 data-today:after:h-1 data-today:after:bg-gray-900 data-today:after:rounded-full dark:data-today:after:bg-gray-300 data-selected:data-today:after:bg-white dark:data-selected:data-today:after:bg-gray-900"
                   >
                     {{ day.day }}
                   </DatePicker.TableCellTrigger>
@@ -86,7 +86,7 @@
               <ChevronRight class="w-4 h-4" />
             </DatePicker.NextTrigger>
           </DatePicker.ViewControl>
-          <DatePicker.Table class="w-full">
+          <DatePicker.Table class="w-full border-separate border-spacing-y-0.5">
             <DatePicker.TableBody>
               <DatePicker.TableRow
                 v-for="(months, id) in api.getMonthsGrid({
@@ -101,7 +101,7 @@
                   :value="month.value"
                 >
                   <DatePicker.TableCellTrigger
-                    class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-[selected]:bg-gray-900 data-[selected]:text-white data-[selected]:rounded-lg dark:data-[selected]:bg-gray-200 dark:data-[selected]:text-gray-900 flex items-center justify-center font-medium"
+                    class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-selected:bg-gray-900 data-selected:text-white data-selected:rounded-lg dark:data-selected:bg-gray-200 dark:data-selected:text-gray-900 flex items-center justify-center font-medium"
                   >
                     {{ month.label }}
                   </DatePicker.TableCellTrigger>
@@ -132,7 +132,7 @@
               <ChevronRight class="w-4 h-4" />
             </DatePicker.NextTrigger>
           </DatePicker.ViewControl>
-          <DatePicker.Table class="w-full">
+          <DatePicker.Table class="w-full border-separate border-spacing-y-0.5">
             <DatePicker.TableBody>
               <DatePicker.TableRow
                 v-for="(years, id) in api.getYearsGrid({ columns: 4 })"
@@ -144,7 +144,7 @@
                   :value="year.value"
                 >
                   <DatePicker.TableCellTrigger
-                    class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-[selected]:bg-gray-900 data-[selected]:text-white data-[selected]:rounded-lg dark:data-[selected]:bg-gray-200 dark:data-[selected]:text-gray-900 flex items-center justify-center font-medium"
+                    class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-selected:bg-gray-900 data-selected:text-white data-selected:rounded-lg dark:data-selected:bg-gray-200 dark:data-selected:text-gray-900 flex items-center justify-center font-medium"
                   >
                     {{ year.label }}
                   </DatePicker.TableCellTrigger>

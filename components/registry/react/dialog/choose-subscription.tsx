@@ -43,7 +43,7 @@ export default function ChooseSubscriptionDialog() {
         </button>
       </Dialog.Trigger>
       <Portal>
-        <Dialog.Backdrop className="data-[state=open]:animate-backdrop-in data-[state=closed]:animate-backdrop-out fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" />
+        <Dialog.Backdrop className="data-[state=open]:animate-backdrop-in data-[state=closed]:animate-backdrop-out fixed inset-0 z-50 bg-black/50 backdrop-blur-xs" />
         <Dialog.Positioner className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <Dialog.Content className="data-[state=open]:animate-dialog-in data-[state=closed]:animate-dialog-out relative w-full max-w-sm rounded-lg bg-white dark:bg-gray-900 p-5 shadow-lg">
             <Dialog.CloseTrigger asChild>
@@ -107,7 +107,7 @@ export default function ChooseSubscriptionDialog() {
                   <div className="space-y-2">
                     {features.map((feature, index) => (
                       <div key={index} className="flex items-start space-x-2">
-                        <Check className="h-4 w-4 text-gray-600 dark:text-gray-400 mt-0.5 flex-shrink-0" />
+                        <Check className="h-4 w-4 text-gray-600 dark:text-gray-400 mt-0.5 shrink-0" />
                         <span className="text-xs text-gray-600 dark:text-gray-400">
                           {feature}
                         </span>

@@ -10,7 +10,7 @@ import { Building2, MapPin, Phone, Mail, Edit3 } from "lucide-vue-next";
     >
       <div class="flex items-center space-x-3 mb-6">
         <div
-          class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white"
+          class="w-12 h-12 rounded-lg bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white"
         >
           <Building2 class="h-6 w-6" />
         </div>
@@ -39,10 +39,10 @@ import { Building2, MapPin, Phone, Mail, Edit3 } from "lucide-vue-next";
           >
             <Editable.Area class="relative">
               <Editable.Input
-                class="w-full px-3 py-2 text-lg font-semibold border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors min-h-[2.5rem]"
+                class="w-full px-3 py-2 text-lg font-semibold border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors min-h-10"
               />
               <Editable.Preview
-                class="w-full px-3 py-2 text-lg font-semibold rounded-md text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 cursor-text transition-colors group-hover:ring-1 group-hover:ring-gray-200 dark:group-hover:ring-gray-700 min-h-[2.5rem]"
+                class="w-full px-3 py-2 text-lg font-semibold rounded-md text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 cursor-text transition-colors group-hover:ring-1 group-hover:ring-gray-200 dark:group-hover:ring-gray-700 min-h-10"
               />
               <Edit3
                 class="absolute right-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
@@ -67,10 +67,10 @@ import { Building2, MapPin, Phone, Mail, Edit3 } from "lucide-vue-next";
           >
             <Editable.Area class="relative">
               <Editable.Input
-                class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors resize-none min-h-[2.5rem]"
+                class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors resize-none min-h-10"
               />
               <Editable.Preview
-                class="w-full px-3 py-2 text-sm rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-text transition-colors group-hover:ring-1 group-hover:ring-gray-200 dark:group-hover:ring-gray-700 min-h-[2.5rem] whitespace-pre-wrap"
+                class="w-full px-3 py-2 text-sm rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-text transition-colors group-hover:ring-1 group-hover:ring-gray-200 dark:group-hover:ring-gray-700 min-h-10 whitespace-pre-wrap"
               />
               <Edit3
                 class="absolute right-2 top-2 h-4 w-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
@@ -94,10 +94,10 @@ import { Building2, MapPin, Phone, Mail, Edit3 } from "lucide-vue-next";
           >
             <Editable.Area class="relative">
               <Editable.Input
-                class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors min-h-[2.5rem]"
+                class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors min-h-10"
               />
               <Editable.Preview
-                class="w-full px-3 py-2 text-sm rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-text transition-colors group-hover:ring-1 group-hover:ring-gray-200 dark:group-hover:ring-gray-700 min-h-[2.5rem]"
+                class="w-full px-3 py-2 text-sm rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-text transition-colors group-hover:ring-1 group-hover:ring-gray-200 dark:group-hover:ring-gray-700 min-h-10"
               />
               <Edit3
                 class="absolute right-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
@@ -121,10 +121,10 @@ import { Building2, MapPin, Phone, Mail, Edit3 } from "lucide-vue-next";
           >
             <Editable.Area class="relative">
               <Editable.Input
-                class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors min-h-[2.5rem]"
+                class="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-colors min-h-10"
               />
               <Editable.Preview
-                class="w-full px-3 py-2 text-sm rounded-md text-blue-600 dark:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-text transition-colors group-hover:ring-1 group-hover:ring-gray-200 dark:group-hover:ring-gray-700 min-h-[2.5rem]"
+                class="w-full px-3 py-2 text-sm rounded-md text-blue-600 dark:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-text transition-colors group-hover:ring-1 group-hover:ring-gray-200 dark:group-hover:ring-gray-700 min-h-10"
               />
               <Edit3
                 class="absolute right-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"

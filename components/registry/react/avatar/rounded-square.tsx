@@ -3,7 +3,7 @@ import { Avatar } from "@ark-ui/react/avatar";
 export default function RoundedSquareAvatar() {
   return (
     <Avatar.Root className="w-16 h-16">
-      <Avatar.Fallback className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 text-gray-700 font-semibold text-lg flex items-center justify-center rounded-2xl">
+      <Avatar.Fallback className="w-full h-full bg-linear-to-br from-gray-200 to-gray-300 text-gray-700 font-semibold text-lg flex items-center justify-center rounded-2xl">
         AB
       </Avatar.Fallback>
       <Avatar.Image

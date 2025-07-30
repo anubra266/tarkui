@@ -79,7 +79,7 @@ export default function InfiniteCarousel() {
             <Carousel.Indicator
               key={index}
               index={index}
-              className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 data-[current]:bg-blue-500 dark:data-[current]:bg-blue-400 transition-colors cursor-pointer"
+              className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 data-current:bg-blue-500 dark:data-current:bg-blue-400 transition-colors cursor-pointer"
             />
           ))}
         </Carousel.IndicatorGroup>

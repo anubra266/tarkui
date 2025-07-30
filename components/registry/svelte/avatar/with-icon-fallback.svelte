@@ -4,7 +4,7 @@
 
 <Avatar.Root class="w-16 h-16">
   <Avatar.Fallback
-    class="w-full h-full bg-gradient-to-br from-slate-400 to-slate-500 text-white flex items-center justify-center rounded-full"
+    class="w-full h-full bg-linear-to-br from-slate-400 to-slate-500 text-white flex items-center justify-center rounded-full"
   >
     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path

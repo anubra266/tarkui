@@ -39,9 +39,9 @@ export default function TabsWithLeftChevronAccordion() {
         <Accordion.Item
           key={item.id}
           value={item.id}
-          className="group border border-gray-300/50 dark:border-gray-700/50 rounded-lg mb-2 last:mb-0 bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm"
+          className="group border border-gray-300/50 dark:border-gray-700/50 rounded-lg mb-2 last:mb-0 bg-linear-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs"
         >
-          <Accordion.ItemTrigger className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200">
+          <Accordion.ItemTrigger className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-linear-to-r hover:from-blue-500/5 hover:to-purple-500/5 transition-all duration-200">
             <Accordion.ItemIndicator className="mr-2 transition-transform duration-200 data-[state=open]:rotate-90">
               <ChevronRightIcon className="w-4 h-4 text-gray-600 dark:text-gray-400" />
             </Accordion.ItemIndicator>

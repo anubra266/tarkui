@@ -111,119 +111,119 @@
           <div class="grid grid-cols-4 gap-2">
             <button
               on:click={clearDisplay}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 hover:bg-red-200 dark:hover:bg-red-800"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 hover:bg-red-200 dark:hover:bg-red-800"
             >
               C
             </button>
             <button
               on:click={() => {}}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"
             >
               ±
             </button>
             <button
               on:click={() => {}}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"
             >
               %
             </button>
             <button
               on:click={() => inputOperation("÷")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-500 text-white hover:bg-blue-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-blue-500 text-white hover:bg-blue-600"
             >
               ÷
             </button>
 
             <button
               on:click={() => inputNumber("7")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
             >
               7
             </button>
             <button
               on:click={() => inputNumber("8")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
             >
               8
             </button>
             <button
               on:click={() => inputNumber("9")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
             >
               9
             </button>
             <button
               on:click={() => inputOperation("×")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-500 text-white hover:bg-blue-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-blue-500 text-white hover:bg-blue-600"
             >
               ×
             </button>
 
             <button
               on:click={() => inputNumber("4")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
             >
               4
             </button>
             <button
               on:click={() => inputNumber("5")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
             >
               5
             </button>
             <button
               on:click={() => inputNumber("6")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
             >
               6
             </button>
             <button
               on:click={() => inputOperation("-")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-500 text-white hover:bg-blue-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-blue-500 text-white hover:bg-blue-600"
             >
               -
             </button>
 
             <button
               on:click={() => inputNumber("1")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
             >
               1
             </button>
             <button
               on:click={() => inputNumber("2")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
             >
               2
             </button>
             <button
               on:click={() => inputNumber("3")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
             >
               3
             </button>
             <button
               on:click={() => inputOperation("+")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-500 text-white hover:bg-blue-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-blue-500 text-white hover:bg-blue-600"
             >
               +
             </button>
 
             <button
               on:click={() => inputNumber("0")}
-              class="col-span-2 h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
+              class="col-span-2 h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
             >
               0
             </button>
             <button
               on:click={() => inputNumber(".")}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
             >
               .
             </button>
             <button
               on:click={performCalculation}
-              class="h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-500 text-white hover:bg-blue-600"
+              class="h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 bg-blue-500 text-white hover:bg-blue-600"
             >
               =
             </button>

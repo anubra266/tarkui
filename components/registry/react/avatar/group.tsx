@@ -12,7 +12,7 @@ export default function AvatarGroup() {
     <div className="flex -space-x-2">
       {avatars.map((avatar, index) => (
         <Avatar.Root key={index} className="w-12 h-12 relative z-10">
-          <Avatar.Fallback className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 text-white font-semibold text-sm flex items-center justify-center rounded-full">
+          <Avatar.Fallback className="w-full h-full bg-linear-to-br from-blue-500 to-purple-600 text-white font-semibold text-sm flex items-center justify-center rounded-full">
             {avatar.fallback}
           </Avatar.Fallback>
           {avatar.src && (

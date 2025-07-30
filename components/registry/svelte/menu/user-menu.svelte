@@ -13,8 +13,8 @@
 
 <div class="flex items-center justify-center min-h-32">
   <Menu.Root>
-    <Menu.Trigger class="inline-flex items-center gap-3 px-3 py-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
-      <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xs font-semibold">
+    <Menu.Trigger class="inline-flex items-center gap-3 px-3 py-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
+      <div class="w-6 h-6 rounded-full bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xs font-semibold">
         JD
       </div>
       <span>John Doe</span>
@@ -22,7 +22,7 @@
     </Menu.Trigger>
     <Portal>
       <Menu.Positioner>
-        <Menu.Content class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-56 focus-visible:outline-none">
+        <Menu.Content class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-56 focus-visible:outline-hidden">
           <div class="px-3 py-2 border-b border-gray-200 dark:border-gray-700">
             <div class="text-sm font-medium text-gray-900 dark:text-gray-100">
               John Doe

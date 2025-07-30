@@ -44,12 +44,12 @@
         class="absolute inset-x-4 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none"
       >
         <CarouselPrevTrigger
-          class="p-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full transition-all pointer-events-auto text-white backdrop-blur-sm"
+          class="p-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full transition-all pointer-events-auto text-white backdrop-blur-xs"
         >
           ←
         </CarouselPrevTrigger>
         <CarouselNextTrigger
-          class="p-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full transition-all pointer-events-auto text-white backdrop-blur-sm"
+          class="p-3 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full transition-all pointer-events-auto text-white backdrop-blur-xs"
         >
           →
         </CarouselNextTrigger>
@@ -61,7 +61,7 @@
         v-for="(_, index) in slides"
         :key="index"
         :index="index"
-        class="w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 data-[current]:bg-blue-500 dark:data-[current]:bg-blue-400 data-[current]:w-8 transition-all cursor-pointer"
+        class="w-3 h-3 rounded-full bg-gray-400 dark:bg-gray-600 data-current:bg-blue-500 dark:data-current:bg-blue-400 data-current:w-8 transition-all cursor-pointer"
       />
     </CarouselIndicatorGroup>
   </CarouselRoot>

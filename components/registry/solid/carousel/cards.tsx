@@ -78,7 +78,7 @@ export default function CardsCarousel() {
           {(_, index) => (
             <Carousel.Indicator
               index={index()}
-              class="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 data-[current]:bg-blue-500 dark:data-[current]:bg-blue-400 data-[current]:w-6 transition-all cursor-pointer"
+              class="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600 data-current:bg-blue-500 dark:data-current:bg-blue-400 data-current:w-6 transition-all cursor-pointer"
             />
           )}
         </For>

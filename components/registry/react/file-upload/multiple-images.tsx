@@ -49,7 +49,7 @@ export default function MultipleImages() {
               <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100">
                 Uploaded Files ({acceptedFiles.length})
               </h3>
-              <FileUpload.Trigger className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
+              <FileUpload.Trigger className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-md hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
                 <Upload className="w-3 h-3" />
                 Add more
               </FileUpload.Trigger>
@@ -74,7 +74,7 @@ export default function MultipleImages() {
                         </FileUpload.ItemPreview>
 
                         {/* Delete Button */}
-                        <FileUpload.ItemDeleteTrigger className="absolute top-2 right-2 w-6 h-6 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2">
+                        <FileUpload.ItemDeleteTrigger className="absolute top-2 right-2 w-6 h-6 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 focus:ring-offset-2">
                           <X className="w-3 h-3" />
                         </FileUpload.ItemDeleteTrigger>
                       </div>

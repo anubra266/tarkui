@@ -83,7 +83,7 @@ export default function Calculator() {
   }) => (
     <button
       onClick={props.onClick}
-      class={`h-12 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+      class={`h-12 rounded-lg font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500 ${
         props.className ||
         "bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600"
       }`}

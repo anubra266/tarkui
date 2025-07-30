@@ -34,7 +34,7 @@ export default function ThumbnailsCarousel() {
             <Carousel.Indicator
               key={index}
               index={index}
-              className="shrink-0 border-2 border-transparent data-[current]:border-blue-500 rounded-md overflow-hidden cursor-pointer transition-all hover:border-gray-300"
+              className="shrink-0 border-2 border-transparent data-current:border-blue-500 rounded-md overflow-hidden cursor-pointer transition-all hover:border-gray-300"
             >
               <img
                 src={image.thumb}
