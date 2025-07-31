@@ -22,8 +22,8 @@ export default function Nested() {
           <ChevronDown class="w-4 h-4" />
         </Menu.Trigger>
         <Portal>
-          <Menu.Positioner class="z-50">
-            <Menu.Content class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-48 focus-visible:outline-hidden">
+          <Menu.Positioner>
+            <Menu.Content class="z-50 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-48 focus-visible:outline-hidden">
               <Menu.Item
                 value="new"
                 class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
@@ -47,8 +47,8 @@ export default function Nested() {
                   <ChevronRight class="w-4 h-4" />
                 </Menu.TriggerItem>
                 <Portal>
-                  <Menu.Positioner class="z-50">
-                    <Menu.Content class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-44 focus-visible:outline-hidden">
+                  <Menu.Positioner>
+                    <Menu.Content class="z-50 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-44 focus-visible:outline-hidden">
                       <Menu.Item
                         value="account"
                         class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"

@@ -25,9 +25,9 @@ import {
         <ChevronDown class="w-4 h-4" />
       </Menu.Trigger>
       <Teleport to="body">
-        <Menu.Positioner class="z-50">
+        <Menu.Positioner>
           <Menu.Content
-            class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-56 focus-visible:outline-hidden"
+            class="z-50 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-56 focus-visible:outline-hidden"
           >
             <div
               class="px-3 py-2 border-b border-gray-200 dark:border-gray-700"
