@@ -23,7 +23,7 @@ export default function UserMenu() {
           <ChevronDown class="w-4 h-4" />
         </Menu.Trigger>
         <Portal>
-          <Menu.Positioner>
+          <Menu.Positioner class="z-50">
             <Menu.Content class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-56 focus-visible:outline-hidden">
               <div class="px-3 py-2 border-b border-gray-200 dark:border-gray-700">
                 <div class="text-sm font-medium text-gray-900 dark:text-gray-100">
@@ -54,7 +54,7 @@ export default function UserMenu() {
                 <CreditCard class="w-4 h-4" />
                 Billing
               </Menu.Item>
-              <Menu.Separator class="my-1 h-px bg-gray-200 dark:bg-gray-700" />
+              <Menu.Separator class="my-1 h-px border-gray-200 dark:border-gray-700" />
               <Menu.Item
                 value="help"
                 class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
@@ -62,7 +62,7 @@ export default function UserMenu() {
                 <HelpCircle class="w-4 h-4" />
                 Help & Support
               </Menu.Item>
-              <Menu.Separator class="my-1 h-px bg-gray-200 dark:bg-gray-700" />
+              <Menu.Separator class="my-1 h-px border-gray-200 dark:border-gray-700" />
               <Menu.Item
                 value="logout"
                 class="flex items-center gap-3 px-3 py-2 text-sm text-red-600 dark:text-red-400 rounded-md hover:bg-red-50 dark:hover:bg-red-900/20 focus:bg-red-50 dark:focus:bg-red-900/20 cursor-pointer"

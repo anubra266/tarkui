@@ -13,7 +13,7 @@ export default function WithGroups() {
           <ChevronDown className="w-4 h-4" />
         </Menu.Trigger>
         <Portal>
-          <Menu.Positioner>
+          <Menu.Positioner className="z-50">
             <Menu.Content className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-48 focus-visible:outline-hidden">
               <Menu.ItemGroup>
                 <Menu.ItemGroupLabel className="px-3 py-1.5 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
@@ -38,7 +38,7 @@ export default function WithGroups() {
                   Save
                 </Menu.Item>
               </Menu.ItemGroup>
-              <Menu.Separator className="my-1 h-px bg-gray-200 dark:bg-gray-700" />
+              <Menu.Separator className="my-1 h-px border-gray-200 dark:border-gray-700" />
               <Menu.ItemGroup>
                 <Menu.ItemGroupLabel className="px-3 py-1.5 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                   Edit

@@ -13,7 +13,7 @@ export default function Basic() {
           <ChevronDown class="w-4 h-4" />
         </Menu.Trigger>
         <Portal>
-          <Menu.Positioner>
+          <Menu.Positioner class="z-50">
             <Menu.Content class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-48 focus-visible:outline-hidden">
               <Menu.Item
                 value="new"
@@ -33,7 +33,7 @@ export default function Basic() {
               >
                 Save
               </Menu.Item>
-              <Menu.Separator class="my-1 h-px bg-gray-200 dark:bg-gray-700" />
+              <Menu.Separator class="my-1 h-px border-gray-200 dark:border-gray-700" />
               <Menu.Item
                 value="exit"
                 class="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
