@@ -67,3 +67,9 @@ export async function getAllComponentCounts(): Promise<Record<string, number>> {
 
   return counts;
 }
+
+// Function to get total number of examples across all components
+export async function getTotalExampleCount(): Promise<number> {
+  const counts = await getAllComponentCounts();
+  return Object.values(counts).reduce((total, count) => total + count, 0);
+}

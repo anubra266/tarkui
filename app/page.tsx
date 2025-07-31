@@ -1,10 +1,11 @@
-import { getAllComponentCounts } from "@/lib/registry";
+import { getAllComponentCounts, getTotalExampleCount } from "@/lib/registry";
 import { Header } from "@/components/header";
 import { Components } from "./page.components";
 
 export default async function Page() {
   // Pre-load all component counts on the server
   const counts = await getAllComponentCounts();
+  const totalExamples = await getTotalExampleCount();
 
   return (
     <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white relative overflow-hidden transition-colors duration-300">
@@ -15,7 +16,7 @@ export default async function Page() {
 
       <Header />
 
-      <Components counts={counts} />
+      <Components counts={counts} totalExamples={totalExamples} />
     </div>
   );
 }

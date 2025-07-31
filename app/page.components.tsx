@@ -11,9 +11,10 @@ import { formatComponentCount } from "@/lib/registry";
 
 interface ComponentsProps {
   counts: Record<string, number>;
+  totalExamples: number;
 }
 
-export function Components({ counts }: ComponentsProps) {
+export function Components({ counts, totalExamples }: ComponentsProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const { framework } = useFramework();
@@ -45,8 +46,8 @@ export function Components({ counts }: ComponentsProps) {
           </span>
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 mb-16 max-w-3xl mx-auto leading-relaxed">
-          An open-source collection of copy-and-paste components for quickly
-          building application UIs.
+          An open-source collection of <b>{totalExamples}</b> copy-and-paste
+          components for quickly building application UIs.
         </p>
 
         {/* Search Bar */}
