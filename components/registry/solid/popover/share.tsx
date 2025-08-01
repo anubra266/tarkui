@@ -42,7 +42,7 @@ export default function PopoverShare() {
   return (
     <Popover.Root>
       <Popover.Trigger class="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-        <Share size={16} />
+        <Share className="h-4 w-4" />
         Share
       </Popover.Trigger>
       <Portal>
@@ -62,7 +62,7 @@ export default function PopoverShare() {
                 class="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 aria-label="Share code"
               >
-                <Code2 size={16} />
+                <Code2 className="h-4 w-4" />
               </button>
               <button
                 onClick={() => handleSocialShare("twitter")}
@@ -78,14 +78,14 @@ export default function PopoverShare() {
                 class="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 aria-label="Share on Facebook"
               >
-                <Facebook size={16} />
+                <Facebook className="h-4 w-4" />
               </button>
               <button
                 onClick={() => handleSocialShare("email")}
                 class="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 aria-label="Share via email"
               >
-                <Mail size={16} />
+                <Mail className="h-4 w-4" />
               </button>
             </div>
 
@@ -102,7 +102,7 @@ export default function PopoverShare() {
                 class="flex items-center justify-center rounded-md p-1 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-700 dark:hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 mr-1"
                 aria-label="Copy URL"
               >
-                <Copy size={16} />
+                <Copy className="h-4 w-4" />
               </button>
             </div>
 

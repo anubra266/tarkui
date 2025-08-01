@@ -74,15 +74,15 @@ export default function PopoverUserProfile() {
             <div class="border-b border-gray-200 dark:border-gray-700 p-3">
               <div class="space-y-2">
                 <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                  <Mail size={16} />
+                  <Mail className="h-4 w-4" />
                   <span>{user.email}</span>
                 </div>
                 <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                  <Phone size={16} />
+                  <Phone className="h-4 w-4" />
                   <span>{user.phone}</span>
                 </div>
                 <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                  <MapPin size={16} />
+                  <MapPin className="h-4 w-4" />
                   <span>{user.location}</span>
                 </div>
               </div>
@@ -92,16 +92,16 @@ export default function PopoverUserProfile() {
             <div class="p-2">
               <div class="space-y-1">
                 <button class="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                  <User size={16} />
+                  <User className="h-4 w-4" />
                   View Profile
                 </button>
                 <button class="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                  <Settings size={16} />
+                  <Settings className="h-4 w-4" />
                   Account Settings
                 </button>
                 <hr class="my-1 border-gray-200 dark:border-gray-700" />
                 <button class="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 focus:outline-none focus:ring-2 focus:ring-red-500">
-                  <LogOut size={16} />
+                  <LogOut className="h-4 w-4" />
                   Sign Out
                 </button>
               </div>

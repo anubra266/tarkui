@@ -30,7 +30,7 @@ export default function PopoverFeedback() {
   return (
     <Popover.Root>
       <Popover.Trigger class="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-        <MessageSquare size={16} />
+        <MessageSquare className="h-4 w-4" />
         Feedback
       </Popover.Trigger>
       <Portal>
@@ -108,7 +108,7 @@ export default function PopoverFeedback() {
                       </>
                     ) : (
                       <>
-                        <Send size={16} />
+                        <Send className="h-4 w-4" />
                         Send feedback
                       </>
                     )}

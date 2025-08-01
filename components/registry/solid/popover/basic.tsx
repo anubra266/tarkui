@@ -6,7 +6,7 @@ export default function PopoverBasic() {
   return (
     <Popover.Root>
       <Popover.Trigger class="inline-flex items-center justify-center rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-2 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-        <Info size={16} />
+        <Info className="h-4 w-4" />
       </Popover.Trigger>
       <Portal>
         <Popover.Positioner>

@@ -46,7 +46,10 @@ export default function PopoverSettingsMenu() {
                 {/* Dark Mode Toggle */}
                 <div class="flex items-center justify-between rounded-md px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <div class="flex items-center gap-2">
-                    <Moon size={16} class="text-gray-500 dark:text-gray-400" />
+                    <Moon
+                      className="h-4 w-4"
+                      class="text-gray-500 dark:text-gray-400"
+                    />
                     <span class="text-sm text-gray-700 dark:text-gray-200">
                       Dark Mode
                     </span>
@@ -70,7 +73,10 @@ export default function PopoverSettingsMenu() {
                 {/* Notifications Toggle */}
                 <div class="flex items-center justify-between rounded-md px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <div class="flex items-center gap-2">
-                    <Bell size={16} class="text-gray-500 dark:text-gray-400" />
+                    <Bell
+                      className="h-4 w-4"
+                      class="text-gray-500 dark:text-gray-400"
+                    />
                     <span class="text-sm text-gray-700 dark:text-gray-200">
                       Notifications
                     </span>
@@ -97,7 +103,7 @@ export default function PopoverSettingsMenu() {
                 <div class="flex items-center justify-between rounded-md px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
                   <div class="flex items-center gap-2">
                     <Shield
-                      size={16}
+                      className="h-4 w-4"
                       class="text-gray-500 dark:text-gray-400"
                     />
                     <span class="text-sm text-gray-700 dark:text-gray-200">
@@ -124,17 +130,17 @@ export default function PopoverSettingsMenu() {
 
                 {/* Other Settings */}
                 <button class="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                  <Globe size={16} />
+                  <Globe className="h-4 w-4" />
                   Language & Region
                 </button>
 
                 <button class="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                  <Palette size={16} />
+                  <Palette className="h-4 w-4" />
                   Appearance
                 </button>
 
                 <button class="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                  <HelpCircle size={16} />
+                  <HelpCircle className="h-4 w-4" />
                   Help & Support
                 </button>
               </div>
