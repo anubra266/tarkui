@@ -1,7 +1,8 @@
 "use client";
 
 import { Listbox, createListCollection } from "@ark-ui/solid/listbox";
-import { Check, AlertCircle, Circle, ArrowUp, ArrowDown } from "lucide-solid";
+import { Check, AlertTriangle, AlertCircle, Info } from "lucide-solid";
+import { createSignal, For } from "solid-js";
 
 export default function PriorityLevels() {
   const collection = createListCollection({
@@ -17,14 +18,14 @@ export default function PriorityLevels() {
         name: "High",
         value: "high",
         color: "orange",
-        icon: ArrowUp,
+        icon: AlertTriangle,
         description: "Important and urgent",
       },
       {
         name: "Medium",
         value: "medium",
         color: "yellow",
-        icon: Circle,
+        icon: Info,
         description: "Standard priority",
       },
       {
@@ -62,40 +63,26 @@ export default function PriorityLevels() {
         <Listbox.Label class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 block">
           Task Priority
         </Listbox.Label>
-        <Listbox.Content class="bg-(--listbox-bg) border border-(--listbox-border) rounded-lg px-1 py-2 w-80 shadow-lg">
-          {collection.items.map((priority) => {
-            const Icon = priority.icon;
-            return (
+        <Listbox.Content class="bg-(--listbox-bg) border border-(--listbox-border) rounded-lg px-1 py-2 w-64 shadow-lg">
+          <For each={collection.items}>
+            {(priority) => (
               <Listbox.Item
-                key={priority.value}
+                key={priority}
                 item={priority}
-                class="flex items-center justify-between px-3 py-3 mx-1 rounded-md cursor-pointer text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 transition-colors"
+                class="flex items-center justify-between px-3 py-2 mx-1 rounded-md cursor-pointer text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 data-disabled:opacity-50 data-disabled:cursor-not-allowed transition-colors"
               >
                 <div class="flex items-center gap-3">
-                  <div
-                    class={`w-8 h-8 rounded-full flex items-center justify-center ${getColorClasses(
-                      priority.color
-                    )}`}
-                  >
-                    <Icon class="w-4 h-4" />
+                  <div class="w-8 h-8 rounded-lg bg-red-100 dark:bg-red-900/20 flex items-center justify-center">
+                    <AlertTriangle class="w-4 h-4 text-red-600 dark:text-red-400" />
                   </div>
-                  <Listbox.ItemText class="flex-1">
-                    <div class="flex flex-col">
-                      <span class="text-gray-900 dark:text-gray-100 font-medium">
-                        {priority.name}
-                      </span>
-                      <span class="text-xs text-gray-500 dark:text-gray-400 font-normal">
-                        {priority.description}
-                      </span>
-                    </div>
-                  </Listbox.ItemText>
+                  <Listbox.ItemText>{priority}</Listbox.ItemText>
                 </div>
                 <Listbox.ItemIndicator>
                   <Check class="w-4 h-4 text-blue-600 dark:text-blue-400" />
                 </Listbox.ItemIndicator>
               </Listbox.Item>
-            );
-          })}
+            )}
+          </For>
         </Listbox.Content>
       </Listbox.Root>
     </div>

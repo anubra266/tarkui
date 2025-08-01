@@ -7,8 +7,11 @@ import {
   ChevronsLeft,
   ChevronsRight,
 } from "lucide-solid";
+import { createSignal, For } from "solid-js";
 
 export default function WithDropdown() {
+  const [showDropdown, setShowDropdown] = createSignal(false);
+
   return (
     <Pagination.Root
       count={100}
@@ -48,14 +51,18 @@ export default function WithDropdown() {
               onChange={(e) => pagination().setPage(Number(e.target.value))}
               class="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md text-gray-900 dark:text-gray-100 text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500/50 dark:focus:ring-blue-400/50 min-w-20"
             >
-              {Array.from(
-                { length: pagination().totalPages },
-                (_, i) => i + 1
-              ).map((page) => (
-                <option key={page} value={page}>
-                  Page {page}
-                </option>
-              ))}
+              <For
+                each={Array.from(
+                  { length: pagination().totalPages },
+                  (_, i) => i + 1
+                )}
+              >
+                {(page) => (
+                  <option key={page} value={page}>
+                    Page {page}
+                  </option>
+                )}
+              </For>
             </select>
           )}
         </Pagination.Context>

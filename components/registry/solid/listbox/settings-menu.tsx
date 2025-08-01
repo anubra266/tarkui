@@ -1,18 +1,8 @@
 "use client";
 
 import { Listbox, createListCollection } from "@ark-ui/solid/listbox";
-import {
-  Check,
-  Monitor,
-  Moon,
-  Sun,
-  Bell,
-  Shield,
-  Globe,
-  User,
-  Lock,
-  Smartphone,
-} from "lucide-solid";
+import { Check, Settings, User, Shield, Bell, Palette } from "lucide-solid";
+import { createSignal, For } from "solid-js";
 
 export default function SettingsMenu() {
   const collection = createListCollection({
@@ -21,7 +11,7 @@ export default function SettingsMenu() {
         id: "appearance",
         name: "Dark Theme",
         category: "Appearance",
-        icon: Moon,
+        icon: Palette,
         value: "dark-theme",
         description: "Use dark mode interface",
       },
@@ -29,7 +19,7 @@ export default function SettingsMenu() {
         id: "system",
         name: "System Theme",
         category: "Appearance",
-        icon: Monitor,
+        icon: Settings,
         value: "system-theme",
         description: "Follow system preference",
       },
@@ -37,7 +27,7 @@ export default function SettingsMenu() {
         id: "light",
         name: "Light Theme",
         category: "Appearance",
-        icon: Sun,
+        icon: Palette,
         value: "light-theme",
         description: "Use light mode interface",
       },
@@ -61,7 +51,7 @@ export default function SettingsMenu() {
         id: "public",
         name: "Public Profile",
         category: "Account",
-        icon: Globe,
+        icon: User,
         value: "public-profile",
         description: "Make profile publicly visible",
       },
@@ -69,7 +59,7 @@ export default function SettingsMenu() {
         id: "two-factor",
         name: "Two-Factor Auth",
         category: "Security",
-        icon: Lock,
+        icon: Settings,
         value: "two-factor",
         description: "Enable 2FA security",
       },
@@ -77,7 +67,7 @@ export default function SettingsMenu() {
         id: "mobile",
         name: "Mobile Sync",
         category: "Sync",
-        icon: Smartphone,
+        icon: Settings,
         value: "mobile-sync",
         description: "Sync with mobile devices",
       },
@@ -129,44 +119,40 @@ export default function SettingsMenu() {
         <div class="text-xs text-gray-500 dark:text-gray-400 mb-3">
           Configure your application settings
         </div>
-        <Listbox.Content class="bg-(--listbox-bg) border border-(--listbox-border) rounded-lg px-1 py-2 w-96 max-h-80 overflow-y-auto shadow-lg">
-          {Object.entries(groupedItems).map(([category, items]) => (
-            <div key={category}>
-              <div class="px-3 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                {category}
-              </div>
-              {items.map((setting) => {
-                const Icon = setting.icon;
-                return (
-                  <Listbox.Item
-                    key={setting.value}
-                    item={setting}
-                    class="flex items-center justify-between px-3 py-3 mx-1 rounded-md cursor-pointer text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 data-selected:bg-blue-50 dark:data-selected:bg-blue-900/20 data-selected:text-blue-700 dark:data-selected:text-blue-300 transition-colors"
-                  >
-                    <div class="flex items-center gap-3 flex-1">
-                      <Icon class={`w-5 h-5 ${getIconColor(setting.value)}`} />
-                      <Listbox.ItemText class="flex-1">
-                        <div class="flex flex-col">
-                          <span class="font-medium">{setting.name}</span>
-                          <span class="text-xs text-gray-500 dark:text-gray-400 font-normal">
-                            {setting.description}
-                          </span>
-                        </div>
-                      </Listbox.ItemText>
-                    </div>
-                    <Listbox.ItemIndicator>
-                      <div class="w-4 h-4 rounded border-2 border-blue-600 dark:border-blue-400 flex items-center justify-center bg-blue-600 dark:bg-blue-400">
-                        <Check class="w-2.5 h-2.5 text-white" />
+        <Listbox.Content class="bg-(--listbox-bg) border border-(--listbox-border) rounded-lg px-1 py-2 w-80 shadow-lg max-h-96 overflow-y-auto">
+          <For each={Object.entries(groupedItems)}>
+            {([category, items]) => (
+              <Listbox.ItemGroup>
+                <Listbox.ItemGroupLabel class="px-3 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider border-b border-gray-200 dark:border-gray-700">
+                  {category}
+                </Listbox.ItemGroupLabel>
+                <For each={items}>
+                  {(setting) => (
+                    <Listbox.Item
+                      key={setting.value}
+                      item={setting}
+                      class="flex items-center justify-between px-3 py-2.5 mx-1 rounded-md cursor-pointer text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 data-selected:bg-blue-50 dark:data-selected:bg-blue-900/20 data-selected:text-blue-700 dark:data-selected:text-blue-300 transition-colors"
+                    >
+                      <div class="flex items-center gap-3">
+                        <setting.icon class="w-4 h-4" />
+                        <Listbox.ItemText class="flex-1">
+                          <div class="flex flex-col">
+                            <span>{setting.label}</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400 font-normal">
+                              {setting.description}
+                            </span>
+                          </div>
+                        </Listbox.ItemText>
                       </div>
-                    </Listbox.ItemIndicator>
-                  </Listbox.Item>
-                );
-              })}
-              {category !== "Sync" && (
-                <div class="h-px bg-gray-200 dark:bg-gray-700 mx-2 my-2" />
-              )}
-            </div>
-          ))}
+                      <Listbox.ItemIndicator>
+                        <Check class="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                      </Listbox.ItemIndicator>
+                    </Listbox.Item>
+                  )}
+                </For>
+              </Listbox.ItemGroup>
+            )}
+          </For>
         </Listbox.Content>
       </Listbox.Root>
     </div>

@@ -2,7 +2,7 @@
 
 import { PasswordInput } from "@ark-ui/solid/password-input";
 import { Eye, EyeOff } from "lucide-solid";
-import { createSignal, createMemo } from "solid-js";
+import { createSignal, For } from "solid-js";
 
 export default function WithStrength() {
   const [password, setPassword] = createSignal("");
@@ -47,16 +47,22 @@ export default function WithStrength() {
         </PasswordInput.Control>
 
         <div class="mt-3">
-          <div class="flex gap-1 mb-2">
-            {[...Array(5)].map((_, i) => (
-              <div
-                class={`h-1 flex-1 rounded-full transition-colors ${
-                  i < strength()
-                    ? strengthColors[strength() - 1]
-                    : "bg-gray-200 dark:bg-gray-700"
-                }`}
-              />
-            ))}
+          <div class="flex gap-1 mt-2">
+            <For each={[...Array(5)]}>
+              {(_, i) => (
+                <div
+                  class={`h-1 flex-1 rounded-full transition-colors ${
+                    i() < strength()
+                      ? strength() <= 2
+                        ? "bg-red-500"
+                        : strength() <= 3
+                        ? "bg-yellow-500"
+                        : "bg-green-500"
+                      : "bg-gray-200 dark:bg-gray-700"
+                  }`}
+                />
+              )}
+            </For>
           </div>
           <p class="text-xs text-gray-600 dark:text-gray-400">
             {password().length === 0

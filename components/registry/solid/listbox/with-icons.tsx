@@ -3,14 +3,15 @@
 import { Listbox, createListCollection } from "@ark-ui/solid/listbox";
 import {
   Check,
-  Figma,
-  Paintbrush,
-  Image,
-  Layers,
-  Zap,
   Code,
   Palette,
+  Zap,
+  Database,
+  Cloud,
+  Shield,
+  Globe,
 } from "lucide-solid";
+import { createSignal, For } from "solid-js";
 
 export default function WithIcons() {
   const collection = createListCollection({
@@ -95,34 +96,26 @@ export default function WithIcons() {
         <div class="text-xs text-gray-500 dark:text-gray-400 mb-3">
           Select your preferred tools
         </div>
-        <Listbox.Content class="bg-(--listbox-bg) border border-(--listbox-border) rounded-lg px-1 py-2 w-80 shadow-lg">
-          {collection.items.map((tool) => {
-            const Icon = tool.icon;
-            return (
+        <Listbox.Content class="bg-(--listbox-bg) border border-(--listbox-border) rounded-lg px-1 py-2 w-64 shadow-lg">
+          <For each={collection.items}>
+            {(tool) => (
               <Listbox.Item
-                key={tool.value}
+                key={tool}
                 item={tool}
-                class="flex items-center justify-between px-3 py-3 mx-1 rounded-md cursor-pointer text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 data-selected:bg-blue-50 dark:data-selected:bg-blue-900/20 data-selected:text-blue-700 dark:data-selected:text-blue-300 transition-colors"
+                class="flex items-center justify-between px-3 py-2 mx-1 rounded-md cursor-pointer text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 data-disabled:opacity-50 data-disabled:cursor-not-allowed transition-colors"
               >
                 <div class="flex items-center gap-3">
-                  <Icon class={`w-5 h-5 ${getIconColor(tool.value)}`} />
-                  <Listbox.ItemText class="flex-1">
-                    <div class="flex flex-col">
-                      <span class="font-medium">{tool.name}</span>
-                      <span class="text-xs text-gray-500 dark:text-gray-400 font-normal">
-                        {tool.description}
-                      </span>
-                    </div>
-                  </Listbox.ItemText>
+                  <div class="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center">
+                    <Code class="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <Listbox.ItemText>{tool}</Listbox.ItemText>
                 </div>
                 <Listbox.ItemIndicator>
-                  <div class="w-4 h-4 rounded border-2 border-blue-600 dark:border-blue-400 flex items-center justify-center bg-blue-600 dark:bg-blue-400">
-                    <Check class="w-2.5 h-2.5 text-white" />
-                  </div>
+                  <Check class="w-4 h-4 text-blue-600 dark:text-blue-400" />
                 </Listbox.ItemIndicator>
               </Listbox.Item>
-            );
-          })}
+            )}
+          </For>
         </Listbox.Content>
       </Listbox.Root>
     </div>

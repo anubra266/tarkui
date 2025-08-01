@@ -3,6 +3,7 @@
 import { HoverCard } from "@ark-ui/solid/hover-card";
 import { Portal } from "solid-js/web";
 import { Star, ShoppingCart, Heart, Truck } from "lucide-solid";
+import { For } from "solid-js";
 
 export default function ProductInfo() {
   return (
@@ -43,23 +44,20 @@ export default function ProductInfo() {
                 </div>
 
                 {/* Rating */}
-                <div class="flex items-center gap-2">
-                  <div class="flex items-center">
-                    {Array.from({ length: 5 }).map((_, i) => (
+                <div class="flex items-center gap-1 mb-2">
+                  <For each={Array.from({ length: 5 })}>
+                    {(_, i) => (
                       <Star
                         class={`w-4 h-4 ${
-                          i < 4
+                          i() < 4
                             ? "text-yellow-400 fill-current"
                             : "text-gray-300 dark:text-gray-600"
                         }`}
                       />
-                    ))}
-                  </div>
-                  <span class="text-sm text-gray-600 dark:text-gray-400">
-                    (4.8)
-                  </span>
-                  <span class="text-sm text-gray-500 dark:text-gray-400">
-                    1,247 reviews
+                    )}
+                  </For>
+                  <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">
+                    (128 reviews)
                   </span>
                 </div>
 

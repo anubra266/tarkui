@@ -2,7 +2,7 @@
 
 import { HoverCard } from "@ark-ui/solid/hover-card";
 import { Portal } from "solid-js/web";
-import { createSignal } from "solid-js";
+import { createSignal, For } from "solid-js";
 
 export default function CustomPositioning() {
   const [positioning, setPositioning] = createSignal("bottom");
@@ -26,19 +26,21 @@ export default function CustomPositioning() {
           Select Position
         </h3>
         <div class="flex flex-wrap gap-2">
-          {positionOptions.map((option) => (
-            <button
-              key={option.value}
-              onClick={() => setPositioning(option.value)}
-              class={`px-3 py-1.5 text-sm rounded-md transition-colors ${
-                positioning() === option.value
-                  ? "bg-blue-600 text-white"
-                  : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700"
-              }`}
-            >
-              {option.label}
-            </button>
-          ))}
+          <For each={positionOptions}>
+            {(option) => (
+              <button
+                type="button"
+                onClick={() => setPositioning(option.value)}
+                class={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                  positioning() === option.value
+                    ? "bg-blue-500 text-white"
+                    : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
+                }`}
+              >
+                {option.label}
+              </button>
+            )}
+          </For>
         </div>
       </div>
 
