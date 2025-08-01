@@ -35,8 +35,8 @@ export function Components({ counts, totalExamples }: ComponentsProps) {
 
   return (
     <main className="relative max-w-7xl mx-auto px-6 py-20 pt-32">
-      <div className="text-center mb-20">
-        <h1 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
+      <div className="md:text-center mb-20">
+        <h1 className="text-2xl md:text-7xl font-bold mb-8 leading-tight">
           <span className="bg-linear-to-r from-gray-900 via-gray-700 to-gray-600 dark:from-white dark:via-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
             Beautiful UI components built with
           </span>

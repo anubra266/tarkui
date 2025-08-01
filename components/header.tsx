@@ -45,7 +45,7 @@ export function Header() {
               </div>
               <div className="absolute inset-0 bg-linear-to-br from-blue-400 to-purple-500 rounded-lg blur-xs opacity-50"></div>
             </div>
-            <span className="text-2xl font-bold bg-linear-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+            <span className="hidden md:block text-2xl font-bold bg-linear-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
               Tark UI
             </span>
           </Link>
@@ -58,11 +58,11 @@ export function Header() {
             </a>
           </nav> */}
         </div>
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-1 md:space-x-3">
           {/* Framework Selector */}
           {isLoaded && (
             <Select value={framework} onValueChange={setFramework}>
-              <SelectTrigger className="w-[120px] bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur-xs border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-200">
+              <SelectTrigger className="w-24 md:w-[120px] bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur-xs border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-200">
                 <SelectValue placeholder="Framework" />
               </SelectTrigger>
               <SelectContent>
@@ -84,7 +84,7 @@ export function Header() {
               size="icon"
               className="hover:bg-gray-200/50 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-white"
             >
-              <Twitter className="w-4 h-4" />
+              <Twitter className="size-2 md:size-4" />
             </Button>
           </Link>
           <Link
@@ -97,7 +97,7 @@ export function Header() {
               size="icon"
               className="hover:bg-gray-200/50 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-white"
             >
-              <Github className="w-4 h-4" />
+              <Github className="size-2 md:size-4" />
             </Button>
           </Link>
           <Button
@@ -106,8 +106,8 @@ export function Header() {
             className="hover:bg-gray-200/50 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-white"
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
-            <Moon className="w-4 h-4 dark:hidden" />
-            <Sun className="w-4 h-4 hidden dark:block" />
+            <Moon className="size-2 md:size-4 dark:hidden" />
+            <Sun className="size-2 md:size-4 hidden dark:block" />
           </Button>
         </div>
       </div>
