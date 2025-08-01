@@ -1,6 +1,5 @@
-"use client";
-
 import { PinInput } from "@ark-ui/solid/pin-input";
+import { For } from "solid-js";
 
 export default function TwoFactor() {
   return (
@@ -15,23 +14,27 @@ export default function TwoFactor() {
           </PinInput.Label>
           <PinInput.Control class="flex items-center gap-3">
             <div class="flex gap-2">
-              {[0, 1, 2].map((_, index) => (
-                <PinInput.Input
-                  index={index}
-                  class="w-12 h-12 text-center text-lg font-medium border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500/50 dark:focus:ring-blue-400/50 focus:border-blue-500 dark:focus:border-blue-400 transition-all"
-                />
-              ))}
+              <For each={[0, 1, 2]}>
+                {(_, index) => (
+                  <PinInput.Input
+                    index={index()}
+                    class="w-12 h-12 text-center text-lg font-medium border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500/50 dark:focus:ring-blue-400/50 focus:border-blue-500 dark:focus:border-blue-400 transition-all"
+                  />
+                )}
+              </For>
             </div>
             <span class="text-gray-400 dark:text-gray-500 text-lg font-medium">
               -
             </span>
             <div class="flex gap-2">
-              {[3, 4, 5].map((_, index) => (
-                <PinInput.Input
-                  index={index + 3}
-                  class="w-12 h-12 text-center text-lg font-medium border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500/50 dark:focus:ring-blue-400/50 focus:border-blue-500 dark:focus:border-blue-400 transition-all"
-                />
-              ))}
+              <For each={[3, 4, 5]}>
+                {(_, index) => (
+                  <PinInput.Input
+                    index={index() + 3}
+                    class="w-12 h-12 text-center text-lg font-medium border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500/50 dark:focus:ring-blue-400/50 focus:border-blue-500 dark:focus:border-blue-400 transition-all"
+                  />
+                )}
+              </For>
             </div>
           </PinInput.Control>
           <PinInput.HiddenInput />

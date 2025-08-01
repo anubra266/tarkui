@@ -2,7 +2,7 @@
 
 import { FloatingPanel } from "@ark-ui/solid/floating-panel";
 import { Send, ArrowDownLeft, Maximize2, Minus, X } from "lucide-solid";
-import { createSignal } from "solid-js";
+import { createSignal, For } from "solid-js";
 
 export default function ChatWidget() {
   const [message, setMessage] = createSignal("");
@@ -63,24 +63,25 @@ export default function ChatWidget() {
             <FloatingPanel.Body class="flex flex-col h-full">
               {/* Messages */}
               <div class="flex-1 p-4 space-y-3 overflow-y-auto">
-                {messages.map((msg) => (
-                  <div
-                    key={msg.id}
-                    class={`flex ${
-                      msg.isUser ? "justify-end" : "justify-start"
-                    }`}
-                  >
+                <For each={messages}>
+                  {(msg) => (
                     <div
-                      class={`max-w-xs px-3 py-2 rounded-lg text-sm leading-relaxed ${
-                        msg.isUser
-                          ? "bg-blue-500 text-white rounded-br-sm"
-                          : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-bl-sm"
+                      class={`flex ${
+                        msg.isUser ? "justify-end" : "justify-start"
                       }`}
                     >
-                      {msg.text}
+                      <div
+                        class={`max-w-xs px-3 py-2 rounded-lg text-sm leading-relaxed ${
+                          msg.isUser
+                            ? "bg-blue-500 text-white rounded-br-sm"
+                            : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-bl-sm"
+                        }`}
+                      >
+                        {msg.text}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  )}
+                </For>
               </div>
 
               {/* Input */}

@@ -2,7 +2,7 @@
 
 import { FileUpload } from "@ark-ui/solid/file-upload";
 import { Clipboard, FileText, X } from "lucide-solid";
-import { onMount, onCleanup, createSignal } from "solid-js";
+import { onMount, onCleanup, createSignal, For } from "solid-js";
 
 export default function WithPaste() {
   const [isPasted, setIsPasted] = createSignal(false);
@@ -73,33 +73,35 @@ export default function WithPaste() {
                   </h4>
                   <FileUpload.ItemGroup>
                     <div class="space-y-2">
-                      {context().acceptedFiles.map((file) => (
-                        <FileUpload.Item file={file}>
-                          <div class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900">
-                            {/* File Icon or Preview */}
-                            <div class="w-10 h-10 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center shrink-0 overflow-hidden">
-                              {file.type.startsWith("image/") ? (
-                                <FileUpload.ItemPreview type="image/*">
-                                  <FileUpload.ItemPreviewImage class="w-full h-full object-cover" />
-                                </FileUpload.ItemPreview>
-                              ) : (
-                                <FileText class="w-4 h-4 text-gray-400 dark:text-gray-500" />
-                              )}
-                            </div>
+                      <For each={context().acceptedFiles}>
+                        {(file) => (
+                          <FileUpload.Item file={file}>
+                            <div class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900">
+                              {/* File Icon or Preview */}
+                              <div class="w-10 h-10 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center shrink-0 overflow-hidden">
+                                {file.type.startsWith("image/") ? (
+                                  <FileUpload.ItemPreview type="image/*">
+                                    <FileUpload.ItemPreviewImage class="w-full h-full object-cover" />
+                                  </FileUpload.ItemPreview>
+                                ) : (
+                                  <FileText class="w-4 h-4 text-gray-400 dark:text-gray-500" />
+                                )}
+                              </div>
 
-                            {/* File Info */}
-                            <div class="flex-1 min-w-0">
-                              <FileUpload.ItemName class="text-sm font-medium text-gray-900 dark:text-gray-100 truncate" />
-                              <FileUpload.ItemSizeText class="text-xs text-gray-500 dark:text-gray-400" />
-                            </div>
+                              {/* File Info */}
+                              <div class="flex-1 min-w-0">
+                                <FileUpload.ItemName class="text-sm font-medium text-gray-900 dark:text-gray-100 truncate" />
+                                <FileUpload.ItemSizeText class="text-xs text-gray-500 dark:text-gray-400" />
+                              </div>
 
-                            {/* Delete Button */}
-                            <FileUpload.ItemDeleteTrigger class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 shrink-0">
-                              <X class="w-4 h-4" />
-                            </FileUpload.ItemDeleteTrigger>
-                          </div>
-                        </FileUpload.Item>
-                      ))}
+                              {/* Delete Button */}
+                              <FileUpload.ItemDeleteTrigger class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 shrink-0">
+                                <X class="w-4 h-4" />
+                              </FileUpload.ItemDeleteTrigger>
+                            </div>
+                          </FileUpload.Item>
+                        )}
+                      </For>
                     </div>
                   </FileUpload.ItemGroup>
 

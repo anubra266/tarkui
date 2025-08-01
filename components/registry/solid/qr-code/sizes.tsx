@@ -1,4 +1,5 @@
 import { QrCode } from "@ark-ui/solid/qr-code";
+import { For } from "solid-js";
 
 export default function Sizes() {
   const sizes = [
@@ -9,20 +10,22 @@ export default function Sizes() {
 
   return (
     <div class="flex items-end justify-center space-x-8">
-      {sizes.map(({ size, padding, label, pixelSize }) => (
-        <div class="flex flex-col items-center space-y-3">
-          <QrCode.Root value="https://tarkui.com" pixelSize={pixelSize}>
-            <QrCode.Frame
-              class={`${size} bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg ${padding}`}
-            >
-              <QrCode.Pattern class="fill-gray-900 dark:fill-white" />
-            </QrCode.Frame>
-          </QrCode.Root>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300">
-            {label}
-          </span>
-        </div>
-      ))}
+      <For each={sizes}>
+        {({ size, padding, label, pixelSize }) => (
+          <div class="flex flex-col items-center space-y-3">
+            <QrCode.Root value="https://tarkui.com" pixelSize={pixelSize}>
+              <QrCode.Frame
+                class={`${size} bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg ${padding}`}
+              >
+                <QrCode.Pattern class="fill-gray-900 dark:fill-white" />
+              </QrCode.Frame>
+            </QrCode.Root>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">
+              {label}
+            </span>
+          </div>
+        )}
+      </For>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { DatePicker, parseDate } from "@ark-ui/solid/date-picker";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-solid";
+import { For } from "solid-js";
 
 const NUM_OF_MONTHS = 3;
 export default function ThreeMonthsDatePicker() {
@@ -28,59 +29,63 @@ export default function ThreeMonthsDatePicker() {
             </DatePicker.NextTrigger>
           </nav>
           <DatePicker.Context>
-            {(api) =>
-              Array.from({ length: NUM_OF_MONTHS }).map((_, index) => {
-                const offset = api().getOffset({ months: index });
-                return (
-                  <div key={index} class="px-3">
-                    <DatePicker.ViewControl class="flex justify-center items-center mx-10 mb-1 h-9">
-                      <DatePicker.ViewTrigger class="z-20 text-sm font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 px-2 py-1 rounded-md transition-colors">
-                        <span>
-                          {new Intl.DateTimeFormat("default", {
-                            month: "long",
-                          }).format(
-                            offset.visibleRange.start.toDate("UTC")
-                          )}{" "}
-                          {offset.visibleRange.start.year}
-                        </span>
-                      </DatePicker.ViewTrigger>
-                    </DatePicker.ViewControl>
-                    <DatePicker.Table>
-                      <DatePicker.TableHead>
-                        <DatePicker.TableRow>
-                          {api().weekDays.map((weekDay, id) => (
-                            <DatePicker.TableHeader
-                              key={id}
-                              class="text-sm font-medium text-gray-500 dark:text-gray-400 w-9 h-7 text-center"
-                            >
-                              {weekDay.narrow}
-                            </DatePicker.TableHeader>
-                          ))}
-                        </DatePicker.TableRow>
-                      </DatePicker.TableHead>
-                      <DatePicker.TableBody>
-                        {offset.weeks.map((week, id) => (
-                          <DatePicker.TableRow key={id}>
-                            {week.map((day, id) => (
-                              <DatePicker.TableCell
-                                key={id}
-                                value={day}
-                                class="pe-0 ps-0"
-                                visibleRange={offset.visibleRange}
-                              >
-                                <DatePicker.TableCellTrigger class="relative w-9 h-9 text-sm transition-colors data-outside-range:pointer-events-none flex items-center justify-center font-medium cursor-pointer data-today:after:content-[''] data-today:after:absolute data-today:after:bottom-0.5 data-today:after:w-1 data-today:after:h-1 data-today:after:rounded-full data-today:after:bg-gray-200 data-today:not-data-range-start:not-data-range-end:not-data-hover-range-start:not-data-hover-range-end:after:bg-gray-900 dark:data-today:after:bg-gray-900 data-outside-range:text-gray-400 dark:data-outside-range:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 data-in-range:not-data-range-start:not-data-range-end:not-data-hover-range-start:not-data-hover-range-end:bg-gray-100 dark:data-in-range:not-data-range-start:not-data-range-end:not-data-hover-range-start:not-data-hover-range-end:bg-gray-700 data-range-start:bg-gray-900 data-range-start:text-white dark:data-range-start:bg-gray-200 dark:data-range-start:text-gray-900 data-range-end:bg-gray-900 data-range-end:text-white dark:data-range-end:bg-gray-200 dark:data-range-end:text-gray-900 data-hover-range-start:bg-gray-900 data-hover-range-start:text-white dark:data-hover-range-start:bg-gray-200 dark:data-hover-range-start:text-gray-900 data-hover-range-end:bg-gray-900 data-hover-range-end:text-white dark:data-hover-range-end:bg-gray-200 dark:data-hover-range-end:text-gray-900 not-data-in-range:rounded-lg data-range-start:rounded-l-lg data-range-end:rounded-r-lg data-hover-range-start:rounded-l-lg data-hover-range-end:rounded-r-lg">
-                                  {day.day}
-                                </DatePicker.TableCellTrigger>
-                              </DatePicker.TableCell>
-                            ))}
+            {(api) => (
+              <For each={Array.from({ length: NUM_OF_MONTHS })}>
+                {(_, index) => {
+                  const offset = api().getOffset({ months: index() });
+                  return (
+                    <div class="px-3">
+                      <DatePicker.ViewControl class="flex justify-center items-center mx-10 mb-1 h-9">
+                        <DatePicker.ViewTrigger class="z-20 text-sm font-medium text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 px-2 py-1 rounded-md transition-colors">
+                          <span>
+                            {new Intl.DateTimeFormat("default", {
+                              month: "long",
+                            }).format(
+                              offset.visibleRange.start.toDate("UTC")
+                            )}{" "}
+                            {offset.visibleRange.start.year}
+                          </span>
+                        </DatePicker.ViewTrigger>
+                      </DatePicker.ViewControl>
+                      <DatePicker.Table>
+                        <DatePicker.TableHead>
+                          <DatePicker.TableRow>
+                            <For each={api().weekDays}>
+                              {(weekDay) => (
+                                <DatePicker.TableHeader class="text-sm font-medium text-gray-500 dark:text-gray-400 w-9 h-7 text-center">
+                                  {weekDay.narrow}
+                                </DatePicker.TableHeader>
+                              )}
+                            </For>
                           </DatePicker.TableRow>
-                        ))}
-                      </DatePicker.TableBody>
-                    </DatePicker.Table>
-                  </div>
-                );
-              })
-            }
+                        </DatePicker.TableHead>
+                        <DatePicker.TableBody>
+                          <For each={offset.weeks}>
+                            {(week) => (
+                              <DatePicker.TableRow>
+                                <For each={week}>
+                                  {(day) => (
+                                    <DatePicker.TableCell
+                                      value={day}
+                                      class="pe-0 ps-0"
+                                      visibleRange={offset.visibleRange}
+                                    >
+                                      <DatePicker.TableCellTrigger class="relative w-9 h-9 text-sm transition-colors data-outside-range:pointer-events-none flex items-center justify-center font-medium cursor-pointer data-today:after:content-[''] data-today:after:absolute data-today:after:bottom-0.5 data-today:after:w-1 data-today:after:h-1 data-today:after:rounded-full data-today:after:bg-gray-200 data-today:not-data-range-start:not-data-range-end:not-data-hover-range-start:not-data-hover-range-end:after:bg-gray-900 dark:data-today:after:bg-gray-900 data-outside-range:text-gray-400 dark:data-outside-range:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 data-in-range:not-data-range-start:not-data-range-end:not-data-hover-range-start:not-data-hover-range-end:bg-gray-100 dark:data-in-range:not-data-range-start:not-data-range-end:not-data-hover-range-start:not-data-hover-range-end:bg-gray-700 data-range-start:bg-gray-900 data-range-start:text-white dark:data-range-start:bg-gray-200 dark:data-range-start:text-gray-900 data-range-end:bg-gray-900 data-range-end:text-white dark:data-range-end:bg-gray-200 dark:data-range-end:text-gray-900 data-hover-range-start:bg-gray-900 data-hover-range-start:text-white dark:data-hover-range-start:bg-gray-200 dark:data-hover-range-start:text-gray-900 data-hover-range-end:bg-gray-900 data-hover-range-end:text-white dark:data-hover-range-end:bg-gray-200 dark:data-hover-range-end:text-gray-900 not-data-in-range:rounded-lg data-range-start:rounded-l-lg data-range-end:rounded-r-lg data-hover-range-start:rounded-l-lg data-hover-range-end:rounded-r-lg">
+                                        {day.day}
+                                      </DatePicker.TableCellTrigger>
+                                    </DatePicker.TableCell>
+                                  )}
+                                </For>
+                              </DatePicker.TableRow>
+                            )}
+                          </For>
+                        </DatePicker.TableBody>
+                      </DatePicker.Table>
+                    </div>
+                  );
+                }}
+              </For>
+            )}
           </DatePicker.Context>
         </DatePicker.View>
         <DatePicker.View view="month">
@@ -100,19 +105,26 @@ export default function ThreeMonthsDatePicker() {
                 </DatePicker.ViewControl>
                 <DatePicker.Table class="w-full border-separate border-spacing-y-0.5">
                   <DatePicker.TableBody>
-                    {api()
-                      .getMonthsGrid({ columns: 4, format: "short" })
-                      .map((months, id) => (
-                        <DatePicker.TableRow key={id}>
-                          {months.map((month, id) => (
-                            <DatePicker.TableCell key={id} value={month.value}>
-                              <DatePicker.TableCellTrigger class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-selected:bg-gray-900 data-selected:text-white data-selected:rounded-lg dark:data-selected:bg-gray-200 dark:data-selected:text-gray-900 flex items-center justify-center font-medium">
-                                {month.label}
-                              </DatePicker.TableCellTrigger>
-                            </DatePicker.TableCell>
-                          ))}
+                    <For
+                      each={api().getMonthsGrid({
+                        columns: 4,
+                        format: "short",
+                      })}
+                    >
+                      {(months) => (
+                        <DatePicker.TableRow>
+                          <For each={months}>
+                            {(month) => (
+                              <DatePicker.TableCell value={month.value}>
+                                <DatePicker.TableCellTrigger class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-selected:bg-gray-900 data-selected:text-white data-selected:rounded-lg dark:data-selected:bg-gray-200 dark:data-selected:text-gray-900 flex items-center justify-center font-medium">
+                                  {month.label}
+                                </DatePicker.TableCellTrigger>
+                              </DatePicker.TableCell>
+                            )}
+                          </For>
                         </DatePicker.TableRow>
-                      ))}
+                      )}
+                    </For>
                   </DatePicker.TableBody>
                 </DatePicker.Table>
               </>
@@ -136,19 +148,21 @@ export default function ThreeMonthsDatePicker() {
                 </DatePicker.ViewControl>
                 <DatePicker.Table class="w-full border-separate border-spacing-y-0.5">
                   <DatePicker.TableBody>
-                    {api()
-                      .getYearsGrid({ columns: 4 })
-                      .map((years, id) => (
-                        <DatePicker.TableRow key={id}>
-                          {years.map((year, id) => (
-                            <DatePicker.TableCell key={id} value={year.value}>
-                              <DatePicker.TableCellTrigger class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-selected:bg-gray-900 data-selected:text-white data-selected:rounded-lg dark:data-selected:bg-gray-200 dark:data-selected:text-gray-900 flex items-center justify-center font-medium">
-                                {year.label}
-                              </DatePicker.TableCellTrigger>
-                            </DatePicker.TableCell>
-                          ))}
+                    <For each={api().getYearsGrid({ columns: 4 })}>
+                      {(years) => (
+                        <DatePicker.TableRow>
+                          <For each={years}>
+                            {(year) => (
+                              <DatePicker.TableCell value={year.value}>
+                                <DatePicker.TableCellTrigger class="w-16 h-10 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 hover:rounded-lg dark:hover:bg-gray-700 rounded-lg transition-colors data-selected:bg-gray-900 data-selected:text-white data-selected:rounded-lg dark:data-selected:bg-gray-200 dark:data-selected:text-gray-900 flex items-center justify-center font-medium">
+                                  {year.label}
+                                </DatePicker.TableCellTrigger>
+                              </DatePicker.TableCell>
+                            )}
+                          </For>
                         </DatePicker.TableRow>
-                      ))}
+                      )}
+                    </For>
                   </DatePicker.TableBody>
                 </DatePicker.Table>
               </>

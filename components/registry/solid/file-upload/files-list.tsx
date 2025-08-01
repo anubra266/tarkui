@@ -11,6 +11,7 @@ import {
   Headphones,
   Image,
 } from "lucide-solid";
+import { For } from "solid-js";
 
 const getFileIcon = (file: File) => {
   const fileType = file.type;
@@ -101,33 +102,35 @@ export default function FilesList() {
             {context().acceptedFiles.length > 0 && (
               <div class="space-y-3">
                 <FileUpload.ItemGroup>
-                  {context().acceptedFiles.map((file) => (
-                    <FileUpload.Item file={file}>
-                      <div class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900">
-                        {/* File Icon/Preview */}
-                        <div class="w-10 h-10 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center shrink-0 overflow-hidden">
-                          {file.type.startsWith("image/") ? (
-                            <FileUpload.ItemPreview type="image/*">
-                              <FileUpload.ItemPreviewImage class="w-full h-full object-cover" />
-                            </FileUpload.ItemPreview>
-                          ) : (
-                            getFileIcon(file)
-                          )}
-                        </div>
+                  <For each={context().acceptedFiles}>
+                    {(file) => (
+                      <FileUpload.Item file={file}>
+                        <div class="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900">
+                          {/* File Icon/Preview */}
+                          <div class="w-10 h-10 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center justify-center shrink-0 overflow-hidden">
+                            {file.type.startsWith("image/") ? (
+                              <FileUpload.ItemPreview type="image/*">
+                                <FileUpload.ItemPreviewImage class="w-full h-full object-cover" />
+                              </FileUpload.ItemPreview>
+                            ) : (
+                              getFileIcon(file)
+                            )}
+                          </div>
 
-                        {/* File Info */}
-                        <div class="flex-1 min-w-0">
-                          <FileUpload.ItemName class="text-sm font-medium text-gray-900 dark:text-gray-100 truncate" />
-                          <FileUpload.ItemSizeText class="text-xs text-gray-500 dark:text-gray-400" />
-                        </div>
+                          {/* File Info */}
+                          <div class="flex-1 min-w-0">
+                            <FileUpload.ItemName class="text-sm font-medium text-gray-900 dark:text-gray-100 truncate" />
+                            <FileUpload.ItemSizeText class="text-xs text-gray-500 dark:text-gray-400" />
+                          </div>
 
-                        {/* Delete Button */}
-                        <FileUpload.ItemDeleteTrigger class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 shrink-0">
-                          <X class="w-4 h-4" />
-                        </FileUpload.ItemDeleteTrigger>
-                      </div>
-                    </FileUpload.Item>
-                  ))}
+                          {/* Delete Button */}
+                          <FileUpload.ItemDeleteTrigger class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 shrink-0">
+                            <X class="w-4 h-4" />
+                          </FileUpload.ItemDeleteTrigger>
+                        </div>
+                      </FileUpload.Item>
+                    )}
+                  </For>
                 </FileUpload.ItemGroup>
 
                 {/* Remove All Button */}

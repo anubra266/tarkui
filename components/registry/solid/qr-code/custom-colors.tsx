@@ -1,4 +1,5 @@
 import { QrCode } from "@ark-ui/solid/qr-code";
+import { For } from "solid-js";
 
 export default function CustomColors() {
   const colorSchemes = [
@@ -30,20 +31,22 @@ export default function CustomColors() {
 
   return (
     <div class="grid grid-cols-2 gap-6">
-      {colorSchemes.map(({ bg, pattern, label, border }) => (
-        <div class="flex flex-col items-center space-y-3">
-          <QrCode.Root value="https://tarkui.com">
-            <QrCode.Frame
-              class={`w-32 h-32 ${bg} border ${border} rounded-lg p-3`}
-            >
-              <QrCode.Pattern class={pattern} />
-            </QrCode.Frame>
-          </QrCode.Root>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300">
-            {label}
-          </span>
-        </div>
-      ))}
+      <For each={colorSchemes}>
+        {({ bg, pattern, label, border }) => (
+          <div class="flex flex-col items-center space-y-3">
+            <QrCode.Root value="https://tarkui.com">
+              <QrCode.Frame
+                class={`w-32 h-32 ${bg} border ${border} rounded-lg p-3`}
+              >
+                <QrCode.Pattern class={pattern} />
+              </QrCode.Frame>
+            </QrCode.Root>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">
+              {label}
+            </span>
+          </div>
+        )}
+      </For>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { Avatar } from "@ark-ui/solid/avatar";
+import { For } from "solid-js";
 
 export default function AvatarGroup() {
   const avatars = [
@@ -10,20 +11,22 @@ export default function AvatarGroup() {
 
   return (
     <div class="flex -space-x-2">
-      {avatars.map((avatar, index) => (
-        <Avatar.Root key={index} class="w-12 h-12 relative z-10">
-          <Avatar.Fallback class="w-full h-full bg-linear-to-br from-blue-500 to-purple-600 text-white font-semibold text-sm flex items-center justify-center rounded-full">
-            {avatar.fallback}
-          </Avatar.Fallback>
-          {avatar.src && (
-            <Avatar.Image
-              src={avatar.src}
-              alt="avatar"
-              class="w-full h-full object-cover rounded-full"
-            />
-          )}
-        </Avatar.Root>
-      ))}
+      <For each={avatars}>
+        {(avatar, index) => (
+          <Avatar.Root class="w-12 h-12 relative z-10">
+            <Avatar.Fallback class="w-full h-full bg-linear-to-br from-blue-500 to-purple-600 text-white font-semibold text-sm flex items-center justify-center rounded-full">
+              {avatar.fallback}
+            </Avatar.Fallback>
+            {avatar.src && (
+              <Avatar.Image
+                src={avatar.src}
+                alt="avatar"
+                class="w-full h-full object-cover rounded-full"
+              />
+            )}
+          </Avatar.Root>
+        )}
+      </For>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { Checkbox } from "@ark-ui/solid";
 import { CheckIcon, MinusIcon } from "lucide-solid";
-import { createSignal } from "solid-js";
+import { createSignal, For } from "solid-js";
 
 const features = [
   { label: "Dark mode", value: "dark-mode" },
@@ -59,22 +59,24 @@ export default function IndeterminateCheckbox() {
           onValueChange={(details) => setSelectedFeatures(details.values)}
           class="space-y-3"
         >
-          {features.map((feature) => (
-            <Checkbox.Root
-              value={feature.value}
-              class="flex items-center gap-3 cursor-pointer"
-            >
-              <Checkbox.Control class="w-5 h-5 bg-white border-2 border-gray-300 rounded data-[state=checked]:bg-blue-500 data-[state=checked]:border-blue-500 data-hover:border-gray-400 dark:bg-gray-900 dark:border-gray-600 dark:data-[state=checked]:bg-blue-500 dark:data-[state=checked]:border-blue-500 dark:data-hover:border-gray-400 transition-all duration-200 flex items-center justify-center">
-                <Checkbox.Indicator>
-                  <CheckIcon class="w-3.5 h-3.5 text-white" />
-                </Checkbox.Indicator>
-              </Checkbox.Control>
-              <Checkbox.Label class="text-sm text-gray-700 dark:text-gray-200 cursor-pointer">
-                {feature.label}
-              </Checkbox.Label>
-              <Checkbox.HiddenInput />
-            </Checkbox.Root>
-          ))}
+          <For each={features}>
+            {(feature) => (
+              <Checkbox.Root
+                value={feature.value}
+                class="flex items-center gap-3 cursor-pointer"
+              >
+                <Checkbox.Control class="w-5 h-5 bg-white border-2 border-gray-300 rounded data-[state=checked]:bg-blue-500 data-[state=checked]:border-blue-500 data-hover:border-gray-400 dark:bg-gray-900 dark:border-gray-600 dark:data-[state=checked]:bg-blue-500 dark:data-[state=checked]:border-blue-500 dark:data-hover:border-gray-400 transition-all duration-200 flex items-center justify-center">
+                  <Checkbox.Indicator>
+                    <CheckIcon class="w-3.5 h-3.5 text-white" />
+                  </Checkbox.Indicator>
+                </Checkbox.Control>
+                <Checkbox.Label class="text-sm text-gray-700 dark:text-gray-200 cursor-pointer">
+                  {feature.label}
+                </Checkbox.Label>
+                <Checkbox.HiddenInput />
+              </Checkbox.Root>
+            )}
+          </For>
         </Checkbox.Group>
       </div>
     </div>

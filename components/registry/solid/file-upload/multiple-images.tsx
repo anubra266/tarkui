@@ -2,7 +2,7 @@
 
 import { FileUpload } from "@ark-ui/solid/file-upload";
 import { Upload, X } from "lucide-solid";
-import { onMount, createSignal } from "solid-js";
+import { onMount, createSignal, For } from "solid-js";
 
 async function fileFromImageUrl(
   url: string,
@@ -58,23 +58,25 @@ export default function MultipleImages() {
             {context().acceptedFiles.length > 0 ? (
               <FileUpload.ItemGroup>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {context().acceptedFiles.map((file) => (
-                    <FileUpload.Item file={file} class="relative">
-                      <div class="relative aspect-square rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700">
-                        <FileUpload.ItemPreview
-                          type="image/*"
-                          class="w-full h-full object-cover"
-                        >
-                          <FileUpload.ItemPreviewImage class="w-full h-full object-cover" />
-                        </FileUpload.ItemPreview>
+                  <For each={context().acceptedFiles}>
+                    {(file) => (
+                      <FileUpload.Item file={file} class="relative">
+                        <div class="relative aspect-square rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700">
+                          <FileUpload.ItemPreview
+                            type="image/*"
+                            class="w-full h-full object-cover"
+                          >
+                            <FileUpload.ItemPreviewImage class="w-full h-full object-cover" />
+                          </FileUpload.ItemPreview>
 
-                        {/* Delete Button */}
-                        <FileUpload.ItemDeleteTrigger class="absolute top-2 right-2 w-6 h-6 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 focus:ring-offset-2">
-                          <X class="w-3 h-3" />
-                        </FileUpload.ItemDeleteTrigger>
-                      </div>
-                    </FileUpload.Item>
-                  ))}
+                          {/* Delete Button */}
+                          <FileUpload.ItemDeleteTrigger class="absolute top-2 right-2 w-6 h-6 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 focus:ring-offset-2">
+                            <X class="w-3 h-3" />
+                          </FileUpload.ItemDeleteTrigger>
+                        </div>
+                      </FileUpload.Item>
+                    )}
+                  </For>
                 </div>
               </FileUpload.ItemGroup>
             ) : (

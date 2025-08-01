@@ -15,6 +15,7 @@ import {
   Headphones,
   Image,
 } from "lucide-solid";
+import { For } from "solid-js";
 
 const getFileExtension = (filename: string) => {
   const ext = filename.split(".").pop()?.toUpperCase();
@@ -139,59 +140,61 @@ export default function FilesTable() {
 
                 {/* Table Body */}
                 <FileUpload.ItemGroup>
-                  {context().acceptedFiles.map((file, index) => (
-                    <FileUpload.Item file={file}>
-                      <div
-                        class={`grid grid-cols-12 gap-3 px-4 py-3 ${
-                          index !== context().acceptedFiles.length - 1
-                            ? "border-b border-gray-200 dark:border-gray-700"
-                            : ""
-                        }`}
-                      >
-                        {/* Name */}
-                        <div class="col-span-5 flex items-center gap-2 min-w-0">
-                          <div class="w-4 h-4 flex items-center justify-center shrink-0">
-                            {file.type.startsWith("image/") ? (
-                              <FileUpload.ItemPreview type="image/*">
-                                <FileUpload.ItemPreviewImage class="w-4 h-4 object-cover rounded" />
-                              </FileUpload.ItemPreview>
-                            ) : (
-                              getFileIcon(file)
-                            )}
+                  <For each={context().acceptedFiles}>
+                    {(file, index) => (
+                      <FileUpload.Item file={file}>
+                        <div
+                          class={`grid grid-cols-12 gap-3 px-4 py-3 ${
+                            index() !== context().acceptedFiles.length - 1
+                              ? "border-b border-gray-200 dark:border-gray-700"
+                              : ""
+                          }`}
+                        >
+                          {/* Name */}
+                          <div class="col-span-5 flex items-center gap-2 min-w-0">
+                            <div class="w-4 h-4 flex items-center justify-center shrink-0">
+                              {file.type.startsWith("image/") ? (
+                                <FileUpload.ItemPreview type="image/*">
+                                  <FileUpload.ItemPreviewImage class="w-4 h-4 object-cover rounded" />
+                                </FileUpload.ItemPreview>
+                              ) : (
+                                getFileIcon(file)
+                              )}
+                            </div>
+                            <FileUpload.ItemName class="text-sm text-gray-900 dark:text-gray-100 truncate" />
                           </div>
-                          <FileUpload.ItemName class="text-sm text-gray-900 dark:text-gray-100 truncate" />
-                        </div>
 
-                        {/* Type */}
-                        <div class="col-span-2 flex items-center">
-                          <span class="text-sm text-gray-600 dark:text-gray-400">
-                            {getFileExtension(file.name)}
-                          </span>
-                        </div>
+                          {/* Type */}
+                          <div class="col-span-2 flex items-center">
+                            <span class="text-sm text-gray-600 dark:text-gray-400">
+                              {getFileExtension(file.name)}
+                            </span>
+                          </div>
 
-                        {/* Size */}
-                        <div class="col-span-2 flex items-center">
-                          <FileUpload.ItemSizeText class="text-sm text-gray-600 dark:text-gray-400" />
-                        </div>
+                          {/* Size */}
+                          <div class="col-span-2 flex items-center">
+                            <FileUpload.ItemSizeText class="text-sm text-gray-600 dark:text-gray-400" />
+                          </div>
 
-                        {/* Actions */}
-                        <div class="col-span-3 flex items-center gap-2">
-                          <DownloadTrigger
-                            data={file}
-                            fileName={file.name}
-                            mimeType={file.type}
-                          >
-                            <button class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300">
-                              <Download class="w-4 h-4" />
-                            </button>
-                          </DownloadTrigger>
-                          <FileUpload.ItemDeleteTrigger class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300">
-                            <Trash2 class="w-4 h-4" />
-                          </FileUpload.ItemDeleteTrigger>
+                          {/* Actions */}
+                          <div class="col-span-3 flex items-center gap-2">
+                            <DownloadTrigger
+                              data={file}
+                              fileName={file.name}
+                              mimeType={file.type}
+                            >
+                              <button class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300">
+                                <Download class="w-4 h-4" />
+                              </button>
+                            </DownloadTrigger>
+                            <FileUpload.ItemDeleteTrigger class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300">
+                              <Trash2 class="w-4 h-4" />
+                            </FileUpload.ItemDeleteTrigger>
+                          </div>
                         </div>
-                      </div>
-                    </FileUpload.Item>
-                  ))}
+                      </FileUpload.Item>
+                    )}
+                  </For>
                 </FileUpload.ItemGroup>
               </div>
             ) : (

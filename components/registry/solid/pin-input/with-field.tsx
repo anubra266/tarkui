@@ -1,8 +1,6 @@
-"use client";
-
 import { Field } from "@ark-ui/solid/field";
 import { PinInput } from "@ark-ui/solid/pin-input";
-import { createSignal } from "solid-js";
+import { createSignal, For } from "solid-js";
 
 export default function WithField() {
   const [isInvalid, setIsInvalid] = createSignal(false);
@@ -37,12 +35,14 @@ export default function WithField() {
             Enter PIN
           </PinInput.Label>
           <PinInput.Control class="flex gap-2">
-            {[0, 1, 2, 3].map((_, index) => (
-              <PinInput.Input
-                index={index}
-                class="w-12 h-12 text-center text-lg font-medium border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500/50 dark:focus:ring-blue-400/50 focus:border-blue-500 dark:focus:border-blue-400 transition-all data-invalid:border-red-500 dark:data-invalid:border-red-400 data-invalid:focus:ring-red-500/50 dark:data-invalid:focus:ring-red-400/50"
-              />
-            ))}
+            <For each={[0, 1, 2, 3]}>
+              {(_, index) => (
+                <PinInput.Input
+                  index={index()}
+                  class="w-12 h-12 text-center text-lg font-medium border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500/50 dark:focus:ring-blue-400/50 focus:border-blue-500 dark:focus:border-blue-400 transition-all data-invalid:border-red-500 dark:data-invalid:border-red-400 data-invalid:focus:ring-red-500/50 dark:data-invalid:focus:ring-red-400/50"
+                />
+              )}
+            </For>
           </PinInput.Control>
           <PinInput.HiddenInput />
         </PinInput.Root>

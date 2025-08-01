@@ -1,6 +1,5 @@
-"use client";
-
 import { PinInput } from "@ark-ui/solid/pin-input";
+import { For } from "solid-js";
 
 export default function Masked() {
   return (
@@ -14,12 +13,14 @@ export default function Masked() {
             Enter secure PIN
           </PinInput.Label>
           <PinInput.Control class="flex gap-2">
-            {[0, 1, 2, 3].map((_, index) => (
-              <PinInput.Input
-                index={index}
-                class="w-12 h-12 text-center text-lg font-medium border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500/50 dark:focus:ring-blue-400/50 focus:border-blue-500 dark:focus:border-blue-400 transition-all"
-              />
-            ))}
+            <For each={[0, 1, 2, 3]}>
+              {(_, index) => (
+                <PinInput.Input
+                  index={index()}
+                  class="w-12 h-12 text-center text-lg font-medium border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-hidden focus:ring-2 focus:ring-blue-500/50 dark:focus:ring-blue-400/50 focus:border-blue-500 dark:focus:border-blue-400 transition-all"
+                />
+              )}
+            </For>
           </PinInput.Control>
           <PinInput.HiddenInput />
         </PinInput.Root>

@@ -9,7 +9,7 @@ import {
   Minus,
   X,
 } from "lucide-solid";
-import { createSignal } from "solid-js";
+import { createSignal, For } from "solid-js";
 
 export default function NotesPanel() {
   const [note, setNote] = createSignal("");
@@ -73,24 +73,23 @@ export default function NotesPanel() {
             <FloatingPanel.Body class="flex flex-col h-full">
               {/* Notes List */}
               <div class="flex-1 p-4 space-y-3 overflow-y-auto">
-                {notes.map((noteItem) => (
-                  <div
-                    key={noteItem.id}
-                    class="p-3 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors"
-                  >
-                    <div class="flex justify-between items-start mb-1">
-                      <h4 class="text-sm font-medium text-gray-900 dark:text-gray-100 truncate">
-                        {noteItem.title}
-                      </h4>
-                      <span class="text-xs text-gray-500 dark:text-gray-400 ml-2 shrink-0">
-                        {noteItem.date}
-                      </span>
+                <For each={notes}>
+                  {(noteItem) => (
+                    <div class="p-3 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors">
+                      <div class="flex justify-between items-start mb-1">
+                        <h4 class="text-sm font-medium text-gray-900 dark:text-gray-100 truncate">
+                          {noteItem.title}
+                        </h4>
+                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-2 shrink-0">
+                          {noteItem.date}
+                        </span>
+                      </div>
+                      <p class="text-xs text-gray-600 dark:text-gray-400 line-clamp-2">
+                        {noteItem.preview}
+                      </p>
                     </div>
-                    <p class="text-xs text-gray-600 dark:text-gray-400 line-clamp-2">
-                      {noteItem.preview}
-                    </p>
-                  </div>
-                ))}
+                  )}
+                </For>
               </div>
 
               {/* Quick Note Input */}

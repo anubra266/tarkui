@@ -11,6 +11,7 @@ import {
   Minus,
   X,
 } from "lucide-solid";
+import { For } from "solid-js";
 
 export default function TaskInspector() {
   const task = {
@@ -183,24 +184,23 @@ export default function TaskInspector() {
                   Recent Comments
                 </h5>
                 <div class="space-y-3">
-                  {comments.map((comment) => (
-                    <div
-                      key={comment.id}
-                      class="border-l-2 border-gray-200 dark:border-gray-700 pl-3"
-                    >
-                      <div class="flex justify-between items-start mb-1">
-                        <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
-                          {comment.author}
+                  <For each={comments}>
+                    {(comment) => (
+                      <div class="border-l-2 border-gray-200 dark:border-gray-700 pl-3">
+                        <div class="flex justify-between items-start mb-1">
+                          <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
+                            {comment.author}
+                          </p>
+                          <span class="text-xs text-gray-500 dark:text-gray-400">
+                            {comment.date}
+                          </span>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                          {comment.text}
                         </p>
-                        <span class="text-xs text-gray-500 dark:text-gray-400">
-                          {comment.date}
-                        </span>
                       </div>
-                      <p class="text-sm text-gray-600 dark:text-gray-400">
-                        {comment.text}
-                      </p>
-                    </div>
-                  ))}
+                    )}
+                  </For>
                 </div>
               </div>
             </FloatingPanel.Body>
