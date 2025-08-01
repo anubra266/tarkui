@@ -117,13 +117,8 @@ export const components: Component[] = [
     category: "Overlay",
   },
   {
-    name: "Progress - Circular",
-    slug: "progress-circular",
-    category: "Feedback",
-  },
-  {
-    name: "Progress - Linear",
-    slug: "progress-linear",
+    name: "Progress",
+    slug: "progress",
     category: "Feedback",
   },
   {

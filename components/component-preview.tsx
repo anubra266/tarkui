@@ -431,27 +431,18 @@ export const PopoverPreview = () => (
   </div>
 );
 
-export const ProgressCircularPreview = () => (
-  <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
-    <div className="absolute inset-0 bg-linear-to-r from-green-500/10 to-emerald-500/10"></div>
-    <div className="relative flex items-center justify-center h-full">
-      <div className="relative w-10 h-10">
-        <div className="absolute inset-0 border-2 border-gray-700 rounded-full"></div>
-        <div className="absolute inset-0 border-2 border-transparent border-t-green-400 border-r-green-400 rounded-full transform rotate-45"></div>
-        <div className="absolute inset-2 flex items-center justify-center">
-          <div className="w-2 h-1 bg-green-400 rounded text-xs"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-export const ProgressLinearPreview = () => (
+export const ProgressPreview = () => (
   <div className="w-full h-full bg-linear-to-br from-gray-900 to-gray-800 rounded-lg p-4 relative overflow-hidden">
     <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 to-indigo-500/10"></div>
-    <div className="relative flex items-center justify-center h-full">
-      <div className="w-16 h-2 bg-gray-700 rounded-full overflow-hidden">
-        <div className="w-10 h-full bg-linear-to-r from-blue-400 to-indigo-500 rounded-full"></div>
+    <div className="relative flex flex-col items-center justify-center h-full space-y-3">
+      {/* Circular Progress */}
+      <div className="relative w-8 h-8">
+        <div className="absolute inset-0 border-2 border-gray-700 rounded-full"></div>
+        <div className="absolute inset-0 border-2 border-transparent border-t-blue-400 border-r-blue-400 rounded-full transform rotate-45"></div>
+      </div>
+      {/* Linear Progress */}
+      <div className="w-12 h-1.5 bg-gray-700 rounded-full overflow-hidden">
+        <div className="w-8 h-full bg-linear-to-r from-blue-400 to-indigo-500 rounded-full"></div>
       </div>
     </div>
   </div>
@@ -860,8 +851,7 @@ export const componentPreviews = {
   "password-input": PasswordInputPreview,
   "pin-input": PinInputPreview,
   popover: PopoverPreview,
-  "progress-circular": ProgressCircularPreview,
-  "progress-linear": ProgressLinearPreview,
+  progress: ProgressPreview,
   "qr-code": QRCodePreview,
   "radio-group": RadioGroupPreview,
   "rating-group": RatingGroupPreview,
