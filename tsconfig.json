@@ -1,41 +1,30 @@
 {
   "compilerOptions": {
+    // Enable latest features
     "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+      "ESNext",
+      "DOM"
     ],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleDetection": "force",
     "allowJs": true,
-    "target": "ES6",
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
+    // Bundler mode
     "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
     "paths": {
       "@/*": [
         "./*"
       ]
-    }
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "components/registry/solid",
-  ]
+    },
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+  }
 }

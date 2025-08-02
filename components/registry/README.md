@@ -63,7 +63,7 @@ components/registry/
 
 ```typescript
 // manifest/new-component.ts
-import { ComponentManifest } from "@/lib/registry";
+import type { ComponentManifest } from "@/lib/registry";
 
 const manifest: ComponentManifest = {
   examples: [

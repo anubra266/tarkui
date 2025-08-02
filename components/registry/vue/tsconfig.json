@@ -1,0 +1,18 @@
+{
+    "extends": "../../../tsconfig.json",
+    "compilerOptions": {
+        "jsx": "preserve",
+        "jsxImportSource": "vue",
+        "noPropertyAccessFromIndexSignature": false,
+        "types": [
+            "vitest/globals"
+        ],
+        "lib": [
+            "ESNext",
+            "DOM"
+        ]
+    },
+    "include": [
+        "./",
+    ]
+}

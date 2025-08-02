@@ -1,4 +1,4 @@
-import { ComponentManifest } from "@/lib/registry";
+import type { ComponentManifest } from "@/lib/registry";
 
 const manifest: ComponentManifest = {
   examples: [
@@ -31,4 +31,3 @@ const manifest: ComponentManifest = {
 };
 
 export default manifest;
- 

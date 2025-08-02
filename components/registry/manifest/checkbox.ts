@@ -1,14 +1,14 @@
-import { ComponentManifest } from "@/lib/registry";
+import type { ComponentManifest } from "@/lib/registry";
 
 const manifest: ComponentManifest = {
   examples: [
-      {
-        name: "basic",
-        title: "Basic",
-      },
-      {
-        name: "with-description",
-        title: "W/ description",
+    {
+      name: "basic",
+      title: "Basic",
+    },
+    {
+      name: "with-description",
+      title: "W/ description",
     },
     {
       name: "simple-todo",
