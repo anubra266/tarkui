@@ -1,19 +1,26 @@
+"use client";
+
 import { Field } from "@ark-ui/react/field";
+import { Fieldset } from "@ark-ui/react/fieldset";
 
 export default function InputWithOverlappingLabel() {
   return (
-    <div className=" bg-white dark:bg-gray-800 w-full px-4 py-12 rounded-xl flex items-center justify-center">
-      <Field.Root className="max-w-sm w-full group relative">
-        <Field.Label className="origin-start text-gray-500 dark:text-gray-400 group-focus-within:text-gray-900 dark:group-focus-within:text-gray-100 absolute block -translate-y-1/2 px-1 transition-all pointer-events-none top-0 cursor-default text-xs font-medium">
-          <span className="bg-white dark:bg-gray-800 inline-flex px-2">
-            Overlapping label
-          </span>
-        </Field.Label>
+    <div className="bg-white dark:bg-gray-800 w-full px-4 py-12 rounded-xl flex items-center justify-center">
+      <Field.Root className="relative max-w-sm w-full group">
         <Field.Input
-          type="email"
-          placeholder="Email"
-          className="block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-sm text-gray-900 dark:text-gray-100 focus:border-gray-900 dark:focus:border-gray-100 focus:outline-hidden focus:ring-1 focus:ring-gray-900 dark:focus:ring-gray-100"
+          placeholder=" "
+          className="block w-full rounded-lg bg-white dark:bg-gray-800 px-3 py-2 text-sm text-gray-900 dark:text-gray-100 outline-none peer"
         />
+
+        <Field.Label className="absolute left-[9px] top-px text-sm text-gray-500 dark:text-gray-400 group-focus-within:text-gray-900 dark:group-focus-within:text-gray-100 transition-all duration-300 px-1 transform -translate-y-1/2 pointer-events-none">
+          Overlapping label
+        </Field.Label>
+
+        <Fieldset.Root className="inset-0 absolute border border-gray-300 dark:border-gray-600 rounded-lg pointer-events-none mt-[-9px] visible group-focus-within:border-gray-700 dark:group-focus-within:border-gray-100 group-focus-within:border-2">
+          <Fieldset.Legend className="ml-2 text-sm invisible px-1 max-w-full whitespace-nowrap">
+            Overlapping label
+          </Fieldset.Legend>
+        </Fieldset.Root>
       </Field.Root>
     </div>
   );

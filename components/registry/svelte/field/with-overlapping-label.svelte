@@ -1,22 +1,31 @@
 <script>
   import { Field } from "@ark-ui/svelte/field";
-
-  const id = "overlapping-email";
+  import { Fieldset } from "@ark-ui/svelte/fieldset";
 </script>
 
-<Field.Root class="max-w-sm w-full">
-  <div class="relative">
+<div
+  class="bg-white dark:bg-gray-800 w-full px-4 py-12 rounded-xl flex items-center justify-center"
+>
+  <Field.Root class="relative max-w-sm w-full group">
     <Field.Input
-      {id}
-      type="email"
       placeholder=" "
-      class="block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 pt-6 text-sm text-gray-900 dark:text-gray-100 placeholder-transparent focus:border-gray-900 dark:focus:border-gray-100 focus:outline-hidden focus:ring-1 focus:ring-gray-900 dark:focus:ring-gray-100"
+      class="block w-full rounded-lg bg-white dark:bg-gray-800 px-3 py-2 text-sm text-gray-900 dark:text-gray-100 outline-none peer"
     />
+
     <Field.Label
-      for={id}
-      class="absolute top-2 left-3 text-xs font-medium text-gray-500 dark:text-gray-400 pointer-events-none bg-white dark:bg-gray-800 px-2"
+      class="absolute left-[9px] top-px text-sm text-gray-500 dark:text-gray-400 group-focus-within:text-gray-900 dark:group-focus-within:text-gray-100 transition-all duration-300 px-1 transform -translate-y-1/2 pointer-events-none"
     >
-      Support Email
+      Overlapping label
     </Field.Label>
-  </div>
-</Field.Root>
+
+    <Fieldset.Root
+      class="inset-0 absolute border border-gray-300 dark:border-gray-600 rounded-lg pointer-events-none mt-[-9px] visible group-focus-within:border-gray-700 dark:group-focus-within:border-gray-100 group-focus-within:border-2"
+    >
+      <Fieldset.Legend
+        class="ml-2 text-sm invisible px-1 max-w-full whitespace-nowrap"
+      >
+        Overlapping label
+      </Fieldset.Legend>
+    </Fieldset.Root>
+  </Field.Root>
+</div>
