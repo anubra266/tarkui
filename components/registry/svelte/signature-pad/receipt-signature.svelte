@@ -4,7 +4,7 @@
 
   let hasSignature = false;
 
-  function handleDrawEnd(details: any) {
+  function handleDrawEnd() {
     hasSignature = true;
   }
 </script>

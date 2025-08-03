@@ -7,7 +7,7 @@ import { Receipt, CreditCard, User } from "lucide-react";
 export default function ReceiptSignature() {
   const [hasSignature, setHasSignature] = useState(false);
 
-  const handleDrawEnd = (details: any) => {
+  const handleDrawEnd = () => {
     setHasSignature(true);
   };
 

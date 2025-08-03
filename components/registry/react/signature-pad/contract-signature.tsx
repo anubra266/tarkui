@@ -8,7 +8,7 @@ export default function ContractSignature() {
   const [hasSignature, setHasSignature] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleDrawEnd = (details: any) => {
+  const handleDrawEnd = () => {
     setHasSignature(true);
   };
 

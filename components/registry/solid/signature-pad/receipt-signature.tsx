@@ -5,7 +5,7 @@ import { Receipt, CreditCard, User } from "lucide-solid";
 export default function ReceiptSignature() {
   const [hasSignature, setHasSignature] = createSignal(false);
 
-  const handleDrawEnd = (details: any) => {
+  const handleDrawEnd = () => {
     setHasSignature(true);
   };
 
