@@ -48,7 +48,7 @@ export default function CategoryFilter() {
           </Select.Control>
           <Portal>
             <Select.Positioner>
-              <Select.Content className="z-50 min-w-[var(--reference-width)] rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg max-h-60 overflow-auto">
+              <Select.Content className="z-50 min-w-(--reference-width) rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg max-h-60 overflow-auto">
                 {collection.group().map(([type, group]) => (
                   <Select.ItemGroup key={type}>
                     <Select.ItemGroupLabel className="px-3 py-2 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
@@ -62,7 +62,7 @@ export default function CategoryFilter() {
                       <Select.Item
                         key={category.value}
                         item={category}
-                        className="relative flex cursor-pointer select-none items-center px-3 py-2 text-sm text-gray-900 dark:text-gray-100 data-[highlighted]:bg-gray-100 dark:data-[highlighted]:bg-gray-700 data-[state=checked]:bg-gray-50 dark:data-[state=checked]:bg-gray-700"
+                        className="relative flex cursor-pointer select-none items-center px-3 py-2 text-sm text-gray-900 dark:text-gray-100 data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-700 data-[state=checked]:bg-gray-50 dark:data-[state=checked]:bg-gray-700"
                       >
                         <Select.ItemText>{category.label}</Select.ItemText>
                         <Select.ItemIndicator className="absolute right-3 text-blue-600 dark:text-blue-400">

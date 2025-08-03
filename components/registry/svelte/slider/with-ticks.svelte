@@ -29,7 +29,7 @@
         {#each [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100] as value}
           <Slider.Marker
             {value}
-            class="relative before:absolute before:-top-3 before:left-1/2 before:transform before:-translate-x-1/2 before:bg-gray-400 dark:before:bg-gray-500 before:data-[state=under-value]:bg-white dark:before:data-[state=under-value]:bg-gray-300 before:w-[1px] mt-2 {value %
+            class="relative before:absolute before:-top-3 before:left-1/2 before:transform before:-translate-x-1/2 before:bg-gray-400 dark:before:bg-gray-500 before:data-[state=under-value]:bg-white dark:before:data-[state=under-value]:bg-gray-300 before:w-px mt-2 {value %
               10 ===
             0
               ? 'before:h-1.5'

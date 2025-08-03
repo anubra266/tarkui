@@ -12,7 +12,7 @@ export default function InputWithLabelAnimation() {
           className="block w-full rounded-lg bg-white dark:bg-gray-800 px-3 py-2 text-sm text-gray-900 dark:text-gray-100 outline-none peer"
         />
 
-        <Field.Label className="absolute left-[9px] top-px text-sm text-gray-500 dark:text-gray-400 transition-all duration-300 px-1 transform -translate-y-1/2 pointer-events-none peer-placeholder-shown:top-1/2 group-focus-within:!top-px group-focus-within:text-gray-900 dark:group-focus-within:text-gray-100">
+        <Field.Label className="absolute left-[9px] top-px text-sm text-gray-500 dark:text-gray-400 transition-all duration-300 px-1 transform -translate-y-1/2 pointer-events-none peer-placeholder-shown:top-1/2 group-focus-within:top-px! group-focus-within:text-gray-900 dark:group-focus-within:text-gray-100">
           Animated label
         </Field.Label>
 

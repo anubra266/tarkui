@@ -35,7 +35,7 @@ export default function SelectWithOverlappingLabel() {
 
           <Portal>
             <Select.Positioner>
-              <Select.Content className="z-50 min-w-[var(--reference-width)] rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg">
+              <Select.Content className="z-50 min-w-(--reference-width) rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg">
                 <Select.ItemGroup>
                   <Select.ItemGroupLabel className="px-3 py-2 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                     Frameworks
@@ -44,7 +44,7 @@ export default function SelectWithOverlappingLabel() {
                     <Select.Item
                       key={item}
                       item={item}
-                      className="relative flex cursor-pointer select-none items-center px-3 py-2 text-sm text-gray-900 dark:text-gray-100 data-[highlighted]:bg-gray-100 dark:data-[highlighted]:bg-gray-700 data-[state=checked]:bg-gray-50 dark:data-[state=checked]:bg-gray-700"
+                      className="relative flex cursor-pointer select-none items-center px-3 py-2 text-sm text-gray-900 dark:text-gray-100 data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-700 data-[state=checked]:bg-gray-50 dark:data-[state=checked]:bg-gray-700"
                     >
                       <Select.ItemText>{item}</Select.ItemText>
                       <Select.ItemIndicator className="absolute right-3 text-blue-600 dark:text-blue-400">

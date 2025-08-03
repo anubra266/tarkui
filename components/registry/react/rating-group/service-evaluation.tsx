@@ -65,7 +65,7 @@ export default function ServiceEvaluation() {
 
   return (
     <div className="max-w-sm w-full bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
-      <div className="bg-gradient-to-r from-green-600 to-teal-600 p-4 text-white">
+      <div className="bg-linear-to-r from-green-600 to-teal-600 p-4 text-white">
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-base font-bold mb-1">Service Feedback</h1>

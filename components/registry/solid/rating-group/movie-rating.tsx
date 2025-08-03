@@ -9,7 +9,7 @@ export default function MovieRating() {
     <div className="max-w-sm w-full bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded flex items-center justify-center">
+          <div className="w-10 h-14 bg-linear-to-br from-purple-500 to-pink-500 rounded flex items-center justify-center">
             <PlayIcon className="w-4 h-4 text-white" />
           </div>
           <div>

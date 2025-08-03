@@ -15,7 +15,7 @@
   <div class="p-4 border-b border-gray-200 dark:border-gray-700">
     <div class="flex items-center space-x-3">
       <div
-        class="w-10 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded flex items-center justify-center"
+        class="w-10 h-14 bg-linear-to-br from-purple-500 to-pink-500 rounded flex items-center justify-center"
       >
         <PlayIcon class="w-4 h-4 text-white" />
       </div>

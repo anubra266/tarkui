@@ -9,6 +9,7 @@
     "dev": "next dev",
     "dev:registry": "tsx scripts/build-registry.ts --watch",
     "dev:next": "next dev",
+    "css:up": "npx @tailwindcss/upgrade -force",
     "lint": "next lint",
     "start": "next start"
   },

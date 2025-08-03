@@ -8,7 +8,7 @@ export default function Cards() {
       sublabel: "••••4242",
       description: "You can use this card with a label and a description.",
       icon: (
-        <div class="w-8 h-6 bg-gradient-to-r from-red-500 to-orange-500 rounded-sm flex items-center justify-center">
+        <div class="w-8 h-6 bg-linear-to-r from-red-500 to-orange-500 rounded-sm flex items-center justify-center">
           <div class="w-3 h-3 bg-red-600 rounded-full opacity-80"></div>
           <div class="w-3 h-3 bg-orange-400 rounded-full -ml-1.5 opacity-80"></div>
         </div>

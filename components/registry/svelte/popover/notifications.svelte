@@ -87,7 +87,7 @@
         class="z-50 w-80 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out"
       >
         <Popover.Arrow
-          class="[--arrow-size:12px] [--arrow-background:theme(colors.white)] dark:[--arrow-background:theme(colors.gray.800)]"
+          class="[--arrow-size:12px] [--arrow-background:var(--color-white)] dark:[--arrow-background:var(--color-gray-800)]"
         >
           <Popover.ArrowTip
             class="border-t border-l border-gray-200 dark:border-gray-700"
@@ -125,7 +125,7 @@
                 <img
                   src={notification.avatar}
                   alt={notification.user}
-                  class="h-8 w-8 flex-shrink-0 rounded-full object-cover"
+                  class="h-8 w-8 shrink-0 rounded-full object-cover"
                 />
 
                 <!-- Content -->
@@ -143,7 +143,7 @@
                 <!-- Unread indicator -->
                 {#if notification.unread}
                   <div
-                    class="flex h-2 w-2 flex-shrink-0 items-center justify-center"
+                    class="flex h-2 w-2 shrink-0 items-center justify-center"
                   >
                     <div class="h-2 w-2 rounded-full bg-blue-500" />
                   </div>

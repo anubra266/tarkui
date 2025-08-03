@@ -30,12 +30,12 @@ export default function ProjectStatus() {
           orientation="horizontal"
           className="flex items-start flex-row gap-0 border-b border-gray-200 dark:border-gray-700"
         >
-          <SegmentGroup.Indicator className="border-blue-500 bottom-0 border-b-2 transform translate-y-px w-[var(--width)] transition-all duration-200" />
+          <SegmentGroup.Indicator className="border-blue-500 bottom-0 border-b-2 transform translate-y-px w-(--width) transition-all duration-200" />
           {statuses.map((status) => (
             <SegmentGroup.Item
               key={status.value}
               value={status.value}
-              className="text-gray-600 dark:text-gray-400 cursor-pointer font-medium transition-colors duration-200 hover:text-gray-900 dark:hover:text-white px-4 pb-3 data-[state=checked]:text-gray-900 dark:data-[state=checked]:text-white data-[disabled]:cursor-not-allowed data-[disabled]:opacity-40"
+              className="text-gray-600 dark:text-gray-400 cursor-pointer font-medium transition-colors duration-200 hover:text-gray-900 dark:hover:text-white px-4 pb-3 data-[state=checked]:text-gray-900 dark:data-[state=checked]:text-white data-disabled:cursor-not-allowed data-disabled:opacity-40"
             >
               <SegmentGroup.ItemText>{status.label}</SegmentGroup.ItemText>
               <SegmentGroup.ItemControl />

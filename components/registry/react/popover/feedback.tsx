@@ -38,7 +38,7 @@ export default function PopoverFeedback() {
       <Portal>
         <Popover.Positioner>
           <Popover.Content className="z-50 w-80 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 shadow-lg data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out">
-            <Popover.Arrow className="[--arrow-size:12px] [--arrow-background:theme(colors.white)] dark:[--arrow-background:theme(colors.gray.800)]">
+            <Popover.Arrow className="[--arrow-size:12px] [--arrow-background:var(--color-white)] dark:[--arrow-background:var(--color-gray-800)]">
               <Popover.ArrowTip className="border-t border-l border-gray-200 dark:border-gray-700" />
             </Popover.Arrow>
             <Popover.Title className="mb-3 text-lg font-semibold text-gray-900 dark:text-gray-100">

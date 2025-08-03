@@ -29,12 +29,12 @@ export default function ViewModeSelector() {
           orientation="vertical"
           className="flex items-start flex-col gap-1 border-l border-gray-200 dark:border-gray-700"
         >
-          <SegmentGroup.Indicator className="border-blue-500 border-l-2 transform -translate-x-px h-[var(--height)] transition-all duration-200" />
+          <SegmentGroup.Indicator className="border-blue-500 border-l-2 transform -translate-x-px h-(--height) transition-all duration-200" />
           {viewModes.map((mode) => (
             <SegmentGroup.Item
               key={mode.value}
               value={mode.value}
-              className="text-gray-600 dark:text-gray-400 cursor-pointer font-medium transition-colors duration-200 hover:text-gray-900 dark:hover:text-white px-3 py-2 data-[state=checked]:font-semibold data-[state=checked]:text-gray-900 dark:data-[state=checked]:text-white data-[disabled]:cursor-not-allowed data-[disabled]:opacity-40"
+              className="text-gray-600 dark:text-gray-400 cursor-pointer font-medium transition-colors duration-200 hover:text-gray-900 dark:hover:text-white px-3 py-2 data-[state=checked]:font-semibold data-[state=checked]:text-gray-900 dark:data-[state=checked]:text-white data-disabled:cursor-not-allowed data-disabled:opacity-40"
             >
               <SegmentGroup.ItemText className="flex items-center space-x-2">
                 <mode.icon className="w-4 h-4" />

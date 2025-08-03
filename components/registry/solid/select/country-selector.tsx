@@ -57,7 +57,7 @@ export default function CountrySelector() {
           </Select.Control>
           <Portal>
             <Select.Positioner>
-              <Select.Content class="z-50 min-w-[var(--reference-width)] rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg max-h-60 overflow-auto">
+              <Select.Content class="z-50 min-w-(--reference-width) rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg max-h-60 overflow-auto">
                 <Select.ItemGroup>
                   <Select.ItemGroupLabel class="px-3 py-2 text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
                     Countries
@@ -66,7 +66,7 @@ export default function CountrySelector() {
                     {(country) => (
                       <Select.Item
                         item={country()}
-                        class="relative flex cursor-pointer select-none items-center px-3 py-2 text-sm text-gray-900 dark:text-gray-100 data-[highlighted]:bg-gray-100 dark:data-[highlighted]:bg-gray-700 data-[state=checked]:bg-gray-50 dark:data-[state=checked]:bg-gray-700"
+                        class="relative flex cursor-pointer select-none items-center px-3 py-2 text-sm text-gray-900 dark:text-gray-100 data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-700 data-[state=checked]:bg-gray-50 dark:data-[state=checked]:bg-gray-700"
                       >
                         <span class="mr-3 text-lg">{country().flag}</span>
                         <Select.ItemText>{country().label}</Select.ItemText>

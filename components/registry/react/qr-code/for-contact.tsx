@@ -28,7 +28,7 @@ END:VCARD`;
       </div>
 
       <QrCode.Root value={vCardData} encoding={{ ecc: "M" }}>
-        <QrCode.Frame className="w-48 h-48 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900 dark:to-emerald-900 border border-green-200 dark:border-green-700 rounded-xl p-4 shadow-lg">
+        <QrCode.Frame className="w-48 h-48 bg-linear-to-br from-green-50 to-emerald-50 dark:from-green-900 dark:to-emerald-900 border border-green-200 dark:border-green-700 rounded-xl p-4 shadow-lg">
           <QrCode.Pattern className="fill-green-700 dark:fill-green-300" />
         </QrCode.Frame>
       </QrCode.Root>

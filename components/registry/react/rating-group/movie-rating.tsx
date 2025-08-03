@@ -21,7 +21,7 @@ export default function MovieRating() {
 
   return (
     <div className="max-w-sm w-full bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-4 text-white">
+      <div className="bg-linear-to-r from-purple-600 to-blue-600 p-4 text-white">
         <h1 className="text-lg font-bold mb-1">{movieData.title}</h1>
         <p className="text-xs opacity-90">
           {movieData.year} • {movieData.genre}

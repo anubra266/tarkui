@@ -16,7 +16,7 @@ const id = "animated-email";
       />
 
       <Field.Label
-        class="absolute left-[9px] top-px text-sm text-gray-500 dark:text-gray-400 transition-all duration-300 px-1 transform -translate-y-1/2 pointer-events-none peer-placeholder-shown:top-1/2 group-focus-within:!top-px group-focus-within:text-gray-900 dark:group-focus-within:text-gray-100"
+        class="absolute left-[9px] top-px text-sm text-gray-500 dark:text-gray-400 transition-all duration-300 px-1 transform -translate-y-1/2 pointer-events-none peer-placeholder-shown:top-1/2 group-focus-within:top-px! group-focus-within:text-gray-900 dark:group-focus-within:text-gray-100"
       >
         Animated label
       </Field.Label>
@@ -34,7 +34,7 @@ const id = "animated-email";
 
       <!-- This fieldset+legend always has a notch and is shown when the input is filled -->
       <Fieldset.Root
-        class="inset-0 absolute border border-gray-300 dark:border-gray-600 rounded-lg pointer-events-none mt-[-9px] visible peer-placeholder-shown:invisible group-focus-within:border-2 group-focus-within:!border-gray-900 dark:group-focus-within:!border-gray-100 group-hover:border-gray-700 dark:group-hover:border-gray-500"
+        class="inset-0 absolute border border-gray-300 dark:border-gray-600 rounded-lg pointer-events-none mt-[-9px] visible peer-placeholder-shown:invisible group-focus-within:border-2 group-focus-within:border-gray-900! dark:group-focus-within:border-gray-100! group-hover:border-gray-700 dark:group-hover:border-gray-500"
       >
         <Fieldset.Legend
           class="ml-2 text-sm invisible px-1 max-w-full whitespace-nowrap"

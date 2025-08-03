@@ -27,7 +27,7 @@ export default function SliderWithTicks() {
               <Slider.Marker
                 key={value}
                 value={value}
-                className={`relative before:absolute before:-top-3 before:left-1/2 before:transform before:-translate-x-1/2 before:bg-gray-400 dark:before:bg-gray-500 before:data-[state=under-value]:bg-white dark:before:data-[state=under-value]:bg-gray-300 before:w-[1px] mt-2 ${
+                className={`relative before:absolute before:-top-3 before:left-1/2 before:transform before:-translate-x-1/2 before:bg-gray-400 dark:before:bg-gray-500 before:data-[state=under-value]:bg-white dark:before:data-[state=under-value]:bg-gray-300 before:w-px mt-2 ${
                   value % 10 === 0 ? "before:h-1.5" : "before:h-1"
                 }`}
               >

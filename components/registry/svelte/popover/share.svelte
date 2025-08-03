@@ -46,7 +46,7 @@
         class="z-50 w-72 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 shadow-lg data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out"
       >
         <Popover.Arrow
-          class="[--arrow-size:12px] [--arrow-background:theme(colors.white)] dark:[--arrow-background:theme(colors.gray.800)]"
+          class="[--arrow-size:12px] [--arrow-background:var(--color-white)] dark:[--arrow-background:var(--color-gray-800)]"
         >
           <Popover.ArrowTip
             class="border-t border-l border-gray-200 dark:border-gray-700"

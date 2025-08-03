@@ -10,7 +10,7 @@ export default function LinearIndeterminate() {
       </Progress.Label>
       <Progress.Track className="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
         <Progress.Range className="h-full bg-blue-600 dark:bg-blue-500 rounded-full absolute inset-0 animate-pulse" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-600/20 to-transparent animate-[shimmer_2s_infinite] transform translate-x-[-100%]" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-blue-600/20 to-transparent animate-[shimmer_2s_infinite] transform -translate-x-full" />
       </Progress.Track>
 
       <style jsx>{`
