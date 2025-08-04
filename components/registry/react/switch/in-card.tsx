@@ -20,7 +20,7 @@ export default function SwitchInCard() {
               A short description goes here.
             </p>
           </div>
-          <Switch.Control className="relative inline-flex w-7 p-0.5 items-center rounded-full bg-gray-300 transition-colors duration-200 ease-in-out data-[state=checked]:bg-blue-500 data-[focus-visible]:ring-2 data-[focus-visible]:ring-gray-300/50 data-[state=checked]:data-[focus-visible]:ring-blue-500/50 dark:bg-gray-600 dark:data-[state=checked]:bg-blue-500 flex-shrink-0">
+          <Switch.Control className="relative inline-flex w-7 p-0.5 items-center rounded-full bg-gray-300 transition-colors duration-200 ease-in-out data-[state=checked]:bg-blue-500 data-focus-visible:ring-2 data-focus-visible:ring-gray-300/50 data-[state=checked]:data-focus-visible:ring-blue-500/50 dark:bg-gray-600 dark:data-[state=checked]:bg-blue-500 shrink-0">
             <Switch.Thumb className="w-3 h-3 rounded-full bg-white shadow-sm transition-transform duration-200 ease-in-out data-[state=checked]:translate-x-full" />
           </Switch.Control>
           <Switch.HiddenInput />

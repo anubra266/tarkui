@@ -4,7 +4,7 @@
   >
     <Switch.Root class="flex items-center gap-3">
       <Switch.Control
-        class="group relative inline-flex w-16 p-1 items-center rounded-full bg-gray-300 transition-colors duration-200 ease-in-out data-[state=checked]:bg-gray-300 data-[focus-visible]:ring-2 data-[focus-visible]:ring-gray-300/50 data-[state=checked]:data-[focus-visible]:ring-gray-300/50 dark:bg-gray-600 dark:data-[state=checked]:bg-gray-600"
+        class="group relative inline-flex w-16 p-1 items-center rounded-full bg-gray-300 transition-colors duration-200 ease-in-out data-[state=checked]:bg-gray-300 data-focus-visible:ring-2 data-focus-visible:ring-gray-300/50 data-[state=checked]:data-focus-visible:ring-gray-300/50 dark:bg-gray-600 dark:data-[state=checked]:bg-gray-600"
       >
         <div
           class="absolute inset-0 flex items-center justify-between px-2 z-0"

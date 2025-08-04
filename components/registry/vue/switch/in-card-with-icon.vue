@@ -6,9 +6,9 @@
       <Switch.Root
         class="flex items-start gap-3 p-4 border border-gray-200 rounded-lg bg-white hover:bg-gray-50 transition-colors duration-200 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-750"
       >
-        <div class="flex-shrink-0">
+        <div class="shrink-0">
           <div
-            class="w-10 h-10 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center"
+            class="w-10 h-10 bg-linear-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center"
           >
             <CreditCard class="w-5 h-5 text-white" />
           </div>
@@ -26,7 +26,7 @@
               </span>
             </div>
             <Switch.Control
-              class="relative inline-flex w-7 p-0.5 items-center rounded-full bg-gray-300 transition-colors duration-200 ease-in-out data-[state=checked]:bg-blue-500 data-[focus-visible]:ring-2 data-[focus-visible]:ring-gray-300/50 data-[state=checked]:data-[focus-visible]:ring-blue-500/50 dark:bg-gray-600 dark:data-[state=checked]:bg-blue-500 flex-shrink-0"
+              class="relative inline-flex w-7 p-0.5 items-center rounded-full bg-gray-300 transition-colors duration-200 ease-in-out data-[state=checked]:bg-blue-500 data-focus-visible:ring-2 data-focus-visible:ring-gray-300/50 data-[state=checked]:data-focus-visible:ring-blue-500/50 dark:bg-gray-600 dark:data-[state=checked]:bg-blue-500 shrink-0"
             >
               <Switch.Thumb
                 class="w-3 h-3 rounded-full bg-white shadow-sm transition-transform duration-200 ease-in-out data-[state=checked]:translate-x-full"
