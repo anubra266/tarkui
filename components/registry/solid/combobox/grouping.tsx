@@ -14,15 +14,15 @@ const initialItems = [
 ];
 
 export default function GroupingCombobox() {
-  const { contains } = useFilter({ sensitivity: "base" });
+  const filterFn = useFilter({ sensitivity: "base" });
 
   const { collection, filter } = useListCollection({
     initialItems,
-    filter: contains,
+    filter: filterFn().contains,
     groupBy: (item) => item.type,
   });
 
-  const handleInputChange = (details) => {
+  const handleInputChange = (details: Combobox.InputValueChangeDetails) => {
     filter(details.inputValue);
   };
 

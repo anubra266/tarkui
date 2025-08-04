@@ -4,11 +4,11 @@ import { Highlight } from "@ark-ui/vue/highlight";
 import { useFilter } from "@ark-ui/vue/locale";
 import { ChevronDownIcon, XIcon } from "lucide-vue-next";
 
-const { contains } = useFilter({ sensitivity: "base" });
+const filters = useFilter({ sensitivity: "base" });
 
 const { collection, filter } = useListCollection({
   initialItems: ["React", "Solid", "Vue", "Svelte", "Angular", "Preact"],
-  filter: contains,
+  filter: filters.value.contains,
 });
 
 const handleInputChange = (details) => {

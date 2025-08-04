@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Portal } from "@ark-ui/svelte/portal";
   import {
     Combobox,
@@ -8,6 +8,13 @@
   import { ChevronDownIcon, XIcon, LoaderIcon } from "lucide-svelte";
 
   // User type definition
+  interface User {
+    id: number;
+    name: string;
+    email: string;
+    avatar: string;
+  }
+
   const allUsers = [
     { id: 1, name: "John Doe", email: "john@example.com", avatar: "JD" },
     { id: 2, name: "Jane Smith", email: "jane@example.com", avatar: "JS" },
@@ -23,7 +30,7 @@
   ];
 
   // Simulate API call
-  const searchUsers = async (query) => {
+  const searchUsers = async (query: string): Promise<User[]> => {
     await new Promise((resolve) => setTimeout(resolve, 500)); // Simulate network delay
 
     if (!query) return [];
@@ -38,7 +45,7 @@
   let isLoading = false;
   let inputValue = "";
 
-  const { collection, set } = useListCollection({
+  const { collection, set } = useListCollection<User>({
     initialItems: [],
     itemToString: (item) => item.name,
     itemToValue: (item) => item.id.toString(),
@@ -128,7 +135,7 @@
               />
               <p class="text-sm">Searching...</p>
             </div>
-          {:else if collection.items.length === 0}
+          {:else if collection().items.length === 0}
             <div class="px-3 py-8 text-center text-gray-500 dark:text-gray-400">
               <p class="text-sm">
                 {inputValue.length < 2
@@ -137,7 +144,7 @@
               </p>
             </div>
           {:else}
-            {#each collection.items as user (user.id)}
+            {#each collection().items as user (user.id)}
               <Combobox.Item
                 item={user}
                 class="relative cursor-pointer select-none py-2 pl-3 pr-9 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 data-highlighted:bg-gray-50 dark:data-highlighted:bg-gray-700 transition-colors"

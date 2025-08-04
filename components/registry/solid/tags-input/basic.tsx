@@ -14,7 +14,7 @@ export default function TagsInputBasic() {
               <TagsInput.Label class="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">
                 Frameworks
               </TagsInput.Label>
-              <TagsInput.Control class="flex flex-wrap gap-1 p-2 border border-gray-300 rounded-md bg-white dark:bg-gray-900 dark:border-gray-600 min-h-[2rem]">
+              <TagsInput.Control class="flex flex-wrap gap-1 p-2 border border-gray-300 rounded-md bg-white dark:bg-gray-900 dark:border-gray-600 min-h-8">
                 <For each={tagsInput().value}>
                   {(value, index) => (
                     <TagsInput.Item

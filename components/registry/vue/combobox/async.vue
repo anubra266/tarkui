@@ -1,14 +1,14 @@
-<script setup>
-import { Combobox, useCombobox, useListCollection } from "@ark-ui/vue/combobox"
-import { ChevronDownIcon, XIcon, LoaderIcon } from "lucide-vue-next"
-import { ref, watch } from "vue"
+<script setup lang="ts">
+import { Combobox, useCombobox, useListCollection } from "@ark-ui/vue/combobox";
+import { ChevronDownIcon, XIcon, LoaderIcon } from "lucide-vue-next";
+import { ref, watch } from "vue";
 
 // User type definition
 interface User {
-  id: number
-  name: string
-  email: string
-  avatar: string
+  id: number;
+  name: string;
+  email: string;
+  avatar: string;
 }
 
 // Simulated API data
@@ -19,62 +19,65 @@ const allUsers = [
   { id: 4, name: "Alice Brown", email: "alice@example.com", avatar: "AB" },
   { id: 5, name: "Charlie Wilson", email: "charlie@example.com", avatar: "CW" },
   { id: 6, name: "Diana Davis", email: "diana@example.com", avatar: "DD" },
-]
+];
 
 // Simulate API call
 const searchUsers = async (query: string): Promise<User[]> => {
-  await new Promise(resolve => setTimeout(resolve, 500)) // Simulate network delay
+  await new Promise((resolve) => setTimeout(resolve, 500)); // Simulate network delay
 
-  if (!query) return []
+  if (!query) return [];
 
-  return allUsers.filter(user =>
-    user.name.toLowerCase().includes(query.toLowerCase()) ||
-    user.email.toLowerCase().includes(query.toLowerCase())
-  )
-}
+  return allUsers.filter(
+    (user) =>
+      user.name.toLowerCase().includes(query.toLowerCase()) ||
+      user.email.toLowerCase().includes(query.toLowerCase())
+  );
+};
 
-const isLoading = ref(false)
-const inputValue = ref("")
+const isLoading = ref(false);
+const inputValue = ref("");
 
 const { collection, set } = useListCollection<User>({
   initialItems: [],
   itemToString: (item) => item.name,
   itemToValue: (item) => item.id.toString(),
-})
+});
 
 const combobox = useCombobox({
-  collection,
-  placeholder: "Type to search users...",
-  inputValue,
-  onInputValueChange: (details) => {
-    inputValue.value = details.inputValue
+  get collection() {
+    return collection.value;
   },
-})
+  placeholder: "Type to search users...",
+  inputValue: inputValue.value,
+  onInputValueChange: (details) => {
+    inputValue.value = details.inputValue;
+  },
+});
 
 watch(inputValue, async (newValue) => {
   if (newValue.length === 0) {
-    set([])
-    isLoading.value = false
-    return
+    set([]);
+    isLoading.value = false;
+    return;
   }
 
   if (newValue.length < 2) {
-    set([])
-    isLoading.value = false
-    return
+    set([]);
+    isLoading.value = false;
+    return;
   }
 
-  isLoading.value = true
+  isLoading.value = true;
   try {
-    const results = await searchUsers(newValue)
-    set(results)
+    const results = await searchUsers(newValue);
+    set(results);
   } catch (error) {
-    console.error("Failed to search users:", error)
-    set([])
+    console.error("Failed to search users:", error);
+    set([]);
   } finally {
-    isLoading.value = false
+    isLoading.value = false;
   }
-})
+});
 </script>
 
 <template>

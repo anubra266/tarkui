@@ -58,7 +58,7 @@ export default function TagsInputWithCombobox() {
               Frameworks
             </TagsInput.Label>
             <Combobox.Control className="relative">
-              <TagsInput.Control className="flex flex-wrap gap-1 p-2 pr-10 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs bg-white dark:bg-gray-800 min-h-[2.5rem] focus-within:outline-hidden focus-within:ring-2 focus-within:ring-blue-500/50 dark:focus-within:ring-blue-400/50 focus-within:border-blue-500 dark:focus-within:border-blue-400">
+              <TagsInput.Control className="flex flex-wrap gap-1 p-2 pr-10 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs bg-white dark:bg-gray-800 min-h-10 focus-within:outline-hidden focus-within:ring-2 focus-within:ring-blue-500/50 dark:focus-within:ring-blue-400/50 focus-within:border-blue-500 dark:focus-within:border-blue-400">
                 {tagsInput.value.map((value, index) => (
                   <TagsInput.Item
                     key={index}

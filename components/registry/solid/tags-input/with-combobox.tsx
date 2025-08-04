@@ -4,7 +4,7 @@ import {
   useListCollection,
 } from "@ark-ui/solid/combobox";
 import { useFilter } from "@ark-ui/solid/locale";
-import { Portal } from "@ark-ui/solid/portal";
+import { Portal } from "solid-js/web";
 import { TagsInput, useTagsInput } from "@ark-ui/solid/tags-input";
 import { ChevronDown, X } from "lucide-solid";
 
@@ -26,19 +26,21 @@ export default function TagsInputWithCombobox() {
     defaultValue: ["React"],
   });
 
-  const { contains } = useFilter({ sensitivity: "base" });
+  const filterFn = useFilter({ sensitivity: "base" });
 
   const { collection, filter } = useListCollection({
     initialItems: availableFrameworks,
-    filter: contains,
+    filter: filterFn().contains,
   });
 
   const combobox = useCombobox({
-    collection,
-    onInputValueChange(details) {
+    get collection() {
+      return collection()
+    },
+    onInputValueChange(details: Combobox.InputValueChangeDetails) {
       filter(details.inputValue);
     },
-    onValueChange(details) {
+    onValueChange(details: Combobox.ValueChangeDetails) {
       if (details.value.length > 0) {
         tagsInput().addValue(details.value[0]);
         combobox().clearValue();
@@ -55,7 +57,7 @@ export default function TagsInputWithCombobox() {
               Frameworks
             </TagsInput.Label>
             <Combobox.Control class="relative">
-              <TagsInput.Control class="flex flex-wrap gap-1 p-2 pr-10 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs bg-white dark:bg-gray-800 min-h-[2.5rem] focus-within:outline-hidden focus-within:ring-2 focus-within:ring-blue-500/50 dark:focus-within:ring-blue-400/50 focus-within:border-blue-500 dark:focus-within:border-blue-400">
+              <TagsInput.Control class="flex flex-wrap gap-1 p-2 pr-10 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs bg-white dark:bg-gray-800 min-h-10 focus-within:outline-hidden focus-within:ring-2 focus-within:ring-blue-500/50 dark:focus-within:ring-blue-400/50 focus-within:border-blue-500 dark:focus-within:border-blue-400">
                 <For each={tagsInput().value}>
                   {(value, index) => (
                     <TagsInput.Item

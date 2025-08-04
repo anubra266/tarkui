@@ -5,11 +5,13 @@
   import { useFilter } from "@ark-ui/svelte/locale";
   import { ChevronDownIcon, XIcon } from "lucide-svelte";
 
-  const { contains } = useFilter({ sensitivity: "base" });
+  const filters = useFilter({ sensitivity: 'base' });
 
   const { collection, filter } = useListCollection({
     initialItems: ["React", "Solid", "Vue", "Svelte", "Angular", "Preact"],
-    filter: contains,
+    filter(itemString, filterText) {
+      return filters().contains(itemString, filterText);
+    },
   });
 
   const handleInputChange = (details) => {
@@ -53,7 +55,7 @@
             >
               Frameworks
             </Combobox.ItemGroupLabel>
-            {#each collection.items as item (item)}
+            {#each collection().items as item (item)}
               <Combobox.Item
                 {item}
                 class="relative cursor-pointer select-none py-2 pl-3 pr-9 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 data-highlighted:bg-gray-50 dark:data-highlighted:bg-gray-700 transition-colors"

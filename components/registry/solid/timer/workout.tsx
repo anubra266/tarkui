@@ -10,7 +10,7 @@ export default function TimerWorkout() {
         startMs={30 * 1000}
         class="w-full max-w-xs"
       >
-        <div class="bg-gradient-to-b from-orange-500 to-red-600 rounded-lg p-6 text-white text-center">
+        <div class="bg-linear-to-b from-orange-500 to-red-600 rounded-lg p-6 text-white text-center">
           <div class="flex items-center justify-center gap-2 mb-4">
             <Dumbbell class="w-6 h-6" />
             <h3 class="font-bold text-lg">Rest Time</h3>

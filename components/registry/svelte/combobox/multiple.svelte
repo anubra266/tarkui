@@ -23,11 +23,13 @@
     "GraphQL",
   ];
 
-  const { contains } = useFilter({ sensitivity: "base" });
+  const filters = useFilter({ sensitivity: 'base' });
 
   const { collection, filter } = useListCollection({
     initialItems: skills,
-    filter: contains,
+    filter(itemString, filterText) {
+    return filters().contains(itemString, filterText)
+ },
   });
 
   const handleInputChange = (details) => {
@@ -103,7 +105,7 @@
             >
               Available Skills
             </Combobox.ItemGroupLabel>
-            {#each collection.items as item (item)}
+            {#each collection().items as item (item)}
               <Combobox.Item
                 {item}
                 class="relative cursor-pointer select-none py-2 pl-3 pr-9 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 data-highlighted:bg-gray-50 dark:data-highlighted:bg-gray-700 transition-colors"

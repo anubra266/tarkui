@@ -16,7 +16,7 @@ export default function TagsInputBasic() {
               <TagsInput.Label className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">
                 Frameworks
               </TagsInput.Label>
-              <TagsInput.Control className="flex flex-wrap gap-1 p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 min-h-[2rem] focus-within:outline-hidden focus-within:ring-2 focus-within:ring-blue-500/50 dark:focus-within:ring-blue-400/50 focus-within:border-blue-500 dark:focus-within:border-blue-400">
+              <TagsInput.Control className="flex flex-wrap gap-1 p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 min-h-8 focus-within:outline-hidden focus-within:ring-2 focus-within:ring-blue-500/50 dark:focus-within:ring-blue-400/50 focus-within:border-blue-500 dark:focus-within:border-blue-400">
                 {tagsInput.value.map((value, index) => (
                   <TagsInput.Item
                     key={index}

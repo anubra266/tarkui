@@ -22,11 +22,11 @@ const skills = [
   "GraphQL",
 ];
 
-const { contains } = useFilter({ sensitivity: "base" });
+const filters = useFilter({ sensitivity: "base" });
 
 const { collection, filter } = useListCollection({
   initialItems: skills,
-  filter: contains,
+  filter: filters.value.contains,
 });
 
 const handleInputChange = (details) => {

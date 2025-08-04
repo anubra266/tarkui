@@ -71,7 +71,7 @@
     <Listbox.Content
       class="bg-(--listbox-bg) border border-(--listbox-border) rounded-lg px-1 py-2 w-80 shadow-lg"
     >
-      {#each collection.items as priority (priority.value)}
+      {#each collection().items as priority (priority.value)}
         {@const IconComponent = priority.icon}
         <Listbox.Item
           item={priority}

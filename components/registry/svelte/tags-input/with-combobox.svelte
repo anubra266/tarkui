@@ -26,11 +26,13 @@
     defaultValue: ["React"],
   });
 
-  const { contains } = useFilter({ sensitivity: "base" });
+  const filters = useFilter({ sensitivity: "base" });
 
   const { collection, filter } = useListCollection({
     initialItems: availableFrameworks,
-    filter: contains,
+    filter(itemString, filterText) {
+      return filters().contains(itemString, filterText);
+    },
   });
 
   const combobox = useCombobox({
@@ -40,8 +42,8 @@
     },
     onValueChange(details) {
       if (details.value.length > 0) {
-        $tagsInput.addValue(details.value[0]);
-        $combobox.clearValue();
+        tagsInput().addValue(details.value[0]);
+        combobox().clearValue();
       }
     },
   });
@@ -59,9 +61,9 @@
       </TagsInput.Label>
       <Combobox.Control class="relative">
         <TagsInput.Control
-          class="flex flex-wrap gap-1 p-2 pr-10 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs bg-white dark:bg-gray-800 min-h-[2.5rem] focus-within:outline-hidden focus-within:ring-2 focus-within:ring-blue-500/50 dark:focus-within:ring-blue-400/50 focus-within:border-blue-500 dark:focus-within:border-blue-400"
+          class="flex flex-wrap gap-1 p-2 pr-10 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs bg-white dark:bg-gray-800 min-h-10 focus-within:outline-hidden focus-within:ring-2 focus-within:ring-blue-500/50 dark:focus-within:ring-blue-400/50 focus-within:border-blue-500 dark:focus-within:border-blue-400"
         >
-          {#each $tagsInput.value as value, index (index)}
+          {#each tagsInput().value as value, index (index)}
             <TagsInput.Item
               {index}
               {value}
@@ -91,7 +93,7 @@
           <ChevronDown class="h-4 w-4" />
         </Combobox.Trigger>
       </Combobox.Control>
-      {#if $tagsInput.value.length > 0}
+      {#if tagsInput().value.length > 0}
         <TagsInput.ClearTrigger
           class="mt-2 text-sm text-gray-500 hover:text-gray-700 transition-colors dark:text-gray-400 dark:hover:text-gray-200"
         >
@@ -104,7 +106,7 @@
           <Combobox.Content
             class="mt-1 max-h-60 w-full overflow-auto rounded-md bg-white dark:bg-gray-800 py-1 shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-gray-600 focus:outline-hidden z-50"
           >
-            {#each $collection.items.filter((item) => !$tagsInput.value.includes(item)) as item (item)}
+            {#each collection().items.filter((item) => !tagsInput().value.includes(item)) as item (item)}
               <Combobox.Item
                 {item}
                 class="relative cursor-pointer select-none py-2 pl-3 pr-9 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 data-highlighted:bg-gray-50 dark:data-highlighted:bg-gray-700 transition-colors"
@@ -119,7 +121,7 @@
                 </Combobox.ItemIndicator>
               </Combobox.Item>
             {/each}
-            {#if $collection.items.filter((item) => !$tagsInput.value.includes(item)).length === 0}
+            {#if collection().items.filter((item) => !tagsInput().value.includes(item)).length === 0}
               <div
                 class="py-2 pl-3 pr-9 text-sm text-gray-500 dark:text-gray-400"
               >

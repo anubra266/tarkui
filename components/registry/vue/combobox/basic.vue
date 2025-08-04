@@ -3,11 +3,11 @@ import { Combobox, useListCollection } from "@ark-ui/vue/combobox";
 import { useFilter } from "@ark-ui/vue/locale";
 import { ChevronDownIcon, XIcon } from "lucide-vue-next";
 
-const { contains } = useFilter({ sensitivity: "base" });
+const filters = useFilter({ sensitivity: "base" });
 
 const { collection, filter } = useListCollection({
   initialItems: ["React", "Solid", "Vue", "Svelte"],
-  filter: contains,
+  filter: filters.value.contains,
 });
 
 const handleInputChange = (details) => {

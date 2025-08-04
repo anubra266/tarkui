@@ -6,14 +6,14 @@ import { For } from "solid-js";
 import { ChevronDownIcon, XIcon } from "lucide-solid";
 
 export default function WithHighlightCombobox() {
-  const { contains } = useFilter({ sensitivity: "base" });
+  const filterFn = useFilter({ sensitivity: "base" });
 
   const { collection, filter } = useListCollection({
     initialItems: ["React", "Solid", "Vue", "Svelte", "Angular", "Preact"],
-    filter: contains,
+    filter: filterFn().contains,
   });
 
-  const handleInputChange = (details) => {
+  const handleInputChange = (details: Combobox.InputValueChangeDetails) => {
     filter(details.inputValue);
   };
 

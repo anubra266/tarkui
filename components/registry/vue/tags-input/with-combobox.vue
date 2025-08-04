@@ -11,7 +11,7 @@
         </TagsInput.Label>
         <Combobox.Control class="relative">
           <TagsInput.Control
-            class="flex flex-wrap gap-1 p-2 pr-10 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs bg-white dark:bg-gray-800 min-h-[2.5rem] focus-within:outline-hidden focus-within:ring-2 focus-within:ring-blue-500/50 dark:focus-within:ring-blue-400/50 focus-within:border-blue-500 dark:focus-within:border-blue-400"
+            class="flex flex-wrap gap-1 p-2 pr-10 border border-gray-300 dark:border-gray-600 rounded-md shadow-xs bg-white dark:bg-gray-800 min-h-10 focus-within:outline-hidden focus-within:ring-2 focus-within:ring-blue-500/50 dark:focus-within:ring-blue-400/50 focus-within:border-blue-500 dark:focus-within:border-blue-400"
           >
             <TagsInput.Item
               v-for="(value, index) in tagsInput.value"
@@ -114,15 +114,17 @@ const tagsInput = useTagsInput({
   defaultValue: ["React"],
 });
 
-const { contains } = useFilter({ sensitivity: "base" });
+const filters = useFilter({ sensitivity: "base" });
 
 const { collection, filter } = useListCollection({
   initialItems: availableFrameworks,
-  filter: contains,
+  filter: filters.value.contains,
 });
 
 const combobox = useCombobox({
-  collection,
+  get collection() {
+    return collection.value;
+  },
   onInputValueChange(details) {
     filter(details.inputValue);
   },

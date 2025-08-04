@@ -49,7 +49,9 @@ export default function AsyncCombobox() {
   });
 
   const combobox = useCombobox({
-    collection: collection(),
+    get collection() {
+      return collection()
+    },
     placeholder: "Type to search users...",
     inputValue: inputValue(),
     onInputValueChange: (details) => {

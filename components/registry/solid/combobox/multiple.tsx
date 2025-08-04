@@ -24,14 +24,14 @@ const skills = [
 ];
 
 export default function MultipleCombobox() {
-  const { contains } = useFilter({ sensitivity: "base" });
+  const filterFn = useFilter({ sensitivity: "base" });
 
   const { collection, filter } = useListCollection({
     initialItems: skills,
-    filter: contains,
+    filter: filterFn().contains,
   });
 
-  const handleInputChange = (details) => {
+  const handleInputChange = (details: Combobox.InputValueChangeDetails) => {
     filter(details.inputValue);
   };
 

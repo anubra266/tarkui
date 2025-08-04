@@ -12,11 +12,11 @@ const initialItems = [
   { label: "Tailwind", value: "tailwind", type: "CSS" },
 ];
 
-const { contains } = useFilter({ sensitivity: "base" });
+const filters = useFilter({ sensitivity: "base" });
 
 const { collection, filter } = useListCollection({
   initialItems,
-  filter: contains,
+  filter: filters.value.contains,
   groupBy: (item) => item.type,
 });
 

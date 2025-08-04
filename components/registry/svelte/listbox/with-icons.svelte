@@ -98,7 +98,7 @@
     <Listbox.Content
       class="bg-(--listbox-bg) border border-(--listbox-border) rounded-lg px-1 py-2 w-80 shadow-lg"
     >
-      {#each collection.items as tool (tool.value)}
+      {#each collection().items as tool (tool.value)}
         {@const IconComponent = tool.icon}
         <Listbox.Item
           item={tool}
