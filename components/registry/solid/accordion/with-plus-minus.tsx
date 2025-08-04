@@ -31,7 +31,7 @@ export default function WithPlusMinusAccordion() {
   ];
 
   return (
-    <Accordion
+    <Accordion.Root
       defaultValue={["react"]}
       collapsible
       class="w-full max-w-md mx-auto bg-linear-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs"
@@ -57,6 +57,6 @@ export default function WithPlusMinusAccordion() {
           </Accordion.Item>
         )}
       </For>
-    </Accordion>
+    </Accordion.Root>
   );
 }

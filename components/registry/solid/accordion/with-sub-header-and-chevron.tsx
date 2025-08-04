@@ -35,7 +35,7 @@ export default function WithSubHeaderAndChevronAccordion() {
   ];
 
   return (
-    <Accordion
+    <Accordion.Root
       defaultValue={["mindful-living"]}
       collapsible
       class="w-full max-w-md mx-auto bg-linear-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs"
@@ -65,6 +65,6 @@ export default function WithSubHeaderAndChevronAccordion() {
           </Accordion.Item>
         )}
       </For>
-    </Accordion>
+    </Accordion.Root>
   );
 }

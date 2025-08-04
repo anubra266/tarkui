@@ -109,7 +109,7 @@ export default function MultiLevelWithIconAccordion() {
   ];
 
   return (
-    <Accordion
+    <Accordion.Root
       defaultValue={["urban-planning"]}
       collapsible
       class="w-full max-w-md mx-auto bg-linear-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs"
@@ -140,7 +140,7 @@ export default function MultiLevelWithIconAccordion() {
 
                 {/* Nested accordion */}
                 <Show when={item.items}>
-                  <Accordion
+                  <Accordion.Root
                     collapsible
                     class="border-l-2 border-blue-500/20 ml-2"
                   >
@@ -170,13 +170,13 @@ export default function MultiLevelWithIconAccordion() {
                         </Accordion.Item>
                       )}
                     </For>
-                  </Accordion>
+                  </Accordion.Root>
                 </Show>
               </div>
             </Accordion.ItemContent>
           </Accordion.Item>
         )}
       </For>
-    </Accordion>
+    </Accordion.Root>
   );
 }

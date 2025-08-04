@@ -69,6 +69,6 @@ export default function WithIconSubHeaderAndChevronAccordion() {
           </Accordion.Item>
         )}
       </For>
-    </Accordion>
+    </Accordion.Root>
   );
 } 
