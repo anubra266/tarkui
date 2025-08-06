@@ -7,7 +7,7 @@ import { Play, Globe } from "lucide-vue-next";
   <Tooltip.Root :openDelay="0" :closeDelay="0">
     <Tooltip.Trigger class="relative group cursor-pointer">
       <div
-        class="w-64 h-36 bg-gradient-to-br from-gray-900 to-gray-700 dark:from-gray-800 dark:to-gray-600 rounded-lg overflow-hidden border border-border"
+        class="w-64 h-36 bg-linear-to-br from-gray-900 to-gray-700 dark:from-gray-800 dark:to-gray-600 rounded-lg overflow-hidden border border-border"
       >
         <div class="absolute inset-0 flex items-center justify-center">
           <div
@@ -26,7 +26,7 @@ import { Play, Globe } from "lucide-vue-next";
           <div class="space-y-2">
             <div class="flex items-start gap-2">
               <Globe
-                class="w-3 h-3 text-muted-foreground mt-0.5 flex-shrink-0"
+                class="w-3 h-3 text-muted-foreground mt-0.5 shrink-0"
               />
               <div class="flex-1 min-w-0">
                 <h4 class="font-semibold text-xs">Product Demo</h4>
