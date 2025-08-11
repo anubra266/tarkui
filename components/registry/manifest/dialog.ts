@@ -1,4 +1,4 @@
-import { ComponentExampleMeta, ComponentManifest } from "@/lib/registry";
+import type { ComponentExampleMeta, ComponentManifest } from "@/lib/registry";
 
 const cssVars: ComponentExampleMeta["cssVars"] = {
   theme: {

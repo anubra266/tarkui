@@ -2,7 +2,6 @@ import { ArrowLeft, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Metadata } from "next";
 import { Header } from "@/components/header";
 import { getComponentRegistry } from "@/lib/registry.server";
 import { ComponentExamples } from "./component-examples";
@@ -124,7 +123,10 @@ export default async function ComponentDetailPage({
 
           {/* Stats Badge */}
           <div className="flex items-center justify-center space-x-4 mb-8">
-            <div className="inline-flex items-center space-x-2 bg-linear-to-r from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs border border-gray-300/50 dark:border-gray-700/50 rounded-full px-6 py-3">
+            <div
+              id="examples-count"
+              className="inline-flex items-center space-x-2 bg-linear-to-r from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-xs border border-gray-300/50 dark:border-gray-700/50 rounded-full px-6 py-3"
+            >
               <Sparkles className="w-4 h-4 text-yellow-400" />
               <span className="text-sm text-gray-700 dark:text-gray-300">
                 {componentRegistry.count} Examples Available
@@ -165,7 +167,7 @@ export default async function ComponentDetailPage({
         <div className="text-center py-20 border-t border-gray-300/50 dark:border-gray-800/50 relative">
           <div className="absolute inset-0 bg-linear-to-r from-transparent via-blue-500/5 to-transparent"></div>
           <div className="relative">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 bg-linear-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 bg-linear-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text">
               Didn't find what you were looking for?
             </h2>
             <Link
@@ -173,7 +175,10 @@ export default async function ComponentDetailPage({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="group relative overflow-hidden bg-linear-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 text-lg font-medium">
+              <Button
+                id="suggest-component"
+                className="group relative overflow-hidden bg-linear-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-5 py-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 text-lg font-medium"
+              >
                 <div className="absolute inset-0 bg-linear-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <span className="relative z-10 flex items-center space-x-2">
                   <Sparkles className="w-5 h-5 group-hover:animate-spin" />

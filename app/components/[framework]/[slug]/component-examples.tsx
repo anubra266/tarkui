@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { Code, Sparkles, Zap } from "lucide-react";
 import { useParams } from "next/navigation";
 import { getRegistryUrlByIndex } from "@/lib/registry.utils";
@@ -33,11 +33,13 @@ export function ComponentExamples({
   const [isModalOpen, setIsModalOpen] = useState(false);
   const params = useParams();
 
-  const framework = Array.isArray(params.framework)
-    ? params.framework[0]
-    : params.framework || "react";
+  const framework = Array.isArray(params["framework"])
+    ? params["framework"][0]
+    : params["framework"] || "react";
 
-  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug || "";
+  const slug = Array.isArray(params["slug"])
+    ? params["slug"][0]
+    : params["slug"] || "";
 
   // Calculate v0 URL directly (synchronous)
   const registryUrl = getRegistryUrlByIndex(framework, slug, index);
@@ -119,6 +121,7 @@ export function ComponentExamples({
               <Tooltip>
                 <TooltipTrigger asChild>
                   <button
+                    id={`copy-code-${slug}-${index}`}
                     onClick={openCodeModal}
                     className="group/btn relative overflow-hidden bg-linear-to-r from-emerald-500/20 to-teal-500/20 hover:from-emerald-500/40 hover:to-teal-500/40 border border-emerald-500/30 hover:border-emerald-400/50 rounded-xl p-2 transition-all duration-300 hover:scale-110 hover:-rotate-3"
                   >
@@ -177,7 +180,7 @@ export function ComponentExamples({
           onClose={() => setIsModalOpen(false)}
           title={title}
           framework={framework}
-          slug={Array.isArray(params.slug) ? params.slug[0] : params.slug || ""}
+          slug={slug}
           exampleIndex={index}
           sourceCode={
             sourceCode[framework] ||

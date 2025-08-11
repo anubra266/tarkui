@@ -62,7 +62,10 @@ export function Header() {
           {/* Framework Selector */}
           {isLoaded && (
             <Select value={framework} onValueChange={setFramework}>
-              <SelectTrigger className="w-24 md:w-[120px] bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur-xs border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-200">
+              <SelectTrigger
+                id="framework-selector"
+                className="w-24 md:w-[120px] bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur-xs border border-gray-300/50 dark:border-gray-700/50 hover:border-gray-400/50 dark:hover:border-gray-600/50 transition-all duration-200"
+              >
                 <SelectValue placeholder="Framework" />
               </SelectTrigger>
               <SelectContent>

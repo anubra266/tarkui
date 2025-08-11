@@ -53,7 +53,7 @@ import { Info, AlertTriangle, CheckCircle } from "lucide-vue-next";
         <span class="text-sm font-medium">Warning</span>
       </HoverCard.Trigger>
 
-      <Portal>
+      <Teleport to="body">
         <HoverCard.Positioner>
           <HoverCard.Content
             class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-4 max-w-xs"
@@ -79,7 +79,7 @@ import { Info, AlertTriangle, CheckCircle } from "lucide-vue-next";
             </div>
           </HoverCard.Content>
         </HoverCard.Positioner>
-      </Portal>
+      </Teleport>
     </HoverCard.Root>
 
     <!-- Success Tooltip -->
@@ -91,7 +91,7 @@ import { Info, AlertTriangle, CheckCircle } from "lucide-vue-next";
         <span class="text-sm font-medium">Success</span>
       </HoverCard.Trigger>
 
-      <Portal>
+      <Teleport to="body">
         <HoverCard.Positioner>
           <HoverCard.Content
             class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-4 max-w-xs"
@@ -117,7 +117,7 @@ import { Info, AlertTriangle, CheckCircle } from "lucide-vue-next";
             </div>
           </HoverCard.Content>
         </HoverCard.Positioner>
-      </Portal>
+      </Teleport>
     </HoverCard.Root>
   </div>
 </template>

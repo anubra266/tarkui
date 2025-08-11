@@ -2,7 +2,13 @@
 
 import { Tooltip } from "@ark-ui/react/tooltip";
 import { Portal } from "@ark-ui/react/portal";
-import { ChevronUp, CircleIcon } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronUp,
+  CircleIcon,
+} from "lucide-react";
 
 export default function TooltipPositioning() {
   return (
@@ -30,7 +36,7 @@ export default function TooltipPositioning() {
         positioning={{ placement: "left" }}
       >
         <Tooltip.Trigger className="col-start-1 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-2 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer inline-flex items-center justify-center">
-          <ChevronUp className="size-4" />
+          <ChevronLeft className="size-4" />
         </Tooltip.Trigger>
         <Portal>
           <Tooltip.Positioner>
@@ -49,7 +55,7 @@ export default function TooltipPositioning() {
         positioning={{ placement: "right" }}
       >
         <Tooltip.Trigger className="rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-2 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer inline-flex items-center justify-center">
-          <ChevronUp className="size-4" />
+          <ChevronRight className="size-4" />
         </Tooltip.Trigger>
         <Portal>
           <Tooltip.Positioner>
@@ -65,7 +71,7 @@ export default function TooltipPositioning() {
         positioning={{ placement: "bottom" }}
       >
         <Tooltip.Trigger className="col-start-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-2 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer inline-flex items-center justify-center">
-          <ChevronUp className="size-4" />
+          <ChevronDown className="size-4" />
         </Tooltip.Trigger>
         <Portal>
           <Tooltip.Positioner>
