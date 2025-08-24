@@ -197,12 +197,9 @@ const defaultFiles = [
                     :data="file"
                     :file-name="file.name"
                     :mime-type="file.type"
+                    class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"
                   >
-                    <button
-                      class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"
-                    >
-                      <Download class="w-4 h-4" />
-                    </button>
+                    <Download class="w-4 h-4" />
                   </DownloadTrigger>
                   <FileUpload.ItemDeleteTrigger
                     class="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"

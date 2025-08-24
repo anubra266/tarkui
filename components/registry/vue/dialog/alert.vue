@@ -4,7 +4,7 @@ import { Dialog } from "@ark-ui/vue/dialog";
 
 <template>
   <Dialog.Root>
-    <Dialog.Trigger as-child>
+    <Dialog.Trigger asChild>
       <button
         class="rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer inline-flex items-center justify-center"
       >
@@ -36,14 +36,14 @@ import { Dialog } from "@ark-ui/vue/dialog";
               </Dialog.Description>
             </div>
             <div class="flex gap-3 justify-end">
-              <Dialog.CloseTrigger as-child>
+              <Dialog.CloseTrigger asChild>
                 <button
                   class="px-4 py-2 text-sm border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600 rounded-md transition-colors cursor-pointer inline-flex items-center justify-center"
                 >
                   Cancel
                 </button>
               </Dialog.CloseTrigger>
-              <Dialog.CloseTrigger as-child>
+              <Dialog.CloseTrigger asChild>
                 <button
                   class="px-4 py-2 text-sm bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-200 rounded-md transition-colors cursor-pointer inline-flex items-center justify-center"
                 >

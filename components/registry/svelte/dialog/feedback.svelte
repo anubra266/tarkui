@@ -8,11 +8,14 @@
 
 <Dialog.Root>
   <Dialog.Trigger>
-    <button
-      class="rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer inline-flex items-center justify-center"
-    >
-      Feedback
-    </button>
+    {#snippet asChild(props)}
+      <button
+        {...props()}
+        class="rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer inline-flex items-center justify-center"
+      >
+        Feedback
+      </button>
+    {/snippet}
   </Dialog.Trigger>
   <Portal>
     <Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs" />
@@ -23,11 +26,14 @@
         class="relative w-full max-w-sm rounded-lg bg-white dark:bg-gray-900 p-5 shadow-lg"
       >
         <Dialog.CloseTrigger>
-          <button
-            class="absolute right-3 top-3 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors cursor-pointer"
-          >
-            <X class="h-4 w-4" />
-          </button>
+          {#snippet asChild(props)}
+            <button
+              {...props()}
+              class="absolute right-3 top-3 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors cursor-pointer"
+            >
+              <X class="h-4 w-4" />
+            </button>
+          {/snippet}
         </Dialog.CloseTrigger>
 
         <div class="space-y-4">
@@ -67,11 +73,14 @@
             </div>
 
             <Dialog.CloseTrigger>
-              <button
-                class="w-full px-3 py-2 text-sm bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-md transition-colors cursor-pointer inline-flex items-center justify-center font-medium"
-              >
-                Send feedback
-              </button>
+              {#snippet asChild(props)}
+                <button
+                  {...props()}
+                  class="w-full px-3 py-2 text-sm bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-md transition-colors cursor-pointer inline-flex items-center justify-center font-medium"
+                >
+                  Send feedback
+                </button>
+              {/snippet}
             </Dialog.CloseTrigger>
           </div>
         </div>

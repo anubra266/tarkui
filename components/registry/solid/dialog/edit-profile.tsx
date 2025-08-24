@@ -23,19 +23,21 @@ export default function EditProfileDialog() {
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger asChild>
-        <button class="rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer inline-flex items-center justify-center">
-          Edit Profile
-        </button>
+      <Dialog.Trigger
+        asChild={(props) => <button {...props()} />}
+        class="rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer inline-flex items-center justify-center"
+      >
+        Edit Profile
       </Dialog.Trigger>
       <Portal>
         <Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs" />
         <Dialog.Positioner class="fixed inset-0 z-50 flex items-center justify-center p-4">
           <Dialog.Content class="relative w-full max-w-lg rounded-lg bg-white dark:bg-gray-900 shadow-lg overflow-hidden">
-            <Dialog.CloseTrigger asChild>
-              <button class="absolute right-4 top-4 z-10 p-2 bg-black/20 rounded-full text-white hover:bg-black/30 transition-colors cursor-pointer">
-                <X class="h-4 w-4" />
-              </button>
+            <Dialog.CloseTrigger
+              asChild={(props) => <button {...props()} />}
+              class="absolute right-4 top-4 z-10 p-2 bg-black/20 rounded-full text-white hover:bg-black/30 transition-colors cursor-pointer"
+            >
+              <X class="h-4 w-4" />
             </Dialog.CloseTrigger>
 
             <div>
@@ -161,16 +163,18 @@ export default function EditProfileDialog() {
 
                 {/* Action Buttons */}
                 <div class="flex justify-end space-x-3 mt-6">
-                  <Dialog.CloseTrigger asChild>
-                    <button class="px-4 py-2 text-sm border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors cursor-pointer inline-flex items-center justify-center">
-                      Cancel
-                    </button>
+                  <Dialog.CloseTrigger
+                    asChild={(props) => <button {...props()} />}
+                    class="px-4 py-2 text-sm border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors cursor-pointer inline-flex items-center justify-center"
+                  >
+                    Cancel
                   </Dialog.CloseTrigger>
 
-                  <Dialog.CloseTrigger asChild>
-                    <button class="px-4 py-2 text-sm bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-md transition-colors cursor-pointer inline-flex items-center justify-center font-medium">
-                      Save changes
-                    </button>
+                  <Dialog.CloseTrigger
+                    asChild={(props) => <button {...props()} />}
+                    class="px-4 py-2 text-sm bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-md transition-colors cursor-pointer inline-flex items-center justify-center font-medium"
+                  >
+                    Save changes
                   </Dialog.CloseTrigger>
                 </div>
               </div>

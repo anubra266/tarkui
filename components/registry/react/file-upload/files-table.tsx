@@ -1,6 +1,9 @@
 "use client";
 
-import { FileUpload, type FileUploadFileError } from "@ark-ui/react/file-upload";
+import {
+  FileUpload,
+  type FileUploadFileError,
+} from "@ark-ui/react/file-upload";
 import { DownloadTrigger } from "@ark-ui/react/download-trigger";
 
 import {
@@ -16,16 +19,14 @@ import {
   Image,
 } from "lucide-react";
 
-
 const errorMessages: Record<FileUploadFileError, string> = {
-  TOO_MANY_FILES: '📊 Too many files selected (max 3 allowed)',
-  FILE_INVALID_TYPE: '🚫 Invalid file type (only images and PDFs allowed)',
-  FILE_TOO_LARGE: '📏 File too large (max 1MB)',
-  FILE_TOO_SMALL: '📐 File too small (min 1KB)',
-  FILE_INVALID: '⚠️ Invalid file',
-  FILE_EXISTS: '🔄 File already exists',
-}
-
+  TOO_MANY_FILES: "📊 Too many files selected (max 3 allowed)",
+  FILE_INVALID_TYPE: "🚫 Invalid file type (only images and PDFs allowed)",
+  FILE_TOO_LARGE: "📏 File too large (max 1MB)",
+  FILE_TOO_SMALL: "📐 File too small (min 1KB)",
+  FILE_INVALID: "⚠️ Invalid file",
+  FILE_EXISTS: "🔄 File already exists",
+};
 
 const getFileExtension = (filename: string) => {
   const ext = filename.split(".").pop()?.toUpperCase();
@@ -189,14 +190,12 @@ export default function FilesTable() {
                         {/* Actions */}
                         <div className="col-span-3 flex items-center gap-2">
                           <DownloadTrigger
-                            asChild
                             data={file}
                             fileName={file.name}
                             mimeType={file.type}
+                            className="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"
                           >
-                            <button className="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300">
-                              <Download className="w-4 h-4" />
-                            </button>
+                            <Download className="w-4 h-4" />
                           </DownloadTrigger>
                           <FileUpload.ItemDeleteTrigger className="w-6 h-6 flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300">
                             <Trash2 className="w-4 h-4" />
@@ -227,7 +226,7 @@ export default function FilesTable() {
         )}
       </FileUpload.Context>
 
-       {/* Rejected Files Section */}
+      {/* Rejected Files Section */}
       <div data-status="rejected">
         <h3>❌ Rejected Files</h3>
         <FileUpload.ItemGroup>
@@ -249,7 +248,8 @@ export default function FilesTable() {
                       <strong>Validation Errors:</strong>
                       {fileRejection.errors.map((error, index) => (
                         <div key={index} data-error-code={error}>
-                          {errorMessages[error as FileUploadFileError] || `❓ ${error}`}
+                          {errorMessages[error as FileUploadFileError] ||
+                            `❓ ${error}`}
                         </div>
                       ))}
                     </div>

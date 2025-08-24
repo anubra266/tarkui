@@ -22,12 +22,15 @@
 </script>
 
 <Dialog.Root>
-  <Dialog.Trigger asChild>
-    <button
-      class="rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer inline-flex items-center justify-center"
-    >
-      Terms & Conditions
-    </button>
+  <Dialog.Trigger>
+    {#snippet asChild(props)}
+      <button
+        {...props()}
+        class="rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer inline-flex items-center justify-center"
+      >
+        Terms & Conditions
+      </button>
+    {/snippet}
   </Dialog.Trigger>
   <Portal>
     <Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs" />
@@ -45,12 +48,15 @@
           >
             Terms & Conditions
           </Dialog.Title>
-          <Dialog.CloseTrigger asChild>
-            <button
-              class="p-1 text-gray-400 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors cursor-pointer"
-            >
-              <X class="h-4 w-4" />
-            </button>
+          <Dialog.CloseTrigger>
+            {#snippet asChild(props)}
+              <button
+                {...props()}
+                class="p-1 text-gray-400 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors cursor-pointer"
+              >
+                <X class="h-4 w-4" />
+              </button>
+            {/snippet}
           </Dialog.CloseTrigger>
         </div>
 
@@ -194,24 +200,30 @@
           {/if}
 
           <div class="flex gap-3">
-            <Dialog.CloseTrigger asChild>
-              <button
-                class="px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 bg-transparent text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors cursor-pointer inline-flex items-center justify-center"
-              >
-                Cancel
-              </button>
+            <Dialog.CloseTrigger>
+              {#snippet asChild(props)}
+                <button
+                  {...props()}
+                  class="px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 bg-transparent text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors cursor-pointer inline-flex items-center justify-center"
+                >
+                  Cancel
+                </button>
+              {/snippet}
             </Dialog.CloseTrigger>
-            <Dialog.CloseTrigger asChild>
-              <button
-                disabled={!state.hasReadToBottom}
-                class={`px-3 py-1.5 text-sm rounded-lg transition-colors cursor-pointer inline-flex items-center justify-center ${
-                  state.hasReadToBottom
-                    ? "bg-gray-900 dark:bg-gray-600 text-white hover:bg-gray-800 dark:hover:bg-gray-500"
-                    : "bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-500 cursor-not-allowed"
-                }`}
-              >
-                I agree
-              </button>
+            <Dialog.CloseTrigger>
+              {#snippet asChild(props)}
+                <button
+                  {...props()}
+                  disabled={!state.hasReadToBottom}
+                  class={`px-3 py-1.5 text-sm rounded-lg transition-colors cursor-pointer inline-flex items-center justify-center ${
+                    state.hasReadToBottom
+                      ? "bg-gray-900 dark:bg-gray-600 text-white hover:bg-gray-800 dark:hover:bg-gray-500"
+                      : "bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-500 cursor-not-allowed"
+                  }`}
+                >
+                  I agree
+                </button>
+              {/snippet}
             </Dialog.CloseTrigger>
           </div>
         </div>

@@ -15,12 +15,15 @@
 </script>
 
 <Dialog.Root>
-  <Dialog.Trigger asChild>
-    <button
-      class="rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer inline-flex items-center justify-center"
-    >
-      Card Details
-    </button>
+  <Dialog.Trigger>
+    {#snippet asChild(props)}
+      <button
+        {...props()}
+        class="rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors cursor-pointer inline-flex items-center justify-center"
+      >
+        Card Details
+      </button>
+    {/snippet}
   </Dialog.Trigger>
   <Portal>
     <Dialog.Backdrop class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs" />
@@ -30,12 +33,15 @@
       <Dialog.Content
         class="relative w-full max-w-sm rounded-lg bg-white dark:bg-gray-900 p-5 shadow-lg"
       >
-        <Dialog.CloseTrigger asChild>
-          <button
-            class="absolute right-3 top-3 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors cursor-pointer"
-          >
-            <X class="h-4 w-4" />
-          </button>
+        <Dialog.CloseTrigger>
+          {#snippet asChild(props)}
+            <button
+              {...props()}
+              class="absolute right-3 top-3 p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors cursor-pointer"
+            >
+              <X class="h-4 w-4" />
+            </button>
+          {/snippet}
         </Dialog.CloseTrigger>
 
         <div class="space-y-4">
@@ -131,7 +137,8 @@
                 type="checkbox"
                 id="setAsDefault"
                 checked={state.cardData.setAsDefault}
-                on:change={(e) => state.cardData.setAsDefault = e.target.checked}
+                on:change={(e) =>
+                  (state.cardData.setAsDefault = e.target.checked)}
                 class="w-3 h-3 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 focus:ring-0 focus:ring-offset-0"
               />
               <label
@@ -142,12 +149,15 @@
               </label>
             </div>
 
-            <Dialog.CloseTrigger asChild>
-              <button
-                class="w-full px-3 py-2 text-sm bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-md transition-colors cursor-pointer inline-flex items-center justify-center font-medium"
-              >
-                Update card
-              </button>
+            <Dialog.CloseTrigger>
+              {#snippet asChild(props)}
+                <button
+                  {...props()}
+                  class="w-full px-3 py-2 text-sm bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-md transition-colors cursor-pointer inline-flex items-center justify-center font-medium"
+                >
+                  Update card
+                </button>
+              {/snippet}
             </Dialog.CloseTrigger>
           </div>
         </div>
@@ -155,4 +165,3 @@
     </Dialog.Positioner>
   </Portal>
 </Dialog.Root>
- 
