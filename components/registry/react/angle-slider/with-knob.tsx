@@ -75,9 +75,7 @@ export default function WithKnobAngleSlider() {
             </linearGradient>
           </defs>
         </svg>
-        <AngleSlider.Thumb className="absolute top-0 right-0 bottom-0 left-[calc(50%-1.5px)] pointer-events-none h-full w-[3px] flex items-start outline-hidden">
-          <span className="bg-linear-to-br from-blue-500 to-purple-600 dark:from-blue-400 dark:to-purple-500 w-5 h-5 rounded-full shrink-0 scale-125 shadow-lg shadow-blue-500/25 dark:shadow-blue-400/25 border-2 border-white dark:border-gray-800" />
-        </AngleSlider.Thumb>
+        <AngleSlider.Thumb className="absolute top-0 right-0 bottom-0 left-[calc(50%-1.5px)] pointer-events-none h-full w-[3px] flex items-start outline-hidden before:absolute before:left-full before:-translate-x-1/2 before:bg-linear-to-br before:from-blue-500 before:to-purple-600 before:dark:from-blue-400 before:dark:to-purple-500 before:w-5 before:h-5 before:rounded-full before:shrink-0 before:scale-125 before:shadow-lg before:shadow-blue-500/25 before:dark:shadow-blue-400/25 before:border-2 before:border-white before:dark:border-gray-800" />
       </AngleSlider.Control>
       <div className="flex items-center flex-col gap-0">
         <AngleSlider.ValueText className="text-4xl text-gray-900 dark:text-gray-100 font-semibold">
