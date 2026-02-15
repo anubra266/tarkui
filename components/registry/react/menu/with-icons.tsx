@@ -16,7 +16,7 @@ export default function WithIcons() {
   return (
     <div className="flex items-center justify-center min-h-32">
       <Menu.Root>
-        <Menu.Trigger className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
+        <Menu.Trigger className="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg data-highlighted:bg-gray-50 dark:data-highlighted:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2">
           Actions
           <ChevronDown className="w-4 h-4" />
         </Menu.Trigger>
@@ -25,21 +25,21 @@ export default function WithIcons() {
             <Menu.Content className="z-50 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-48 focus-visible:outline-hidden">
               <Menu.Item
                 value="new"
-                className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+                className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
               >
                 <FileText className="w-4 h-4" />
                 New Document
               </Menu.Item>
               <Menu.Item
                 value="open"
-                className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+                className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
               >
                 <FolderOpen className="w-4 h-4" />
                 Open Folder
               </Menu.Item>
               <Menu.Item
                 value="save"
-                className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+                className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
               >
                 <Save className="w-4 h-4" />
                 Save
@@ -47,14 +47,14 @@ export default function WithIcons() {
               <Menu.Separator className="my-1 h-px border-gray-200 dark:border-gray-700" />
               <Menu.Item
                 value="copy"
-                className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+                className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
               >
                 <Copy className="w-4 h-4" />
                 Copy
               </Menu.Item>
               <Menu.Item
                 value="cut"
-                className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+                className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
               >
                 <Scissors className="w-4 h-4" />
                 Cut
@@ -62,7 +62,7 @@ export default function WithIcons() {
               <Menu.Separator className="my-1 h-px border-gray-200 dark:border-gray-700" />
               <Menu.Item
                 value="delete"
-                className="flex items-center gap-3 px-3 py-2 text-sm text-red-600 dark:text-red-400 rounded-md hover:bg-red-50 dark:hover:bg-red-900/20 focus:bg-red-50 dark:focus:bg-red-900/20 cursor-pointer"
+                className="flex items-center gap-3 px-3 py-2 text-sm text-red-600 dark:text-red-400 rounded-md data-highlighted:bg-red-50 dark:data-highlighted:bg-red-900/20 focus:bg-red-50 dark:focus:bg-red-900/20 cursor-pointer"
               >
                 <Trash2 className="w-4 h-4" />
                 Delete

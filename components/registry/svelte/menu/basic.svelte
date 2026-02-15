@@ -7,7 +7,7 @@
 <div class="flex items-center justify-center min-h-32">
   <Menu.Root>
     <Menu.Trigger
-      class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2"
+      class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg data-highlighted:bg-gray-50 dark:data-highlighted:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2"
     >
       Menu
       <ChevronDown class="w-4 h-4" />
@@ -19,19 +19,19 @@
         >
           <Menu.Item
             value="new"
-            class="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+            class="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
           >
             New File
           </Menu.Item>
           <Menu.Item
             value="open"
-            class="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+            class="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
           >
             Open
           </Menu.Item>
           <Menu.Item
             value="save"
-            class="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+            class="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
           >
             Save
           </Menu.Item>
@@ -40,7 +40,7 @@
           />
           <Menu.Item
             value="exit"
-            class="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+            class="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
           >
             Exit
           </Menu.Item>

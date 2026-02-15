@@ -14,7 +14,7 @@
 <div class="flex items-center justify-center min-h-32">
   <Menu.Root>
     <Menu.Trigger
-      class="inline-flex items-center gap-3 px-3 py-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2"
+      class="inline-flex items-center gap-3 px-3 py-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg data-highlighted:bg-gray-50 dark:data-highlighted:bg-gray-800 focus:outline-hidden focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:ring-offset-2"
     >
       <div
         class="w-6 h-6 rounded-full bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xs font-semibold"
@@ -39,21 +39,21 @@
           </div>
           <Menu.Item
             value="profile"
-            class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+            class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
           >
             <User class="w-4 h-4" />
             Profile
           </Menu.Item>
           <Menu.Item
             value="settings"
-            class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+            class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
           >
             <Settings class="w-4 h-4" />
             Settings
           </Menu.Item>
           <Menu.Item
             value="billing"
-            class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+            class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
           >
             <CreditCard class="w-4 h-4" />
             Billing
@@ -63,7 +63,7 @@
           />
           <Menu.Item
             value="help"
-            class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+            class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
           >
             <HelpCircle class="w-4 h-4" />
             Help & Support
@@ -73,7 +73,7 @@
           />
           <Menu.Item
             value="logout"
-            class="flex items-center gap-3 px-3 py-2 text-sm text-red-600 dark:text-red-400 rounded-md hover:bg-red-50 dark:hover:bg-red-900/20 focus:bg-red-50 dark:focus:bg-red-900/20 cursor-pointer"
+            class="flex items-center gap-3 px-3 py-2 text-sm text-red-600 dark:text-red-400 rounded-md data-highlighted:bg-red-50 dark:data-highlighted:bg-red-900/20 focus:bg-red-50 dark:focus:bg-red-900/20 cursor-pointer"
           >
             <LogOut class="w-4 h-4" />
             Log out

@@ -18,21 +18,21 @@ import { Copy, Scissors, ClipboardPaste, Trash2, Info } from "lucide-vue-next";
           >
             <Menu.Item
               value="copy"
-              class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+              class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
             >
               <Copy class="w-4 h-4" />
               Copy
             </Menu.Item>
             <Menu.Item
               value="cut"
-              class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+              class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
             >
               <Scissors class="w-4 h-4" />
               Cut
             </Menu.Item>
             <Menu.Item
               value="paste"
-              class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+              class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
             >
               <ClipboardPaste class="w-4 h-4" />
               Paste
@@ -42,7 +42,7 @@ import { Copy, Scissors, ClipboardPaste, Trash2, Info } from "lucide-vue-next";
             />
             <Menu.Item
               value="delete"
-              class="flex items-center gap-3 px-3 py-2 text-sm text-red-600 dark:text-red-400 rounded-md hover:bg-red-50 dark:hover:bg-red-900/20 focus:bg-red-50 dark:focus:bg-red-900/20 cursor-pointer"
+              class="flex items-center gap-3 px-3 py-2 text-sm text-red-600 dark:text-red-400 rounded-md data-highlighted:bg-red-50 dark:data-highlighted:bg-red-900/20 focus:bg-red-50 dark:focus:bg-red-900/20 cursor-pointer"
             >
               <Trash2 class="w-4 h-4" />
               Delete
@@ -52,7 +52,7 @@ import { Copy, Scissors, ClipboardPaste, Trash2, Info } from "lucide-vue-next";
             />
             <Menu.Item
               value="properties"
-              class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+              class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
             >
               <Info class="w-4 h-4" />
               Properties

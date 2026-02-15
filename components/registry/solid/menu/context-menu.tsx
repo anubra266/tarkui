@@ -16,21 +16,21 @@ export default function ContextMenu() {
             <Menu.Content class="z-50 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-1 min-w-48 focus-visible:outline-hidden">
               <Menu.Item
                 value="copy"
-                class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+                class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
               >
                 <Copy class="w-4 h-4" />
                 Copy
               </Menu.Item>
               <Menu.Item
                 value="cut"
-                class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+                class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
               >
                 <Scissors class="w-4 h-4" />
                 Cut
               </Menu.Item>
               <Menu.Item
                 value="paste"
-                class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+                class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
               >
                 <ClipboardPaste class="w-4 h-4" />
                 Paste
@@ -38,7 +38,7 @@ export default function ContextMenu() {
               <Menu.Separator class="my-1 h-px border-gray-200 dark:border-gray-700" />
               <Menu.Item
                 value="delete"
-                class="flex items-center gap-3 px-3 py-2 text-sm text-red-600 dark:text-red-400 rounded-md hover:bg-red-50 dark:hover:bg-red-900/20 focus:bg-red-50 dark:focus:bg-red-900/20 cursor-pointer"
+                class="flex items-center gap-3 px-3 py-2 text-sm text-red-600 dark:text-red-400 rounded-md data-highlighted:bg-red-50 dark:data-highlighted:bg-red-900/20 focus:bg-red-50 dark:focus:bg-red-900/20 cursor-pointer"
               >
                 <Trash2 class="w-4 h-4" />
                 Delete
@@ -46,7 +46,7 @@ export default function ContextMenu() {
               <Menu.Separator class="my-1 h-px border-gray-200 dark:border-gray-700" />
               <Menu.Item
                 value="properties"
-                class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
+                class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 rounded-md data-highlighted:bg-gray-100 dark:data-highlighted:bg-gray-800 focus:bg-gray-100 dark:focus:bg-gray-800 cursor-pointer"
               >
                 <Info class="w-4 h-4" />
                 Properties
